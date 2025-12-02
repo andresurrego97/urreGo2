@@ -1,0 +1,577 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &44323752472931380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2660639298781730724}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_Bodykit_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+--- !u!4 &511089609254341599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 66f4551783c1c9b44b69698375eaa3f3, type: 3}
+  m_PrefabInstance: {fileID: 44323752472931380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &916946769146390888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6316901688301191476, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6316901688301191476, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542315999751287478, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542315999751287478, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542315999751287478, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542315999751287478, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 5d4d0d95aeb26dd48a9b8255be22e3aa, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -2898502517198072454, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3227874469655224674}
+    - targetCorrespondingSourceObject: {fileID: -5341063209999635310, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6855607301400202374}
+    - targetCorrespondingSourceObject: {fileID: -6538526682195912486, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5017932228712488338}
+    - targetCorrespondingSourceObject: {fileID: -2052669806539491900, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5444743877319239501}
+    - targetCorrespondingSourceObject: {fileID: 4618795863980625611, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 645855345719361009}
+    - targetCorrespondingSourceObject: {fileID: -4550720525929713353, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5013122251640874659}
+    - targetCorrespondingSourceObject: {fileID: -6316901688301191476, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 511089609254341599}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+--- !u!4 &2660639298781730724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6316901688301191476, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3025251931777216946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6538526682195912486, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4132366523349714426 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5341063209999635310, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5503735129421961311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4550720525929713353, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5521664276847290275 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4618795863980625611, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6593223036059319314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2898502517198072454, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8014953326156356780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2052669806539491900, guid: dcf6594959d9ffa4b890bedd416253ad, type: 3}
+  m_PrefabInstance: {fileID: 916946769146390888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1115823426747947546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5521664276847290275}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_Engine_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+--- !u!4 &645855345719361009 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e3528f639dc8442883abe775e8a0b8, type: 3}
+  m_PrefabInstance: {fileID: 1115823426747947546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3116789764924589705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6593223036059319314}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_Wheel_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+--- !u!4 &3227874469655224674 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+  m_PrefabInstance: {fileID: 3116789764924589705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4762707642463568200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5503735129421961311}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_SteeringWheel_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+--- !u!4 &5013122251640874659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
+  m_PrefabInstance: {fileID: 4762707642463568200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4767622862961457785
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3025251931777216946}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_Wheel_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+--- !u!4 &5017932228712488338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+  m_PrefabInstance: {fileID: 4767622862961457785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5477824963214164134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8014953326156356780}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_Wheel_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+--- !u!4 &5444743877319239501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+  m_PrefabInstance: {fileID: 5477824963214164134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6390251603184970605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4132366523349714426}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+      propertyPath: m_Name
+      value: MarsSpeeder_Wheel_LOD0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+--- !u!4 &6855607301400202374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80e967b9a22798a4ea3b6e11b8ef6b9b, type: 3}
+  m_PrefabInstance: {fileID: 6390251603184970605}
+  m_PrefabAsset: {fileID: 0}
