@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9029749025504356159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+      propertyPath: m_Name
+      value: P_CoeTruck_Engine_LOD0 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+--- !u!1 &2736855307630969625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2834066522226203610, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+  m_PrefabInstance: {fileID: 9029749025504356159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6325398405720032509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736855307630969625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: 128
+  _renderer: {fileID: 6591272242933657844}
+--- !u!23 &6591272242933657844 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2749724423785158603, guid: e6a5ea675b3ebeb4ba0cc8ad9b536d1f, type: 3}
+  m_PrefabInstance: {fileID: 9029749025504356159}
+  m_PrefabAsset: {fileID: 0}

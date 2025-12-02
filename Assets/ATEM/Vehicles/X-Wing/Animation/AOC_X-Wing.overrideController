@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_X-Wing
+  m_Controller: {fileID: 9100000, guid: 850968a0d99c85349821c435256b5fd8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: fd8bce440dc6e7f49a8ac742afed2069, type: 2}
+    m_OverrideClip: {fileID: -4158698137070546253, guid: 9ecf6db95c219064399ffcd3c83f872b, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 8aaf028eb92c6b243ab2537ce206c346, type: 2}
+    m_OverrideClip: {fileID: 68311253987511422, guid: d6158709c9af08743aa1feb4d007efe4, type: 3}

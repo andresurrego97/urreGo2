@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_Glowrider
+  m_Controller: {fileID: 9100000, guid: 850968a0d99c85349821c435256b5fd8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9118f8a8b735648499feca70554ae6ef, type: 2}
+    m_OverrideClip: {fileID: -1513566479933614594, guid: 81a79d5060d74c54892749ec8ccef9d8, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 5379e68b0a3b9c5469591f8d15d1a787, type: 2}
+    m_OverrideClip: {fileID: 7222581769893712899, guid: b9b6ef6fc3ec5294ebc5c665029401b1, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 91c8124d0f3598c4f8986bfa42e45e8e, type: 2}
+    m_OverrideClip: {fileID: 6776313029617936853, guid: 7b00227c1039c144b8f206d1627d015f, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7df4ac67990459e4f836b055042317a6, type: 2}
+    m_OverrideClip: {fileID: -8941322914062048583, guid: 1ebb3df62b6b5964db6ad798d441117f, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 316133500c6f6da48b22faff1b02c071, type: 2}
+    m_OverrideClip: {fileID: -4190762438980463741, guid: 2967cb1231dd44546aee1647d84a288c, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 63a313505e131db438888dc536ec481d, type: 2}
+    m_OverrideClip: {fileID: -597786071833000289, guid: 44604735f0c24534fbdace7883042201, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 410dfcfbdbedc4847b115647273e8ddd, type: 2}
+    m_OverrideClip: {fileID: -8451771410352570859, guid: 9c61ad3eed974fd4e9ca45c77e3d15b9, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: e9c5332181fe64448a6a93bf293f629f, type: 2}
+    m_OverrideClip: {fileID: 7514095198574364545, guid: 39a920ea5f29c1c429630b9b4658fddd, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: fd8bce440dc6e7f49a8ac742afed2069, type: 2}
+    m_OverrideClip: {fileID: -5806964577550011095, guid: 9c81f131207d2af40bb88daef47d29fd, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 8aaf028eb92c6b243ab2537ce206c346, type: 2}
+    m_OverrideClip: {fileID: -5806964577550011095, guid: 9c81f131207d2af40bb88daef47d29fd, type: 3}

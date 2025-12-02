@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AM_Baja Truck
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: BajaTruck_LOD0
+    m_Weight: 1
+  - m_Path: BajaTruck_LOD0/Root
+    m_Weight: 1
+  - m_Path: BajaTruck_LOD0/Root/Def_Door.L
+    m_Weight: 1
+  - m_Path: BajaTruck_LOD0/Root/Def_Door.R
+    m_Weight: 1
+  - m_Path: BajaTruck_LOD0/Root/Def_Hood
+    m_Weight: 1
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L/Def_Steering.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L/Def_Steering.L/Trans_Wheels_Offset_Front.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L/Def_Steering.L/Trans_Wheels_Offset_Front.L/TGT_Brakes_Front.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L/Def_Steering.L/Trans_Wheels_Offset_Front.L/TGT_Brakes_Front.L/POS_BrakeFL
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L/Def_Steering.L/Trans_Wheels_Offset_Front.L/TGT_Brakes_Front.L/TGT_Wheel_Front.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.L/Trans_Axle_Offset_Front.L/Def_Steering.L/Trans_Wheels_Offset_Front.L/TGT_Brakes_Front.L/TGT_Wheel_Front.L/POS_WheelFL
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R/Def_Steering.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R/Def_Steering.R/Trans_Wheels_Offset_Front.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R/Def_Steering.R/Trans_Wheels_Offset_Front.R/TGT_Brakes_Front.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R/Def_Steering.R/Trans_Wheels_Offset_Front.R/TGT_Brakes_Front.R/POS_BrakeFR
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R/Def_Steering.R/Trans_Wheels_Offset_Front.R/TGT_Brakes_Front.R/TGT_Wheel_Front.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Front.R/Trans_Axle_Offset_Front.R/Def_Steering.R/Trans_Wheels_Offset_Front.R/TGT_Brakes_Front.R/TGT_Wheel_Front.R/POS_WheelFR
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L/Trans_Axle_Offset_Back.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L/Trans_Axle_Offset_Back.L/Trans_Wheels_Offset_Back.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L/Trans_Axle_Offset_Back.L/Trans_Wheels_Offset_Back.L/TGT_Brakes_Back.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L/Trans_Axle_Offset_Back.L/Trans_Wheels_Offset_Back.L/TGT_Brakes_Back.L/POS_BrakeRL
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L/Trans_Axle_Offset_Back.L/Trans_Wheels_Offset_Back.L/TGT_Brakes_Back.L/TGT_Wheel_Back.L
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.L/Trans_Axle_Offset_Back.L/Trans_Wheels_Offset_Back.L/TGT_Brakes_Back.L/TGT_Wheel_Back.L/POS_WheelRL
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R/Trans_Axle_Offset_Back.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R/Trans_Axle_Offset_Back.R/Trans_Wheels_Offset_Back.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R/Trans_Axle_Offset_Back.R/Trans_Wheels_Offset_Back.R/TGT_Brakes_Back.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R/Trans_Axle_Offset_Back.R/Trans_Wheels_Offset_Back.R/TGT_Brakes_Back.R/POS_BrakeRR
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R/Trans_Axle_Offset_Back.R/Trans_Wheels_Offset_Back.R/TGT_Brakes_Back.R/TGT_Wheel_Back.R
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/Grp_Wheel_Rear.R/Trans_Axle_Offset_Back.R/Trans_Wheels_Offset_Back.R/TGT_Brakes_Back.R/TGT_Wheel_Back.R/POS_WheelRR
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_Bodykit
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_Bodykit/POS_Bodykit
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_Engine
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_Engine/POS_Engine
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_SteeringWheel
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_SteeringWheel/POS_SteeringWheel
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_WheelSpare
+    m_Weight: 0
+  - m_Path: BajaTruck_LOD0/Root/TGT_WheelSpare/POS_WheelSpare
+    m_Weight: 0
+  - m_Path: SK_BajaTruck_Body_LOD0
+    m_Weight: 0
+  - m_Path: SK_BajaTruck_Chassis_LOD0
+    m_Weight: 0
+  - m_Path: SK_BajaTruck_Dash_LOD0
+    m_Weight: 0
+  - m_Path: SK_BajaTruck_Emissive_LOD0
+    m_Weight: 0
+  - m_Path: SK_BajaTruck_Interior_LOD0
+    m_Weight: 0

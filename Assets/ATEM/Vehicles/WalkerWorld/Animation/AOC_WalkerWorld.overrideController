@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_WalkerWorld
+  m_Controller: {fileID: 9100000, guid: 850968a0d99c85349821c435256b5fd8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 63a313505e131db438888dc536ec481d, type: 2}
+    m_OverrideClip: {fileID: 8968206700893356530, guid: 8f83634d6009b35488ff038c35804a50, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 410dfcfbdbedc4847b115647273e8ddd, type: 2}
+    m_OverrideClip: {fileID: -6080223938202756333, guid: f688a202eaa8fbc4e979a99ae381db87, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: e9c5332181fe64448a6a93bf293f629f, type: 2}
+    m_OverrideClip: {fileID: -4820109867775141679, guid: 7af7f5bd9315ebf449483769a3a4490b, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: fd8bce440dc6e7f49a8ac742afed2069, type: 2}
+    m_OverrideClip: {fileID: 7199977872500982374, guid: 22cfff347b156e543b44c93a873d042a, type: 3}
