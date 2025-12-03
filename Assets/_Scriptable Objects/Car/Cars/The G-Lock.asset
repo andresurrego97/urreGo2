@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: The G-Lock
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: c3fc1b55b44f0f14b8c1132567389465, type: 2}
+  bodyKit: {fileID: 0}
+  engine: {fileID: 11400000, guid: 1dd68f9f9c0ef334286c768f0ff82faf, type: 2}
+  steeringWheel: {fileID: 11400000, guid: b299ace1362466746a375c8cc12301a7, type: 2}
+  wheel: {fileID: 11400000, guid: 2d64b70804d5639419e0863e2c85bc79, type: 2}

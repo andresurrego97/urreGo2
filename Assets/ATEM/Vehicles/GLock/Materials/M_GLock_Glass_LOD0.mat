@@ -38,9 +38,9 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _HASALPHA
   - _HASDECALS
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _BUILTIN_SURFACE_TYPE_TRANSPARENT
   - _EMISSION
@@ -49,9 +49,10 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -152,8 +153,8 @@ Material:
     m_Floats:
     - _AO_ColorInfluence: 0.5
     - _AO_Strength: 1
-    - _AlphaClip: 1
-    - _AlphaToMask: 1
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
     - _BUILTIN_AlphaClip: 0
     - _BUILTIN_Blend: 0
     - _BUILTIN_CullMode: 2
@@ -169,7 +170,7 @@ Material:
     - _BaseMetallic: 0
     - _BaseRoughness: 0.5
     - _Blend: 0
-    - _BlendModePreserveSpecular: 1
+    - _BlendModePreserveSpecular: 0
     - _BumpScale: 1
     - _CastShadows: 1
     - _Cull: 2
@@ -179,8 +180,8 @@ Material:
     - _DarkenBase: 1
     - _DarkenC: 1
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
+    - _DstBlend: 10
+    - _DstBlendAlpha: 10
     - _EmissiveBoost: 1
     - _Emissive_Saturation: 1
     - _FLIPNORMAL: 0
@@ -223,15 +224,15 @@ Material:
     - _Saturation: 2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _SrcBlendAlpha: 1
-    - _Surface: 0
+    - _Surface: 1
     - _TintOnly: 1
     - _UVSec: 0
     - _Value: 0.15
     - _WorkflowMode: 1
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _ZWriteControl: 0
     - __dirty: 0
     m_Colors:

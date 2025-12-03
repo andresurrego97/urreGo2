@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Atomize
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: 8f62786b798e21649bb3b0c5830b1571, type: 2}
+  bodyKit: {fileID: 11400000, guid: 10ee03f235cee6449b85c604f0dead6c, type: 2}
+  engine: {fileID: 11400000, guid: 4af9b54c614d571429441bc5f04b3a75, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 1f4c95e8401a62f4ea4dd492c431c869, type: 2}
+  wheel: {fileID: 11400000, guid: 8f608ef46f4e55e4cb171212758673a9, type: 2}

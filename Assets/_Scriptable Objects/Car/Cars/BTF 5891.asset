@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: BTF 5891
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: a3dc95bfb424129489797ac9c26e623b, type: 2}
+  bodyKit: {fileID: 11400000, guid: 657db05c48b650643a559499123ac4fa, type: 2}
+  engine: {fileID: 11400000, guid: 2f489916d359c5c459e9c48d76f455e5, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 153de5789c66da649932babcfb687fac, type: 2}
+  wheel: {fileID: 11400000, guid: 2b23c6dfe181947428102b027f80952a, type: 2}

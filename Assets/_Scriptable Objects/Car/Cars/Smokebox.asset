@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Smokebox
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: efc893168ec52dd4095f86f5436d42c6, type: 2}
+  bodyKit: {fileID: 11400000, guid: 49e951556058e6c4297be620a4753f8f, type: 2}
+  engine: {fileID: 11400000, guid: ee66813ec6bf0e54fb791d1f4e5c24e3, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 09883cbc346366b47928fe02ffe541b7, type: 2}
+  wheel: {fileID: 11400000, guid: 6443ca12075d14043ae88d646436ba9c, type: 2}

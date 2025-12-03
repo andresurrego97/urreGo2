@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Athena
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: 2c18215cc24797a479e42be3ef54f93e, type: 2}
+  bodyKit: {fileID: 11400000, guid: 2617fe2660f1fef4987f1745ddeb061b, type: 2}
+  engine: {fileID: 11400000, guid: aab21508fa1442c48ab6d55dcdfabd50, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 3597d815852cb0a4aa0ea059a161d936, type: 2}
+  wheel: {fileID: 11400000, guid: 01376cad0a11b054f9aa97e94c7008b1, type: 2}

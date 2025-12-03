@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Rossababy 3045
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: a5ddce0401b82394bba3777ea5716333, type: 2}
+  bodyKit: {fileID: 11400000, guid: 976e774412bab1b4d8672b9ffe20c64e, type: 2}
+  engine: {fileID: 11400000, guid: c326e7bed4224494ebedff38b9500739, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 739eb5ab720f7e04986b3ebfdc2f11d0, type: 2}
+  wheel: {fileID: 11400000, guid: 9fd4bd76f8ba3c645abb50f563cc482f, type: 2}

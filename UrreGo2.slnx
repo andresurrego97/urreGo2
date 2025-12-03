@@ -1,7 +1,7 @@
 ﻿<Solution>
   <Project Path="UniTask.csproj" />
-  <Project Path="UniTask.Linq.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="UniTask.Linq.csproj" />
   <Project Path="UniTask.TextMeshPro.csproj" />
   <Project Path="ShaderGraphVariables.csproj" />
   <Project Path="UniTask.Editor.csproj" />

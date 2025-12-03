@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Midnight Drift
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: d0a22d68629398b4cbf0a0bca616ecee, type: 2}
+  bodyKit: {fileID: 11400000, guid: 68072c4c5fcae2c408f916a0d5fa28e1, type: 2}
+  engine: {fileID: 11400000, guid: bf4b9bb0004e61a45a0f482da8986f0f, type: 2}
+  steeringWheel: {fileID: 11400000, guid: deb18637debeb7949b430372dbd7c3aa, type: 2}
+  wheel: {fileID: 11400000, guid: 8fccc6ada40c72a41bbdc0aebdbb94a7, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Luna Racer
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: ba8515c6af813c94f89b8da71e15f776, type: 2}
+  bodyKit: {fileID: 11400000, guid: fcf888de2f486d94eb315be63eea8491, type: 2}
+  engine: {fileID: 11400000, guid: de2641ac69311124286fbcfed2bb3ac6, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 1359ed5c3d585e841a20d56b14aee8ea, type: 2}
+  wheel: {fileID: 11400000, guid: a171de685b2e8b349b1611cb846fc311, type: 2}

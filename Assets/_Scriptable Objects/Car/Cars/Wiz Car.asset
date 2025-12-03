@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Wiz Car
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: ccac3a3b366dd0943bebc75814c4de44, type: 2}
+  bodyKit: {fileID: 11400000, guid: cb2aa328667d48a498bfdbaa7e2b4c3f, type: 2}
+  engine: {fileID: 11400000, guid: 65ecd6a81e3f98c4290fd2dc515fa676, type: 2}
+  steeringWheel: {fileID: 11400000, guid: be416193748b8c844b388c64dc9a90ab, type: 2}
+  wheel: {fileID: 11400000, guid: 2a1281097d2bce74cbc1ca468dbf279f, type: 2}

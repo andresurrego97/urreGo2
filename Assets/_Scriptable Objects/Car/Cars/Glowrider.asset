@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Glowrider
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: 73d5aec2d86bf1c46adce4845da80a02, type: 2}
+  bodyKit: {fileID: 11400000, guid: eb4adf2feadfc3449a85eb42ff389ba1, type: 2}
+  engine: {fileID: 11400000, guid: 47ca246cd722f074aa99299214c47f2d, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 535cd81b9774992449e181060df0ca9a, type: 2}
+  wheel: {fileID: 11400000, guid: b49fe1991fa8ba341a86a8a13384404f, type: 2}

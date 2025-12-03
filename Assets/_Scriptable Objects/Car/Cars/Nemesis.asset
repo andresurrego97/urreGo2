@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Nemesis
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: 04df7d6def4a5ed4b8d8691052614710, type: 2}
+  bodyKit: {fileID: 11400000, guid: 3248f60a123eb1948906bb26f5cb4336, type: 2}
+  engine: {fileID: 11400000, guid: ec1f409fd21db5b4481d42169ff699ae, type: 2}
+  steeringWheel: {fileID: 11400000, guid: cfce93ce428437c4599e84bbd85f4c11, type: 2}
+  wheel: {fileID: 11400000, guid: 425eb5c32752eb243a24d65d085cf625, type: 2}

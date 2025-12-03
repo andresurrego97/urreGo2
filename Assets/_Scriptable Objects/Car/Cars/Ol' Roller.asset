@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Ol' Roller
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: 89a36aa6023c3414595909b4919f8389, type: 2}
+  bodyKit: {fileID: 11400000, guid: 500b920ab86e6f64d81b861efe4d87d9, type: 2}
+  engine: {fileID: 11400000, guid: 592b6c764564707469b58b2ec4d4e88e, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 32a2ce11eea4ddf4bb60858c832f886a, type: 2}
+  wheel: {fileID: 11400000, guid: 1418621788a0aa84a9baecf2b9a5e8f2, type: 2}

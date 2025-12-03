@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
+  m_Name: Archer Primal
+  m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  body: {fileID: 11400000, guid: fd35b8f99b715b145a10f796864bccc9, type: 2}
+  bodyKit: {fileID: 11400000, guid: 011012c801f62ee4face997cc14f9b60, type: 2}
+  engine: {fileID: 11400000, guid: 3c88b20084431d34cb699b6baff8a615, type: 2}
+  steeringWheel: {fileID: 11400000, guid: 4932bf5c70f850c45b2fc4fe6bff23f9, type: 2}
+  wheel: {fileID: 11400000, guid: 630891532a05fb644a0467e3e644d68e, type: 2}

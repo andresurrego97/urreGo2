@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d1e1fe72b98ca48b419be99f4334ac, type: 3}
+  m_Name: Colors
+  m_EditorClassIdentifier: Assembly-CSharp::CarColors
+  colors:
+  - name: Chrome
+    color: {r: 0.9411765, g: 0.9019608, b: 0.9019608, a: 1}
+  - name: Copper
+    color: {r: 0.64705884, g: 0.3529412, b: 0.23529412, a: 1}
+  - name: Gold
+    color: {r: 0.9411765, g: 0.5686275, b: 0.15686275, a: 1}
+  - name: GunMetal
+    color: {r: 0.39215687, g: 0.4509804, b: 0.4509804, a: 1}
+  - name: Platinum
+    color: {r: 0.88235295, g: 0.8627451, b: 0.8235294, a: 1}
+  - name: Dark Silver
+    color: {r: 0.60784316, g: 0.64705884, b: 0.6666667, a: 1}
+  - name: Titanium
+    color: {r: 0.4117647, g: 0.49019608, b: 0.54901963, a: 1}
+  - name: Ultramarine
+    color: {r: 0.11764706, g: 0.3529412, b: 0.78431374, a: 1}
+  - name: Powdercoat
+    color: {r: 0.9411765, g: 0.92156863, b: 0.88235295, a: 1}
+  - name: Burnished
+    color: {r: 0.78431374, g: 0.43137255, b: 0.27450982, a: 1}
+  - name: Carbon Black
+    color: {r: 0.0627451, g: 0.0627451, b: 0.078431375, a: 1}
+  - name: Neon Pulse
+    color: {r: 0.15686275, g: 0.27450982, b: 0.29411766, a: 1}
+  - name: Refined Meteorite
+    color: {r: 0.19607843, g: 0.4509804, b: 0.4117647, a: 1}
+  - name: Verde Mantis
+    color: {r: 0.39215687, g: 0.7647059, b: 0.23529412, a: 1}
+  - name: AB_1
+    color: {r: 0.78431374, g: 0.7058824, b: 0.43137255, a: 1}
+  - name: AB_2
+    color: {r: 0.33333334, g: 0.23529412, b: 0.13725491, a: 1}
+  - name: Holo
+    color: {r: 0.60784316, g: 0.54901963, b: 0.627451, a: 1}
+  - name: 24K
+    color: {r: 0.9411765, g: 0.64705884, b: 0.27450982, a: 1}
+  - name: Club Cup
+    color: {r: 0.8039216, g: 0.039215688, b: 0.27450982, a: 1}
+  - name: ASM Crystal 1
+    color: {r: 0.1764706, g: 0.15686275, b: 0.1764706, a: 1}
+  - name: ASM Crystal 2
+    color: {r: 0.37254903, g: 0.09803922, b: 0.29803923, a: 1}
+  - name: Black
+    color: {r: 0.039215688, g: 0.039215688, b: 0.039215688, a: 1}
+  - name: Neon Blue
+    color: {r: 0, g: 0.8235294, b: 1, a: 1}
+  - name: Neon Pink
+    color: {r: 1, g: 0, b: 0.4509804, a: 1}
+  - name: Neon Yellow
+    color: {r: 1, g: 1, b: 0.039215688, a: 1}
+  - name: Neon Green
+    color: {r: 0.47058824, g: 1, b: 0, a: 1}
+  - name: Neon Orange
+    color: {r: 1, g: 0.60784316, b: 0, a: 1}
+  - name: SkyBlue
+    color: {r: 0.39215687, g: 0.7254902, b: 0.8039216, a: 1}
+  - name: OceanBlue
+    color: {r: 0.078431375, g: 0.27450982, b: 0.3137255, a: 1}
+  - name: Turquoise
+    color: {r: 0.23529412, g: 0.78431374, b: 0.627451, a: 1}
+  - name: Military Grey
+    color: {r: 0.627451, g: 0.60784316, b: 0.5686275, a: 1}
+  - name: Navy Grey
+    color: {r: 0.43137255, g: 0.50980395, b: 0.54901963, a: 1}
+  - name: Slate Grey
+    color: {r: 0.5686275, g: 0.5882353, b: 0.60784316, a: 1}
+  - name: Racing Green
+    color: {r: 0.13725491, g: 0.29411766, b: 0.09803922, a: 1}
+  - name: Olive
+    color: {r: 0.29411766, g: 0.3529412, b: 0.23529412, a: 1}
+  - name: Bright Orange
+    color: {r: 1, g: 0.47058824, b: 0, a: 1}
+  - name: Burnt Orange
+    color: {r: 0.92156863, g: 0.3137255, b: 0, a: 1}
+  - name: Dark Purple
+    color: {r: 0.25490198, g: 0.05882353, b: 0.25490198, a: 1}
+  - name: Light Purple
+    color: {r: 0.50980395, g: 0.37254903, b: 0.7254902, a: 1}
+  - name: Purple
+    color: {r: 0.4509804, g: 0.15686275, b: 0.74509805, a: 1}
+  - name: Hotrod Red
+    color: {r: 0.9019608, g: 0.09803922, b: 0.078431375, a: 1}
+  - name: Blood Red
+    color: {r: 0.6666667, g: 0.11764706, b: 0.05882353, a: 1}
+  - name: Dark Red
+    color: {r: 0.37254903, g: 0.039215688, b: 0.05882353, a: 1}
+  - name: Smoke
+    color: {r: 0.078431375, g: 0.078431375, b: 0.11764706, a: 1}
+  - name: Brilliant White
+    color: {r: 1, g: 0.98039216, b: 0.9607843, a: 1}
+  - name: Ice White
+    color: {r: 1, g: 0.9411765, b: 0.98039216, a: 1}
