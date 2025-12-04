@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: aab21508fa1442c48ab6d55dcdfabd50, type: 2}
   steeringWheel: {fileID: 11400000, guid: 3597d815852cb0a4aa0ea059a161d936, type: 2}
   wheel: {fileID: 11400000, guid: 01376cad0a11b054f9aa97e94c7008b1, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: d61f6b10122cd11498e39ff89e4fc7c1, type: 3}
+    bodyKit: {fileID: 2800000, guid: 30e69199f7bf7b44b83c823ca848b191, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: Paint Blast
+    body: {fileID: 2800000, guid: 46a42727a7a03054dab0cef55fd193a2, type: 3}
+    bodyKit: {fileID: 2800000, guid: e569a4045d7e8c04b807518315b7724a, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Competitor
+    body: {fileID: 2800000, guid: 92ba273d009749f41bdd67aed5590284, type: 3}
+    bodyKit: {fileID: 2800000, guid: 2ac5ea3d3fcf98844a84448f2999e03a, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Astute
+    body: {fileID: 2800000, guid: cc7511c946442254c9a6cbce726bfd3d, type: 3}
+    bodyKit: {fileID: 2800000, guid: ca3d10c2f4e1f1e41918e4fa2305241e, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: b56419796fdf60f48bf588581bb5c524, type: 3}
+    bodyKit: {fileID: 2800000, guid: 01b6510a9266cc24f95e4bab3ee0e988, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

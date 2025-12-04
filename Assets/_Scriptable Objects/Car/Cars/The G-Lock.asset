@@ -17,3 +17,59 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 1dd68f9f9c0ef334286c768f0ff82faf, type: 2}
   steeringWheel: {fileID: 11400000, guid: b299ace1362466746a375c8cc12301a7, type: 2}
   wheel: {fileID: 11400000, guid: 2d64b70804d5639419e0863e2c85bc79, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: 06a8938e5858b564f902a22d7c7a79ab, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 0}
+    engine: {fileID: 2800000, guid: 9d3634d747564064c9bead38e4fdc76d, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: High Voltage
+    body: {fileID: 2800000, guid: 1dc904f1128d6444cabfffb853d3737e, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: 6df7a76f6ae179e4faeddaf178d782c8, type: 3}
+    engine: {fileID: 2800000, guid: 9e4a7535f9956f6488f806f474c65ac5, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Flame Out
+    body: {fileID: 2800000, guid: 9defe614d7b15a84d996d760a0f961da, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: 351c60137045f4347b1c5689c5233793, type: 3}
+    engine: {fileID: 2800000, guid: 45eebacb8d799e94d8358220ae3bb730, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: The Sportsman
+    body: {fileID: 2800000, guid: 1113c6a5bc5986c45bc6b480081acb6c, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 0}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 57078506d88349e48b89ab3dcfc46668, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 0}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Union Jack
+    body: {fileID: 2800000, guid: a4b909f019b6db7408f5555e05573a6e, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: ac89cdfa6e80e6f468f995995260e4a0, type: 3}
+    engine: {fileID: 2800000, guid: e9115768cb40d0e41ba84494eb14a542, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

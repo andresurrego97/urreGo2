@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: c326e7bed4224494ebedff38b9500739, type: 2}
   steeringWheel: {fileID: 11400000, guid: 739eb5ab720f7e04986b3ebfdc2f11d0, type: 2}
   wheel: {fileID: 11400000, guid: 9fd4bd76f8ba3c645abb50f563cc482f, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: 7a46a3f876eefac4db3fa4d79bd4c651, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: Private Eye
+    body: {fileID: 2800000, guid: 3cb962abd4ab5914594330a6c7931272, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: e51097615128b5e408446e4fc687bd26, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Sunset Racer
+    body: {fileID: 2800000, guid: be86696c908a018479c646eb0bc0261d, type: 3}
+    bodyKit: {fileID: 2800000, guid: 1bf3f97a4fc2a6041910d531740f339b, type: 3}
+    chasis: {fileID: 2800000, guid: 9b93603e342366c46b7e9ea7f488d1b3, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Miami
+    body: {fileID: 2800000, guid: c3ea1d4008d518a4a8ddc1d84a841407, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: cd178774f83263c48882726afa970f83, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 3e7623668ff0ff34993da2ddd5db1da0, type: 3}
+    bodyKit: {fileID: 2800000, guid: bad4ee0c0b4850140bd956ab42407cd8, type: 3}
+    chasis: {fileID: 2800000, guid: f4cc48e5f0f640f42aab27de1ab0399f, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

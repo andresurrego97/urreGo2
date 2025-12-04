@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: ec1f409fd21db5b4481d42169ff699ae, type: 2}
   steeringWheel: {fileID: 11400000, guid: cfce93ce428437c4599e84bbd85f4c11, type: 2}
   wheel: {fileID: 11400000, guid: 425eb5c32752eb243a24d65d085cf625, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: 8ad805da76cb2c24a828baaf6331b15c, type: 3}
+    bodyKit: {fileID: 2800000, guid: dd2f1b68e27c4f34dad7176d57c5b6f3, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: WW Oozinator
+    body: {fileID: 2800000, guid: 856bc84838972f64a94775da81e92802, type: 3}
+    bodyKit: {fileID: 2800000, guid: defe0758f46a63f4ab99e55bb0142b65, type: 3}
+    chasis: {fileID: 2800000, guid: df80688524871c440977eec5720d5392, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Thrill Ride
+    body: {fileID: 2800000, guid: 2d4d0131d88a8e84da66b700e6f4c455, type: 3}
+    bodyKit: {fileID: 2800000, guid: 87b0d80a73ef54542b1180091c1293d2, type: 3}
+    chasis: {fileID: 2800000, guid: bdd22464b0440e8408f892b8a91022a1, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Warrior
+    body: {fileID: 2800000, guid: 69ae6651355a764499913b96cdfc883a, type: 3}
+    bodyKit: {fileID: 2800000, guid: 01c4435bac749464e89964489af0afe9, type: 3}
+    chasis: {fileID: 2800000, guid: 5c5113dc82313c8429a6a6d9c3326ba9, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 6e1405c27094ea0488436aabb640a6e8, type: 3}
+    bodyKit: {fileID: 2800000, guid: 99d449124b2ea1a4392337160db62e6d, type: 3}
+    chasis: {fileID: 2800000, guid: 12f241c75e8ae81489ed0fd86322f76d, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

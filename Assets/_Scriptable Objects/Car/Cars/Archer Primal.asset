@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 3c88b20084431d34cb699b6baff8a615, type: 2}
   steeringWheel: {fileID: 11400000, guid: 4932bf5c70f850c45b2fc4fe6bff23f9, type: 2}
   wheel: {fileID: 11400000, guid: 630891532a05fb644a0467e3e644d68e, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: 97fdfc2d8cddf9e44bf7e91d89900bf6, type: 3}
+    bodyKit: {fileID: 2800000, guid: 1c880451c16abf741988a8a281286c7f, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: Shards
+    body: {fileID: 2800000, guid: 1d2e97349288e954bb6214712f3d5839, type: 3}
+    bodyKit: {fileID: 2800000, guid: f7e2c1db172099049b4de69bd03ffcdd, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Classic Racer
+    body: {fileID: 2800000, guid: 97e7456a8681b30469a39f5ba6ab7aa4, type: 3}
+    bodyKit: {fileID: 2800000, guid: c22096a53b1b38743887abfec8538cd6, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Speedster
+    body: {fileID: 2800000, guid: d046f527bb72f3d4e8ae8579c83784bb, type: 3}
+    bodyKit: {fileID: 2800000, guid: 3707758be73a21c488612df9e0666a51, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 88e1579120e45e64694013ac09c29b12, type: 3}
+    bodyKit: {fileID: 2800000, guid: 4dcb1c865a1898446a5809fa0f461ca3, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

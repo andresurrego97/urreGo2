@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: a8faf5b4ee115e34bb8ba4677d8f5a4e, type: 2}
   steeringWheel: {fileID: 11400000, guid: 3994c1805d736d14caddafd52dc8e676, type: 2}
   wheel: {fileID: 11400000, guid: 772074f4e469b6a4fa896b406e035cca, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: 2820e56c582e7784ba433519f8913082, type: 3}
+    bodyKit: {fileID: 2800000, guid: e777b5be95c26364b82ee26c94e33bc3, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: Velocity
+    body: {fileID: 2800000, guid: 4bf75c5f755028a47a5bab43e44f6a18, type: 3}
+    bodyKit: {fileID: 2800000, guid: 0c9ccfb052dce514d9118f7dd54d24d9, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Wedge
+    body: {fileID: 2800000, guid: b9167334a4c97b14392d45a1ddcbf6cb, type: 3}
+    bodyKit: {fileID: 2800000, guid: afb4a6e314ace684fb6e77955147e0c1, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Hunter
+    body: {fileID: 2800000, guid: a192822919696ff49adba009cf07311b, type: 3}
+    bodyKit: {fileID: 2800000, guid: 6e52a829e3096924c91495048bc5e77c, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 1f09673838e9561499115e8be9f17877, type: 3}
+    bodyKit: {fileID: 2800000, guid: 396214b9285dd594ea5c45620cd7322e, type: 3}
+    chasis: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

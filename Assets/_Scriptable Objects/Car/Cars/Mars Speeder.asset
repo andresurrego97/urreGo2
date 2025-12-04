@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 1d7402627e3a2bd47a1e9af8a4d3bfa9, type: 2}
   steeringWheel: {fileID: 11400000, guid: 5c71681e1a2b28649ba735d742938fbc, type: 2}
   wheel: {fileID: 11400000, guid: ec48f4ed5014a874da1564219138ece5, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: dbc3d51ec4c7ed2419782a07ce1f0f6a, type: 3}
+    bodyKit: {fileID: 2800000, guid: 7a1d7893d8c8bd04d950b58cb140eb0e, type: 3}
+    chasis: {fileID: 2800000, guid: c13ca1ae192b2fe4bb811b0911ca3613, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: Warp
+    body: {fileID: 2800000, guid: aed4b5db1678b804f8bfe85dac1c70f6, type: 3}
+    bodyKit: {fileID: 2800000, guid: 31a6c2bc8628ff245a695eba19cfebaf, type: 3}
+    chasis: {fileID: 2800000, guid: c13ca1ae192b2fe4bb811b0911ca3613, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Elevate
+    body: {fileID: 2800000, guid: faec558beeee9c146a628b8054d7755a, type: 3}
+    bodyKit: {fileID: 2800000, guid: 69336e0a883aa3046b8110a30836d72d, type: 3}
+    chasis: {fileID: 2800000, guid: b1d5d2d7043163943911f4176c4b56b3, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Airforce
+    body: {fileID: 2800000, guid: 9ea51504f043b8d4baac8dfb1c344485, type: 3}
+    bodyKit: {fileID: 2800000, guid: 8cb2c9dbf56f3524d9484300e34f9057, type: 3}
+    chasis: {fileID: 2800000, guid: 739d32857be57b64c83c0fb9d052360b, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 943610e9f04be4b49a85b13b68ae2695, type: 3}
+    bodyKit: {fileID: 2800000, guid: af1f827d3a7c3464b8ff0eb687891b4b, type: 3}
+    chasis: {fileID: 2800000, guid: be692b4fcbe239346b1f20f370cdeac7, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

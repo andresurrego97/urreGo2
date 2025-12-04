@@ -17,3 +17,59 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: cd4c793eb6b8ddc4095668ed181de8c5, type: 2}
   steeringWheel: {fileID: 11400000, guid: cff49ddf16687004f8072970ae91c554, type: 2}
   wheel: {fileID: 11400000, guid: e3dac5b68d58ec447a4168e60585bf88, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: f2e3f8596540a6d4fb8c79436f97a6f2, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: 68c6aebc3a27b4143b9e56564d8d1a50, type: 3}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: TEST
+    body: {fileID: 2800000, guid: 8a8dc06cbe77cea4f9f9b4d6f4ad9b22, type: 3}
+    bodyKit: {fileID: 0}
+    chasis: {fileID: 2800000, guid: 8b8dfd262f146c34b95cdc17bc9815fa, type: 3}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Puzzle
+    body: {fileID: 2800000, guid: 0bfcd67ce5142c141ab6df4b90e99b6c, type: 3}
+    bodyKit: {fileID: 2800000, guid: dd53ffd4675b54e46af39f05962f77a6, type: 3}
+    chasis: {fileID: 2800000, guid: 08ed3d6918fd4924e98733f76b4f9990, type: 3}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Stealth
+    body: {fileID: 2800000, guid: a2dd23a6a88fe6a42934a27be3ac81ca, type: 3}
+    bodyKit: {fileID: 2800000, guid: a5fd463c61673274eb6da32cdfd672a3, type: 3}
+    chasis: {fileID: 0}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Transporter
+    body: {fileID: 2800000, guid: e678c4dce915e724da1e7c437eb10e9a, type: 3}
+    bodyKit: {fileID: 2800000, guid: 7ce41fa8ad308f5449b3e4e6fbd385ce, type: 3}
+    chasis: {fileID: 0}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: 802b2adcc1a48134d9ee2401552d9dcd, type: 3}
+    bodyKit: {fileID: 2800000, guid: e22fd7c15118b994b96188ad35ee147c, type: 3}
+    chasis: {fileID: 0}
+    engine: {fileID: 0}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}

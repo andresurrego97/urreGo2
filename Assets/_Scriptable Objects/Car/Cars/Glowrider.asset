@@ -17,3 +17,45 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 47ca246cd722f074aa99299214c47f2d, type: 2}
   steeringWheel: {fileID: 11400000, guid: 535cd81b9774992449e181060df0ca9a, type: 2}
   wheel: {fileID: 11400000, guid: b49fe1991fa8ba341a86a8a13384404f, type: 2}
+  decalDefault:
+    name: 
+    body: {fileID: 2800000, guid: 64acffc2bba99a5498a197fd6a6012ab, type: 3}
+    bodyKit: {fileID: 2800000, guid: cc6fdf04eb5453e448600fb69a03ae7b, type: 3}
+    chasis: {fileID: 2800000, guid: 48aabae0e75ae804286e776373ab1095, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  decals:
+  - name: Pin Stripe
+    body: {fileID: 2800000, guid: d74f08e9d5bc54f40804d8147ceebc21, type: 3}
+    bodyKit: {fileID: 2800000, guid: 593a39af927030248941d12d057cd2a6, type: 3}
+    chasis: {fileID: 2800000, guid: 5efaa6d73292b854d9d4730a93bf5694, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Cruiseliner
+    body: {fileID: 2800000, guid: 07112231a5f8c1e4caf0e165b1da66a8, type: 3}
+    bodyKit: {fileID: 2800000, guid: 5d3278ef904fa7347bc5e155bf5a4f69, type: 3}
+    chasis: {fileID: 2800000, guid: 28297a830973701448f7a70bd236f482, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Rupture
+    body: {fileID: 2800000, guid: 53cb21b888e730c4785a4e60abd0e05c, type: 3}
+    bodyKit: {fileID: 2800000, guid: 7556ea4c899c21c468c592eb0ca54d5f, type: 3}
+    chasis: {fileID: 2800000, guid: 779312d6797e25a4c96548f03f51ddc5, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
+  - name: Matrix
+    body: {fileID: 2800000, guid: a129255ac36137341bc8976f87601a28, type: 3}
+    bodyKit: {fileID: 2800000, guid: 6522616fc9dfec143ba4574277d5e226, type: 3}
+    chasis: {fileID: 2800000, guid: 4b457e6ae3694b24b8b1db42c008af63, type: 3}
+    dash: {fileID: 0}
+    emissive: {fileID: 0}
+    glass: {fileID: 0}
+    interior: {fileID: 0}
