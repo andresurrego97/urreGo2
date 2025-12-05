@@ -4,6 +4,7 @@ using UnityEngine;
 public class CarPartsList : ScriptableObject
 {
     public CarDescription[] cars;
+    public CarPart[] steeringWheels;
     public CarPart[] wheels;
     public CarComboPart[] comboWheels;
 }

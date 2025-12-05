@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe1713ea82a5ab4ebf9ef0f7d23e097, type: 3}
   m_Name: GLock
   m_EditorClassIdentifier: Assembly-CSharp::CarPart
-  part: {fileID: 919132149155446097, guid: 4331d8af2d1ef7b43bd6f3915a97dd77, type: 3}
+  part: {fileID: 4535903982343544673, guid: 26ecd173f47ecdd498da33ac8b92b3c0, type: 3}

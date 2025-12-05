@@ -1,315 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2185023330109268693
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8118787586992586080}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Wheel_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
---- !u!4 &1862372969253684542 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-  m_PrefabInstance: {fileID: 2185023330109268693}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4150482242682732681
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1891800210855072044}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_SteeringWheel_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
---- !u!4 &4473130929507182434 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a89913653bd5eb54aa1e907da83e4cf2, type: 3}
-  m_PrefabInstance: {fileID: 4150482242682732681}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4761831487422252560
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5859034900045499510}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Engine_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
---- !u!4 &5016963802427531771 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07c0d2f544b142d4ba7d8525918a7a0b, type: 3}
-  m_PrefabInstance: {fileID: 4761831487422252560}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5409622313942567272
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8864572408405901878}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Wheel_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
---- !u!4 &5519284111647157891 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-  m_PrefabInstance: {fileID: 5409622313942567272}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5453500805721187960
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2117646093018364657}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Brake_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
---- !u!4 &5486514007326851475 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-  m_PrefabInstance: {fileID: 5453500805721187960}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5849866084183741533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -388,45 +78,17 @@ PrefabInstance:
       objectReference: {fileID: 22100000, guid: a9a123c533d29b34a8a30983fb1b1413, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -7423822309115520739, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6226197954412691888}
-    - targetCorrespondingSourceObject: {fileID: -2619436792357097798, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6991493500040423981}
-    - targetCorrespondingSourceObject: {fileID: -4026874630126344209, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8486651043384331602}
-    - targetCorrespondingSourceObject: {fileID: -6807933564476479171, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1862372969253684542}
-    - targetCorrespondingSourceObject: {fileID: -3725174173514142036, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5486514007326851475}
-    - targetCorrespondingSourceObject: {fileID: -6184656603482696085, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5519284111647157891}
-    - targetCorrespondingSourceObject: {fileID: -2452846532424507728, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9104040920235710857}
-    - targetCorrespondingSourceObject: {fileID: 5090133409482007922, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7749317870918867068}
-    - targetCorrespondingSourceObject: {fileID: 4810745411294875213, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6201925391802637281}
-    - targetCorrespondingSourceObject: {fileID: -9195894110144915413, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5016963802427531771}
-    - targetCorrespondingSourceObject: {fileID: -3787561983891077775, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4473130929507182434}
-    - targetCorrespondingSourceObject: {fileID: 1509374930514290143, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7438105176118576105}
-    m_AddedComponents: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2502989661455953370}
   m_SourcePrefab: {fileID: 100100000, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+--- !u!95 &19267413621090764 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &759703333846383335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2619436792357097798, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
@@ -462,6 +124,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3725174173514142036, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
   m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &3953359894385836848 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1732828309336336531, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4027286452929504093 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7407627009888335616, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5034046596469207426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1509374930514290143, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
@@ -472,9 +144,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7423822309115520739, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
   m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &5668672416665285059 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2271447754754696606, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5859034900045499510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -9195894110144915413, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6768786975709047052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2502989661455953370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6768786975709047052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89fd598f7abc34b44a5b8fdf41d9729f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarRootReferences
+  root_bodyKit: {fileID: 1436038340921186832}
+  root_engine: {fileID: 5859034900045499510}
+  root_steeringWheel: {fileID: 1891800210855072044}
+  root_brakes:
+  - {fileID: 5320913645069929792}
+  - {fileID: 1815879661442954162}
+  - {fileID: 2117646093018364657}
+  - {fileID: 926434370228144877}
+  root_frontWheels:
+  - {fileID: 759703333846383335}
+  - {fileID: 8118787586992586080}
+  root_backWheels:
+  - {fileID: 8864572408405901878}
+  - {fileID: 1697064774030160175}
+  - {fileID: 5034046596469207426}
+  renderer_body: {fileID: 8967692423506931221}
+  renderer_chassis: {fileID: 6888686975341653741}
+  renderer_dash: {fileID: 3953359894385836848}
+  renderer_emissive: {fileID: 4027286452929504093}
+  renderer_glass: {fileID: 0}
+  renderer_interior: {fileID: 5668672416665285059}
+  anim: {fileID: 19267413621090764}
+--- !u!137 &6888686975341653741 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1060437715276397232, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
   m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8118787586992586080 stripped
@@ -487,441 +208,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -6184656603482696085, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
   m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5880314859557649418
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1436038340921186832}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Bodykit_LOD0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
---- !u!4 &6201925391802637281 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e956b4343ae704aa966ecb36223dfe, type: 3}
-  m_PrefabInstance: {fileID: 5880314859557649418}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5903479622279177819
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5320913645069929792}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Brake_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
---- !u!4 &6226197954412691888 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-  m_PrefabInstance: {fileID: 5903479622279177819}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6968137635637732354
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5034046596469207426}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Wheel_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
---- !u!4 &7438105176118576105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-  m_PrefabInstance: {fileID: 6968137635637732354}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7389420961900121542
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 759703333846383335}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Wheel_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
---- !u!4 &6991493500040423981 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-  m_PrefabInstance: {fileID: 7389420961900121542}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7782680811690131351
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1697064774030160175}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Wheel_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
---- !u!4 &7749317870918867068 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9df3a4c90f114b40b1bbc60a54f50af, type: 3}
-  m_PrefabInstance: {fileID: 7782680811690131351}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8235990072065944249
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1815879661442954162}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Brake_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
---- !u!4 &8486651043384331602 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-  m_PrefabInstance: {fileID: 8235990072065944249}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8778278211667132002
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 926434370228144877}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-      propertyPath: m_Name
-      value: BajaTruck_Brake_LOD0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
---- !u!4 &9104040920235710857 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c058223cc52966c40849ef3e4cc82730, type: 3}
-  m_PrefabInstance: {fileID: 8778278211667132002}
+--- !u!137 &8967692423506931221 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3268842067789822536, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}

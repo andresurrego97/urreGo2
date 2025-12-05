@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2087c5ef4ac67ca43810ae8857ce4eaf, type: 3}
   m_Name: Parts List
   m_EditorClassIdentifier: Assembly-CSharp::CarWheels
+  cars:
+  - {fileID: 11400000, guid: 40a6fa4009aac3544b8b2336ea6089a4, type: 2}
+  - {fileID: 11400000, guid: 94021276bced46949965802135e4515c, type: 2}
+  - {fileID: 11400000, guid: 2f3805e292715804bb80d20caa65db50, type: 2}
+  - {fileID: 11400000, guid: 718aad7c2fce8784bb9f2ecd9c43dce3, type: 2}
+  - {fileID: 11400000, guid: e9a9140c1e9f5a24aba6436fb1acd6a0, type: 2}
+  - {fileID: 11400000, guid: 48cc644109593c942921be0974d4bb17, type: 2}
+  - {fileID: 11400000, guid: 52727459fcd810e40b8b42914b30a7a5, type: 2}
+  - {fileID: 11400000, guid: fbc71942fafa61d41abcd15a3b8752e7, type: 2}
+  - {fileID: 11400000, guid: faabd41dc00340b498eb0beba3b78ce7, type: 2}
+  - {fileID: 11400000, guid: e0d648aeb36b528468076a5f15087f9e, type: 2}
+  - {fileID: 11400000, guid: 0a7e71c5283fa0b4f8a5330c2b8049c3, type: 2}
+  - {fileID: 11400000, guid: 284115a046917d4479ca893f76b87a8d, type: 2}
+  - {fileID: 11400000, guid: 59e6a34e6f8a7614dabf861c1db67842, type: 2}
+  - {fileID: 11400000, guid: 012a11fd4979d444a8bd4c9c7fbdda2b, type: 2}
+  - {fileID: 11400000, guid: a20f4b38336152a48bc07c887a80eaa7, type: 2}
+  - {fileID: 11400000, guid: 5d36c2519322e4446911a545e8ada896, type: 2}
+  - {fileID: 11400000, guid: 3cc0f4b99463eb74aba02e77648358a9, type: 2}
+  steeringWheels:
+  - {fileID: 11400000, guid: 4932bf5c70f850c45b2fc4fe6bff23f9, type: 2}
+  - {fileID: 11400000, guid: 3597d815852cb0a4aa0ea059a161d936, type: 2}
+  - {fileID: 11400000, guid: 6455bab672ac1d24b849fb4311ac1615, type: 2}
+  - {fileID: 11400000, guid: 153de5789c66da649932babcfb687fac, type: 2}
+  - {fileID: 11400000, guid: 535cd81b9774992449e181060df0ca9a, type: 2}
+  - {fileID: 11400000, guid: 5c71681e1a2b28649ba735d742938fbc, type: 2}
+  - {fileID: 11400000, guid: 32a2ce11eea4ddf4bb60858c832f886a, type: 2}
+  - {fileID: 11400000, guid: 1f4c95e8401a62f4ea4dd492c431c869, type: 2}
+  - {fileID: 11400000, guid: deb18637debeb7949b430372dbd7c3aa, type: 2}
+  - {fileID: 11400000, guid: 09883cbc346366b47928fe02ffe541b7, type: 2}
+  - {fileID: 11400000, guid: 739eb5ab720f7e04986b3ebfdc2f11d0, type: 2}
+  - {fileID: 11400000, guid: 3994c1805d736d14caddafd52dc8e676, type: 2}
+  - {fileID: 11400000, guid: cfce93ce428437c4599e84bbd85f4c11, type: 2}
+  - {fileID: 11400000, guid: be416193748b8c844b388c64dc9a90ab, type: 2}
+  - {fileID: 11400000, guid: b299ace1362466746a375c8cc12301a7, type: 2}
+  - {fileID: 11400000, guid: cff49ddf16687004f8072970ae91c554, type: 2}
+  - {fileID: 11400000, guid: 1359ed5c3d585e841a20d56b14aee8ea, type: 2}
   wheels:
   - {fileID: 11400000, guid: bc2545ec26d4fb34d83ff1f1fac92768, type: 2}
   - {fileID: 11400000, guid: 4ba86effdfb6bac4799825a6d60c0fa3, type: 2}

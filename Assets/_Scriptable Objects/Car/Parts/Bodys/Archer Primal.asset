@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe1713ea82a5ab4ebf9ef0f7d23e097, type: 3}
   m_Name: Archer Primal
   m_EditorClassIdentifier: Assembly-CSharp::CarPart
-  part: {fileID: 919132149155446097, guid: 1e1bfd86a856be841aee99753921a0e2, type: 3}
+  part: {fileID: 8521116349041756370, guid: 7072b6aa4cde3ed49b01af7aca5a6737, type: 3}
