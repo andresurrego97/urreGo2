@@ -1,6 +1,5 @@
 using Cysharp.Threading.Tasks;
 using System;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -23,6 +22,14 @@ public class CarPartsChanger : MonoBehaviour
 
     private CarRootReferences currentRootReferences;
 
+    private void Awake()
+    {
+        title_body.text = "None";
+        title_bodyKit.text = "None";
+        title_steeringWheel.text = "None";
+        title_wheels.text = "None";
+    }
+
     #region Body
     public void Body_Back()
     {
@@ -40,7 +47,7 @@ public class CarPartsChanger : MonoBehaviour
     {
         currentBody++;
 
-        if (currentBody > list.cars.Length -1)
+        if (currentBody > list.cars.Length - 1)
         {
             currentBody = 0;
         }
@@ -63,17 +70,15 @@ public class CarPartsChanger : MonoBehaviour
         currentBodyKit = false;
         BodyKit_Next();
 
-        currentSteeringWheel = -1;
-        currentSteeringWheel = Array.IndexOf(list.steeringWheels, list.cars[currentBody].steeringWheel) - 1;
-        SteeringWheel_Next();
-
         currentWheels = -1;
         currentWheels = Array.IndexOf(list.comboWheels, list.cars[currentBody].wheel) - 1;
         Wheels_Next();
-        // put default wheels for the car
-        // default body kit
-        // default stearing wheel
-        // default combo wheels
+
+        Engine_Next().Forget();
+
+        currentSteeringWheel = -1;
+        currentSteeringWheel = Array.IndexOf(list.steeringWheels, list.cars[currentBody].steeringWheel) - 1;
+        SteeringWheel_Next();
     }
     #endregion
 
@@ -110,45 +115,6 @@ public class CarPartsChanger : MonoBehaviour
     }
     #endregion
 
-    #region Steering Wheel
-    public void SteeringWheel_Back()
-    {
-        currentSteeringWheel--;
-
-        if (currentSteeringWheel < 0)
-        {
-            currentSteeringWheel = list.cars.Length - 1;
-        }
-
-        Instantiate_SteeringWheel().Forget();
-    }
-
-    public void SteeringWheel_Next()
-    {
-        currentSteeringWheel++;
-
-        if (currentSteeringWheel > list.cars.Length - 1)
-        {
-            currentSteeringWheel = 0;
-        }
-
-        Instantiate_SteeringWheel().Forget();
-    }
-
-    private async UniTaskVoid Instantiate_SteeringWheel()
-    {
-        title_steeringWheel.text = list.steeringWheels[currentSteeringWheel].name;
-
-        if (currentRootReferences.root_steeringWheel.childCount == 1)
-        {
-            Destroy(currentRootReferences.root_steeringWheel.GetChild(0).gameObject);
-        }
-
-        currentRootReferences.renderer_steeringWheel =
-            (await Extensions.AsyncInstantiate(list.steeringWheels[currentSteeringWheel].part, currentRootReferences.root_steeringWheel)).GetComponentInChildren<Renderer>();
-    }
-    #endregion
-
     #region Wheels
     public void Wheels_Back()
     {
@@ -164,6 +130,12 @@ public class CarPartsChanger : MonoBehaviour
 
     public void Wheels_Next()
     {
+        if (currentWheels == -2)
+        {
+            title_wheels.text = "Default";
+            return;
+        }
+
         currentWheels++;
 
         if (currentWheels > list.cars.Length - 1)
@@ -171,44 +143,13 @@ public class CarPartsChanger : MonoBehaviour
             currentWheels = 0;
         }
 
+        title_wheels.text = list.comboWheels[currentWheels].name;
+
         Instantiate_Wheels().Forget();
     }
 
     private async UniTaskVoid Instantiate_Wheels()
     {
-        if (currentWheels != -1)
-        {
-            title_wheels.text = list.comboWheels[currentWheels].name;
-        }
-        else
-        {
-            title_wheels.text = "Default";
-            return;
-        }
-
-        // brakes
-        for (int i = 0; i < currentRootReferences.root_brakes.Length; i++)
-        {
-            if (currentRootReferences.root_brakes[i].childCount == 1)
-            {
-                Destroy(currentRootReferences.root_brakes[i].GetChild(0).gameObject);
-            }
-        }
-
-        if (list.comboWheels[currentWheels].thirdPart != null)
-        {
-            currentRootReferences.renderer_brakes = new MeshRenderer[currentRootReferences.root_brakes.Length];
-            for (int i = 0; i < currentRootReferences.root_brakes.Length; i++)
-            {
-                currentRootReferences.renderer_brakes[i] =
-                    (await Extensions.AsyncInstantiate(list.comboWheels[currentWheels].thirdPart.part, currentRootReferences.root_brakes[i])).GetComponentInChildren<Renderer>();
-            }
-        }
-        else
-        {
-            currentRootReferences.renderer_brakes = null;
-        }
-
         // front
         for (int i = 0; i < currentRootReferences.root_frontWheels.Length; i++)
         {
@@ -263,6 +204,76 @@ public class CarPartsChanger : MonoBehaviour
         {
             currentRootReferences.renderer_frontWheels = null;
         }
+
+        // brakes
+        for (int i = 0; i < currentRootReferences.root_brakes.Length; i++)
+        {
+            if (currentRootReferences.root_brakes[i].childCount == 1)
+            {
+                Destroy(currentRootReferences.root_brakes[i].GetChild(0).gameObject);
+            }
+        }
+
+        if (list.comboWheels[currentWheels].thirdPart != null)
+        {
+            currentRootReferences.renderer_brakes = new MeshRenderer[currentRootReferences.root_brakes.Length];
+            for (int i = 0; i < currentRootReferences.root_brakes.Length; i++)
+            {
+                currentRootReferences.renderer_brakes[i] =
+                    (await Extensions.AsyncInstantiate(list.comboWheels[currentWheels].thirdPart.part, currentRootReferences.root_brakes[i])).GetComponentInChildren<Renderer>();
+            }
+        }
+        else
+        {
+            currentRootReferences.renderer_brakes = null;
+        }
+    }
+    #endregion
+
+    #region Engine
+    private async UniTaskVoid Engine_Next()
+    {
+        currentRootReferences.renderer_engine =
+        (await Extensions.AsyncInstantiate(list.cars[currentBody].engine.part, currentRootReferences.root_engine)).GetComponentInChildren<Renderer>();
+    }
+    #endregion
+
+    #region Steering Wheel
+    public void SteeringWheel_Back()
+    {
+        currentSteeringWheel--;
+
+        if (currentSteeringWheel < 0)
+        {
+            currentSteeringWheel = list.cars.Length - 1;
+        }
+
+        Instantiate_SteeringWheel().Forget();
+    }
+
+    public void SteeringWheel_Next()
+    {
+        currentSteeringWheel++;
+
+        if (currentSteeringWheel > list.cars.Length - 1)
+        {
+            currentSteeringWheel = 0;
+        }
+
+        title_steeringWheel.text = list.steeringWheels[currentSteeringWheel].name;
+
+        Instantiate_SteeringWheel().Forget();
+    }
+
+    private async UniTaskVoid Instantiate_SteeringWheel()
+    {
+        if (currentRootReferences.root_steeringWheel.childCount == 1)
+        {
+            Destroy(currentRootReferences.root_steeringWheel.GetChild(0).gameObject);
+        }
+
+        currentRootReferences.renderer_steeringWheel =
+            (await Extensions.AsyncInstantiate(list.steeringWheels[currentSteeringWheel].part, currentRootReferences.root_steeringWheel)).GetComponentInChildren<Renderer>();
     }
     #endregion
 }
