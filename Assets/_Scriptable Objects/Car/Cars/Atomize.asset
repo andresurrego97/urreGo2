@@ -17,20 +17,21 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 4af9b54c614d571429441bc5f04b3a75, type: 2}
   steeringWheel: {fileID: 11400000, guid: 1f4c95e8401a62f4ea4dd492c431c869, type: 2}
   wheel: {fileID: 11400000, guid: 8f608ef46f4e55e4cb171212758673a9, type: 2}
-  decalDefault:
-    name: 
+  decals:
+  - name: Default
     body: {fileID: 2800000, guid: 8a8b1f9ebefea3249a512afc236a6920, type: 3}
     bodyKit: {fileID: 2800000, guid: 4a89be7872a119641a0938672c008a55, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  decals:
   - name: 90's Wave
     body: {fileID: 2800000, guid: 9bcaa03ab75ef7c4e822de7dec59af51, type: 3}
     bodyKit: {fileID: 2800000, guid: 8608173f35c5668468fd5d6fb66edbd9, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 33feef9992b7c054d80a5ba600bbe3d3, type: 3}
     bodyKit: {fileID: 2800000, guid: 38b11d70b8cd0c94c9a17e32b9ffb6e3, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -47,6 +49,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 27aee0c1e296eea4a8afc164f0c2356e, type: 3}
     bodyKit: {fileID: 2800000, guid: b0e498cc831f93347a932d666e4a9d74, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -55,6 +58,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 8212ba1fab09e1549988b15a8e8a06c4, type: 3}
     bodyKit: {fileID: 2800000, guid: fb7cc8c712932aa45883bd66e4777431, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}

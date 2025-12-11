@@ -17,20 +17,21 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: bf4b9bb0004e61a45a0f482da8986f0f, type: 2}
   steeringWheel: {fileID: 11400000, guid: deb18637debeb7949b430372dbd7c3aa, type: 2}
   wheel: {fileID: 11400000, guid: 8fccc6ada40c72a41bbdc0aebdbb94a7, type: 2}
-  decalDefault:
-    name: 
+  decals:
+  - name: Default
     body: {fileID: 2800000, guid: 0b1128b8211406347b124158bc22c73f, type: 3}
     bodyKit: {fileID: 2800000, guid: 449c350956ac7de4cb1faea1dc99710a, type: 3}
     chasis: {fileID: 2800000, guid: 7126d4bac13e327429a17d8c1f1e65da, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  decals:
   - name: Katana
     body: {fileID: 2800000, guid: 9b321217bbfb57c45978f21bf1e1919a, type: 3}
     bodyKit: {fileID: 2800000, guid: e3a7a9cf45f7e1d41a776b283fb99ef9, type: 3}
     chasis: {fileID: 2800000, guid: 8870443a5a7a20241b33e89e7ddbdedb, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: b9e2b7a4d62eff44a90c26d4fd87b309, type: 3}
     bodyKit: {fileID: 2800000, guid: a4c3d7964e8066f48bb6ca770042146e, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -47,6 +49,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: e392eff78e8d80549acab2b5285e6443, type: 3}
     bodyKit: {fileID: 2800000, guid: 81264429a74bafc4587da5cf2d14b09e, type: 3}
     chasis: {fileID: 2800000, guid: 51f77310df14865448a4d6c3178767d6, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -55,6 +58,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 44f59ab7eb125c5408c9b2a3b3830b56, type: 3}
     bodyKit: {fileID: 2800000, guid: 4edd50091b02bd945b838b258aca0320, type: 3}
     chasis: {fileID: 2800000, guid: ebf5551ed7b154d4c90badff2a8058dd, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}

@@ -17,20 +17,21 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: ee66813ec6bf0e54fb791d1f4e5c24e3, type: 2}
   steeringWheel: {fileID: 11400000, guid: 09883cbc346366b47928fe02ffe541b7, type: 2}
   wheel: {fileID: 11400000, guid: 6443ca12075d14043ae88d646436ba9c, type: 2}
-  decalDefault:
-    name: 
+  decals:
+  - name: Default
     body: {fileID: 2800000, guid: 2686c1527abaef04bab031bab184f2b7, type: 3}
     bodyKit: {fileID: 2800000, guid: 72a682e22b87dd2439c7d8c56c5aed28, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  decals:
   - name: Dark Horse
     body: {fileID: 2800000, guid: a4e6aafe7cc3978459a5e178c5455f9b, type: 3}
     bodyKit: {fileID: 2800000, guid: f356fa6099423ae4b8a874ef8e396555, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 3258a7109cfc4ae41a02194ee935f657, type: 3}
     bodyKit: {fileID: 2800000, guid: 07282f8c199500a48bad0fca576dc99a, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -47,6 +49,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: e8568d70999c67d4bbec25670519d05d, type: 3}
     bodyKit: {fileID: 2800000, guid: 1bd8ecfdea97ffc44921d69b44af2c82, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -55,6 +58,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 543ece1e6d12b6b42aee09a4b4397431, type: 3}
     bodyKit: {fileID: 2800000, guid: b53e2de580b7df34f9e49335f46ea8db, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}

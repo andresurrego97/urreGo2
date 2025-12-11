@@ -17,17 +17,16 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 1dd68f9f9c0ef334286c768f0ff82faf, type: 2}
   steeringWheel: {fileID: 11400000, guid: b299ace1362466746a375c8cc12301a7, type: 2}
   wheel: {fileID: 11400000, guid: 2d64b70804d5639419e0863e2c85bc79, type: 2}
-  decalDefault:
-    name: 
+  decals:
+  - name: Default
     body: {fileID: 2800000, guid: 06a8938e5858b564f902a22d7c7a79ab, type: 3}
     bodyKit: {fileID: 0}
-    chasis: {fileID: 0}
+    chasis: {fileID: 2800000, guid: 6df7a76f6ae179e4faeddaf178d782c8, type: 3}
     engine: {fileID: 2800000, guid: 9d3634d747564064c9bead38e4fdc76d, type: 3}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  decals:
   - name: High Voltage
     body: {fileID: 2800000, guid: 1dc904f1128d6444cabfffb853d3737e, type: 3}
     bodyKit: {fileID: 0}

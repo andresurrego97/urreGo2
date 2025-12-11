@@ -26,6 +26,6 @@ public class CarDescription : ScriptableObject
     public CarComboPart wheel;
 
     [Header("Decals")]
-    public CarDecal decalDefault;
+    //public CarDecal decalDefault;
     public CarDecal[] decals;
 }

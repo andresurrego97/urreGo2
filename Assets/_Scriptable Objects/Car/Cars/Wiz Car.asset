@@ -17,20 +17,21 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 65ecd6a81e3f98c4290fd2dc515fa676, type: 2}
   steeringWheel: {fileID: 11400000, guid: be416193748b8c844b388c64dc9a90ab, type: 2}
   wheel: {fileID: 11400000, guid: 2a1281097d2bce74cbc1ca468dbf279f, type: 2}
-  decalDefault:
-    name: 
+  decals:
+  - name: Default
     body: {fileID: 2800000, guid: 990274cbcd1f0054db2011862f399801, type: 3}
-    bodyKit: {fileID: 0}
+    bodyKit: {fileID: 2800000, guid: 9c21ea81f6e794748a31c66336e048f3, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  decals:
   - name: Wiz
     body: {fileID: 2800000, guid: cfa7c15364127c04589c5f9c9ebf08ab, type: 3}
     bodyKit: {fileID: 2800000, guid: 9c21ea81f6e794748a31c66336e048f3, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 73b4f4e812da59a4a85a1c84c075f200, type: 3}
     bodyKit: {fileID: 2800000, guid: 5b0ec1d33859e1749a7f9326d4726eef, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -47,6 +49,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 84a08967ed214a34aa8222adfdd419e4, type: 3}
     bodyKit: {fileID: 2800000, guid: 0d448ae52dbc6ab40aa6be9716888128, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -55,6 +58,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: ed0d96a2308e37c4b8018757416d874d, type: 3}
     bodyKit: {fileID: 2800000, guid: 8e7993c3bcfa1654499678269ec64f7d, type: 3}
     chasis: {fileID: 0}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}

@@ -9,17 +9,25 @@ public enum CarPartType
     Wheel
 }
 
-public readonly struct CarPart_BaseColor
+public enum CarColorType
+{
+    Base,
+    TintA,
+    TintB,
+    TintC,
+    Emission,
+    All
+}
+
+public readonly struct CarColorsProperties
 {
     public static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
     public static readonly int BaseMetallic = Shader.PropertyToID("_BaseMetallic");
     public static readonly int BaseRoughness = Shader.PropertyToID("_BaseRoughness");
     public static readonly int BaseFlakes = Shader.PropertyToID("_BaseFlakes");
     public static readonly int DarkenBase = Shader.PropertyToID("_DarkenBase");
-}
+    public static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
 
-public readonly struct CarPart_TintColor
-{
     public static readonly int TintA = Shader.PropertyToID("_TintA");
     public static readonly int TintB = Shader.PropertyToID("_TintB");
     public static readonly int TintC = Shader.PropertyToID("_TintC");

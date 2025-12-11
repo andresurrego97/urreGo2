@@ -17,20 +17,21 @@ MonoBehaviour:
   engine: {fileID: 11400000, guid: 592b6c764564707469b58b2ec4d4e88e, type: 2}
   steeringWheel: {fileID: 11400000, guid: 32a2ce11eea4ddf4bb60858c832f886a, type: 2}
   wheel: {fileID: 11400000, guid: 1418621788a0aa84a9baecf2b9a5e8f2, type: 2}
-  decalDefault:
-    name: 
+  decals:
+  - name: Default
     body: {fileID: 2800000, guid: e5d94d677a8d23d4c8da1e7ba3851006, type: 3}
     bodyKit: {fileID: 2800000, guid: c95bbbca359c6914aaae6314f993ae24, type: 3}
     chasis: {fileID: 2800000, guid: bf65e573802e9dc488ee4103c1cb2467, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  decals:
   - name: Inferno
     body: {fileID: 2800000, guid: 91c1715e1f818e84ab84269287a345f9, type: 3}
     bodyKit: {fileID: 2800000, guid: 35d6b6e670b08f6459a7046ac05a6ea0, type: 3}
     chasis: {fileID: 2800000, guid: b2fb1802c1ba1684eb095f149de1a926, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: a0519ebd3bbba8f4fbdfc2f4c633ccab, type: 3}
     bodyKit: {fileID: 2800000, guid: a9dd919b3051e95449a93f3c459443e1, type: 3}
     chasis: {fileID: 2800000, guid: a4d8e1ad523ce1e44a926b4655f07999, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -47,6 +49,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 7c58c0a7c70b82d40a26e35b613881c9, type: 3}
     bodyKit: {fileID: 2800000, guid: 5e42c02a97d60bc48ae9c37f9873c933, type: 3}
     chasis: {fileID: 2800000, guid: 9f8c479b672e4834b9499fa41bd32a22, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
@@ -55,6 +58,7 @@ MonoBehaviour:
     body: {fileID: 2800000, guid: 5ecd866abb94bd24a9f22dc665d43540, type: 3}
     bodyKit: {fileID: 2800000, guid: a5d737fab148c2b4490f9e6c1d7ef0fd, type: 3}
     chasis: {fileID: 2800000, guid: 0d59c79de3d89c143889d3888f21e9b3, type: 3}
+    engine: {fileID: 0}
     dash: {fileID: 0}
     emissive: {fileID: 0}
     glass: {fileID: 0}
