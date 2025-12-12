@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum CarPartType
@@ -19,32 +20,43 @@ public enum CarColorType
     All
 }
 
-public readonly struct CarColorsProperties
+public enum CarColorSlider
+{
+    Metallic,
+    Smoothness,
+    FlakeInfluence,
+    DarkenInfluence
+}
+
+public struct CarColorsProperties
 {
     public static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
-    public static readonly int BaseMetallic = Shader.PropertyToID("_BaseMetallic");
-    public static readonly int BaseRoughness = Shader.PropertyToID("_BaseRoughness");
-    public static readonly int BaseFlakes = Shader.PropertyToID("_BaseFlakes");
-    public static readonly int DarkenBase = Shader.PropertyToID("_DarkenBase");
-    public static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
-
     public static readonly int TintA = Shader.PropertyToID("_TintA");
     public static readonly int TintB = Shader.PropertyToID("_TintB");
     public static readonly int TintC = Shader.PropertyToID("_TintC");
+    public static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
 
-    public static readonly int MetallicA = Shader.PropertyToID("_MetallicA");
-    public static readonly int MetallicB = Shader.PropertyToID("_MetallicB");
-    public static readonly int MetallicC = Shader.PropertyToID("_MetallicC");
+    public static Dictionary<(CarColorType, CarColorSlider), int> propertyMap =
+    new()
+    {
+        { (CarColorType.Base, CarColorSlider.Metallic), Shader.PropertyToID("_BaseMetallic")},
+        { (CarColorType.Base, CarColorSlider.Smoothness), Shader.PropertyToID("_BaseRoughness")},
+        { (CarColorType.Base, CarColorSlider.FlakeInfluence), Shader.PropertyToID("_BaseFlakes")},
+        { (CarColorType.Base, CarColorSlider.DarkenInfluence), Shader.PropertyToID("_DarkenBase")},
 
-    public static readonly int RoughnessA = Shader.PropertyToID("_RoughnessA");
-    public static readonly int RoughnessB = Shader.PropertyToID("_RoughnessB");
-    public static readonly int RoughnessC = Shader.PropertyToID("_RoughnessC");
+        { (CarColorType.TintA, CarColorSlider.Metallic), Shader.PropertyToID("_MetallicA")},
+        { (CarColorType.TintA, CarColorSlider.Smoothness), Shader.PropertyToID("_RoughnessA")},
+        { (CarColorType.TintA, CarColorSlider.FlakeInfluence), Shader.PropertyToID("_FlakesA")},
+        { (CarColorType.TintA, CarColorSlider.DarkenInfluence), Shader.PropertyToID("_DarkenA")},
 
-    public static readonly int FlakesA = Shader.PropertyToID("_FlakesA");
-    public static readonly int FlakesB = Shader.PropertyToID("_FlakesB");
-    public static readonly int FlakesC = Shader.PropertyToID("_FlakesC");
+        { (CarColorType.TintB, CarColorSlider.Metallic), Shader.PropertyToID("_MetallicB")},
+        { (CarColorType.TintB, CarColorSlider.Smoothness), Shader.PropertyToID("_RoughnessB")},
+        { (CarColorType.TintB, CarColorSlider.FlakeInfluence), Shader.PropertyToID("_FlakesB")},
+        { (CarColorType.TintB, CarColorSlider.DarkenInfluence), Shader.PropertyToID("_DarkenB")},
 
-    public static readonly int DarkenA = Shader.PropertyToID("_DarkenA");
-    public static readonly int DarkenB = Shader.PropertyToID("_DarkenB");
-    public static readonly int DarkenC = Shader.PropertyToID("_DarkenC");
-}
+        { (CarColorType.TintC, CarColorSlider.Metallic), Shader.PropertyToID("_MetallicC")},
+        { (CarColorType.TintC, CarColorSlider.Smoothness), Shader.PropertyToID("_RoughnessC")},
+        { (CarColorType.TintC, CarColorSlider.FlakeInfluence), Shader.PropertyToID("_FlakesC")},
+        { (CarColorType.TintC, CarColorSlider.DarkenInfluence), Shader.PropertyToID("_DarkenC")}
+    };
+};
