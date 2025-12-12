@@ -27,7 +27,7 @@ MonoBehaviour:
     emissive: {fileID: 0}
     glass: {fileID: 0}
     interior: {fileID: 0}
-  - name: TEST
+  - name: ATEM
     body: {fileID: 2800000, guid: 8a8dc06cbe77cea4f9f9b4d6f4ad9b22, type: 3}
     bodyKit: {fileID: 0}
     chasis: {fileID: 2800000, guid: 8b8dfd262f146c34b95cdc17bc9815fa, type: 3}

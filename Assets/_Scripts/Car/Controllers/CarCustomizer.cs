@@ -3,10 +3,11 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class CarCustomizer : MonoBehaviour
 {
-    #region Fields
+    #region Serialize Fields
     [Header("References")]
     [SerializeField] private CarPartsList partsList;
     [SerializeField] private CarColors colorsList;
@@ -24,7 +25,7 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title_baseColor;
     [SerializeField] private Slider slider_baseColor_metallic;
     [SerializeField] private Slider slider_baseColor_smoothness;
-    [SerializeField] private Slider slider_baseColor_flakeInflience;
+    [SerializeField] private Slider slider_baseColor_flakeInfluence;
     [SerializeField] private Slider slider_baseColor_darkenInfluence;
     [SerializeField] private TextMeshProUGUI number_baseColor_metallic;
     [SerializeField] private TextMeshProUGUI number_baseColor_smoothness;
@@ -35,7 +36,7 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title_tintA;
     [SerializeField] private Slider slider_tintA_metallic;
     [SerializeField] private Slider slider_tintA_smoothness;
-    [SerializeField] private Slider slider_tintA_flakeInflience;
+    [SerializeField] private Slider slider_tintA_flakeInfluence;
     [SerializeField] private Slider slider_tintA_darkenInfluence;
     [SerializeField] private TextMeshProUGUI number_tintA_metallic;
     [SerializeField] private TextMeshProUGUI number_tintA_smoothness;
@@ -46,7 +47,7 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title_tintB;
     [SerializeField] private Slider slider_tintB_metallic;
     [SerializeField] private Slider slider_tintB_smoothness;
-    [SerializeField] private Slider slider_tintB_flakeInflience;
+    [SerializeField] private Slider slider_tintB_flakeInfluence;
     [SerializeField] private Slider slider_tintB_darkenInfluence;
     [SerializeField] private TextMeshProUGUI number_tintB_metallic;
     [SerializeField] private TextMeshProUGUI number_tintB_smoothness;
@@ -57,7 +58,7 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title_tintC;
     [SerializeField] private Slider slider_tintC_metallic;
     [SerializeField] private Slider slider_tintC_smoothness;
-    [SerializeField] private Slider slider_tintC_flakeInflience;
+    [SerializeField] private Slider slider_tintC_flakeInfluence;
     [SerializeField] private Slider slider_tintC_darkenInfluence;
     [SerializeField] TextMeshProUGUI number_tintC_metallic;
     [SerializeField] TextMeshProUGUI number_tintC_smoothness;
@@ -69,6 +70,7 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title_decal;
     #endregion
 
+    #region pribate Fields
     private int currentPart_body = -1;
     private bool currentPart_bodyKit = false;
     private int currentPart_steeringWheel = -1;
@@ -85,6 +87,7 @@ public class CarCustomizer : MonoBehaviour
     private CarRootReferences currentRootReferences;
 
     private const string _f0 = "F0";
+    #endregion
 
     private void Awake()
     {
@@ -101,7 +104,7 @@ public class CarCustomizer : MonoBehaviour
 
         slider_baseColor_metallic.value = 0;
         slider_baseColor_smoothness.value = 0;
-        slider_baseColor_flakeInflience.value = 0;
+        slider_baseColor_flakeInfluence.value = 0;
         slider_baseColor_darkenInfluence.value = 0;
         number_baseColor_metallic.text = "0";
         number_baseColor_smoothness.text = "0";
@@ -110,7 +113,7 @@ public class CarCustomizer : MonoBehaviour
 
         slider_tintA_metallic.value = 0;
         slider_tintA_smoothness.value = 0;
-        slider_tintA_flakeInflience.value = 0;
+        slider_tintA_flakeInfluence.value = 0;
         slider_tintA_darkenInfluence.value = 0;
         number_tintA_metallic.text = "0";
         number_tintA_smoothness.text = "0";
@@ -119,7 +122,7 @@ public class CarCustomizer : MonoBehaviour
 
         slider_tintB_metallic.value = 0;
         slider_tintB_smoothness.value = 0;
-        slider_tintB_flakeInflience.value = 0;
+        slider_tintB_flakeInfluence.value = 0;
         slider_tintB_darkenInfluence.value = 0;
         number_tintB_metallic.text = "0";
         number_tintB_smoothness.text = "0";
@@ -128,7 +131,7 @@ public class CarCustomizer : MonoBehaviour
 
         slider_tintC_metallic.value = 0;
         slider_tintC_smoothness.value = 0;
-        slider_tintC_flakeInflience.value = 0;
+        slider_tintC_flakeInfluence.value = 0;
         slider_tintC_darkenInfluence.value = 0;
         number_tintC_metallic.text = "0";
         number_tintC_smoothness.text = "0";
@@ -190,9 +193,12 @@ public class CarCustomizer : MonoBehaviour
         if (currentRootReferences.renderer_interior != null)
             currentRootReferences.material_interior = currentRootReferences.renderer_interior.material;
 
-        //currentDecal = -1;
+        currentDecal = -1;
+        Decals_Next();
+
         SetColor_BodyParts(CarColorType.All);
         SetColors_Slider_Body();
+        SetDecals_Body();
 
         currentPart_bodyKit = false;
         Parts_BodyKit_Next();
@@ -243,6 +249,7 @@ public class CarCustomizer : MonoBehaviour
         currentRootReferences.material_bodyKit = currentRootReferences.renderer_bodyKit.material;
         SetColor_BodyKitPart(CarColorType.All);
         SetColors_Sliders_BodyKit();
+        SetDecals_BodyKit();
     }
     #endregion
 
@@ -388,6 +395,7 @@ public class CarCustomizer : MonoBehaviour
         currentRootReferences.material_engine = currentRootReferences.renderer_engine.material;
         SetColor_EnginePart(CarColorType.All);
         SetColors_Slider_Engine();
+        SetDecals_Engine();
     }
     #endregion
 
@@ -463,6 +471,17 @@ public class CarCustomizer : MonoBehaviour
         SetColor_Base();
     }
 
+    public void Colors_Base_Random()
+    {
+        currentColor_base = Random.Range(0, colorsList.colors.Length);
+        slider_baseColor_metallic.value = Random.Range(0f, 1f);
+        slider_baseColor_smoothness.value = Random.Range(0f, 1f);
+        slider_baseColor_flakeInfluence.value = Random.Range(0f, 1f);
+        slider_baseColor_darkenInfluence.value = Random.Range(0f, 1f);
+
+        SetColor_Base();
+    }
+
     private void SetColor_Base()
     {
         title_baseColor.text = colorsList.colors[currentColor_base].name;
@@ -520,6 +539,17 @@ public class CarCustomizer : MonoBehaviour
         {
             currentColor_tintA = 0;
         }
+
+        SetColor_TintA();
+    }
+
+    public void Colors_TintA_Random()
+    {
+        currentColor_tintA = Random.Range(0, colorsList.colors.Length);
+        slider_tintA_metallic.value = Random.Range(0f, 1f);
+        slider_tintA_smoothness.value = Random.Range(0f, 1f);
+        slider_tintA_flakeInfluence.value = Random.Range(0f, 1f);
+        slider_tintA_darkenInfluence.value = Random.Range(0f, 1f);
 
         SetColor_TintA();
     }
@@ -585,6 +615,17 @@ public class CarCustomizer : MonoBehaviour
         SetColor_TintB();
     }
 
+    public void Colors_TintB_Random()
+    {
+        currentColor_tintB = Random.Range(0, colorsList.colors.Length);
+        slider_tintB_metallic.value = Random.Range(0f, 1f);
+        slider_tintB_smoothness.value = Random.Range(0f, 1f);
+        slider_tintB_flakeInfluence.value = Random.Range(0f, 1f);
+        slider_tintB_darkenInfluence.value = Random.Range(0f, 1f);
+
+        SetColor_TintB();
+    }
+
     private void SetColor_TintB()
     {
         title_tintB.text = colorsList.colors[currentColor_tintB].name;
@@ -642,6 +683,17 @@ public class CarCustomizer : MonoBehaviour
         {
             currentColor_tintC = 0;
         }
+
+        SetColor_TintC();
+    }
+
+    public void Colors_TintC_Random()
+    {
+        currentColor_tintC = Random.Range(0, colorsList.colors.Length);
+        slider_tintC_metallic.value = Random.Range(0f, 1f);
+        slider_tintC_smoothness.value = Random.Range(0f, 1f);
+        slider_tintC_flakeInfluence.value = Random.Range(0f, 1f);
+        slider_tintC_darkenInfluence.value = Random.Range(0f, 1f);
 
         SetColor_TintC();
     }
@@ -707,6 +759,13 @@ public class CarCustomizer : MonoBehaviour
         SetColor_Emission();
     }
 
+    public void Colors_Emission_Random()
+    {
+        currentColor_emission = Random.Range(0, colorsList.colors.Length);
+
+        SetColor_Emission();
+    }
+
     private void SetColor_Emission()
     {
         title_emission.text = colorsList.colors[currentColor_emission].name;
@@ -718,6 +777,15 @@ public class CarCustomizer : MonoBehaviour
         SetColor_WheelsPart(CarColorType.Emission);
     }
     #endregion
+
+    public void Colors_All_Random()
+    {
+        Colors_Base_Random();
+        Colors_TintA_Random();
+        Colors_TintB_Random();
+        Colors_TintC_Random();
+        Colors_Emission_Random();
+    }
 
     #region Set Parts Colors
 
@@ -977,22 +1045,22 @@ public class CarCustomizer : MonoBehaviour
     {
         SetColors_Slider_Body(CarColorType.Base, CarColorSlider.Metallic, slider_baseColor_metallic.value);
         SetColors_Slider_Body(CarColorType.Base, CarColorSlider.Smoothness, slider_baseColor_smoothness.value);
-        SetColors_Slider_Body(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInflience.value);
+        SetColors_Slider_Body(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInfluence.value);
         SetColors_Slider_Body(CarColorType.Base, CarColorSlider.DarkenInfluence, slider_baseColor_darkenInfluence.value);
 
         SetColors_Slider_Body(CarColorType.TintA, CarColorSlider.Metallic, slider_tintA_metallic.value);
         SetColors_Slider_Body(CarColorType.TintA, CarColorSlider.Smoothness, slider_tintA_smoothness.value);
-        SetColors_Slider_Body(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInflience.value);
+        SetColors_Slider_Body(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInfluence.value);
         SetColors_Slider_Body(CarColorType.TintA, CarColorSlider.DarkenInfluence, slider_tintA_darkenInfluence.value);
 
         SetColors_Slider_Body(CarColorType.TintB, CarColorSlider.Metallic, slider_tintB_metallic.value);
         SetColors_Slider_Body(CarColorType.TintB, CarColorSlider.Smoothness, slider_tintB_smoothness.value);
-        SetColors_Slider_Body(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInflience.value);
+        SetColors_Slider_Body(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInfluence.value);
         SetColors_Slider_Body(CarColorType.TintB, CarColorSlider.DarkenInfluence, slider_tintB_darkenInfluence.value);
 
         SetColors_Slider_Body(CarColorType.TintC, CarColorSlider.Metallic, slider_tintC_metallic.value);
         SetColors_Slider_Body(CarColorType.TintC, CarColorSlider.Smoothness, slider_tintC_smoothness.value);
-        SetColors_Slider_Body(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInflience.value);
+        SetColors_Slider_Body(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInfluence.value);
         SetColors_Slider_Body(CarColorType.TintC, CarColorSlider.DarkenInfluence, slider_tintC_darkenInfluence.value);
     }
     private void SetColors_Slider_Body(CarColorType colorType, CarColorSlider propertieType, float value)
@@ -1018,22 +1086,22 @@ public class CarCustomizer : MonoBehaviour
     {
         SetColors_Sliders_BodyKit(CarColorType.Base, CarColorSlider.Metallic, slider_baseColor_metallic.value);
         SetColors_Sliders_BodyKit(CarColorType.Base, CarColorSlider.Smoothness, slider_baseColor_smoothness.value);
-        SetColors_Sliders_BodyKit(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInflience.value);
+        SetColors_Sliders_BodyKit(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInfluence.value);
         SetColors_Sliders_BodyKit(CarColorType.Base, CarColorSlider.DarkenInfluence, slider_baseColor_darkenInfluence.value);
 
         SetColors_Sliders_BodyKit(CarColorType.TintA, CarColorSlider.Metallic, slider_tintA_metallic.value);
         SetColors_Sliders_BodyKit(CarColorType.TintA, CarColorSlider.Smoothness, slider_tintA_smoothness.value);
-        SetColors_Sliders_BodyKit(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInflience.value);
+        SetColors_Sliders_BodyKit(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInfluence.value);
         SetColors_Sliders_BodyKit(CarColorType.TintA, CarColorSlider.DarkenInfluence, slider_tintA_darkenInfluence.value);
 
         SetColors_Sliders_BodyKit(CarColorType.TintB, CarColorSlider.Metallic, slider_tintB_metallic.value);
         SetColors_Sliders_BodyKit(CarColorType.TintB, CarColorSlider.Smoothness, slider_tintB_smoothness.value);
-        SetColors_Sliders_BodyKit(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInflience.value);
+        SetColors_Sliders_BodyKit(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInfluence.value);
         SetColors_Sliders_BodyKit(CarColorType.TintB, CarColorSlider.DarkenInfluence, slider_tintB_darkenInfluence.value);
 
         SetColors_Sliders_BodyKit(CarColorType.TintC, CarColorSlider.Metallic, slider_tintC_metallic.value);
         SetColors_Sliders_BodyKit(CarColorType.TintC, CarColorSlider.Smoothness, slider_tintC_smoothness.value);
-        SetColors_Sliders_BodyKit(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInflience.value);
+        SetColors_Sliders_BodyKit(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInfluence.value);
         SetColors_Sliders_BodyKit(CarColorType.TintC, CarColorSlider.DarkenInfluence, slider_tintC_darkenInfluence.value);
     }
     private void SetColors_Sliders_BodyKit(CarColorType colorType, CarColorSlider propertieType, float value)
@@ -1049,22 +1117,22 @@ public class CarCustomizer : MonoBehaviour
     {
         SetColors_Slider_Engine(CarColorType.Base, CarColorSlider.Metallic, slider_baseColor_metallic.value);
         SetColors_Slider_Engine(CarColorType.Base, CarColorSlider.Smoothness, slider_baseColor_smoothness.value);
-        SetColors_Slider_Engine(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInflience.value);
+        SetColors_Slider_Engine(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInfluence.value);
         SetColors_Slider_Engine(CarColorType.Base, CarColorSlider.DarkenInfluence, slider_baseColor_darkenInfluence.value);
 
         SetColors_Slider_Engine(CarColorType.TintA, CarColorSlider.Metallic, slider_tintA_metallic.value);
         SetColors_Slider_Engine(CarColorType.TintA, CarColorSlider.Smoothness, slider_tintA_smoothness.value);
-        SetColors_Slider_Engine(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInflience.value);
+        SetColors_Slider_Engine(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInfluence.value);
         SetColors_Slider_Engine(CarColorType.TintA, CarColorSlider.DarkenInfluence, slider_tintA_darkenInfluence.value);
 
         SetColors_Slider_Engine(CarColorType.TintB, CarColorSlider.Metallic, slider_tintB_metallic.value);
         SetColors_Slider_Engine(CarColorType.TintB, CarColorSlider.Smoothness, slider_tintB_smoothness.value);
-        SetColors_Slider_Engine(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInflience.value);
+        SetColors_Slider_Engine(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInfluence.value);
         SetColors_Slider_Engine(CarColorType.TintB, CarColorSlider.DarkenInfluence, slider_tintB_darkenInfluence.value);
 
         SetColors_Slider_Engine(CarColorType.TintC, CarColorSlider.Metallic, slider_tintC_metallic.value);
         SetColors_Slider_Engine(CarColorType.TintC, CarColorSlider.Smoothness, slider_tintC_smoothness.value);
-        SetColors_Slider_Engine(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInflience.value);
+        SetColors_Slider_Engine(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInfluence.value);
         SetColors_Slider_Engine(CarColorType.TintC, CarColorSlider.DarkenInfluence, slider_tintC_darkenInfluence.value);
     }
     private void SetColors_Slider_Engine(CarColorType colorType, CarColorSlider propertieType, float value)
@@ -1080,22 +1148,22 @@ public class CarCustomizer : MonoBehaviour
     {
         SetColors_Sliders_SteeringWheel(CarColorType.Base, CarColorSlider.Metallic, slider_baseColor_metallic.value);
         SetColors_Sliders_SteeringWheel(CarColorType.Base, CarColorSlider.Smoothness, slider_baseColor_smoothness.value);
-        SetColors_Sliders_SteeringWheel(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInflience.value);
+        SetColors_Sliders_SteeringWheel(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInfluence.value);
         SetColors_Sliders_SteeringWheel(CarColorType.Base, CarColorSlider.DarkenInfluence, slider_baseColor_darkenInfluence.value);
 
         SetColors_Sliders_SteeringWheel(CarColorType.TintA, CarColorSlider.Metallic, slider_tintA_metallic.value);
         SetColors_Sliders_SteeringWheel(CarColorType.TintA, CarColorSlider.Smoothness, slider_tintA_smoothness.value);
-        SetColors_Sliders_SteeringWheel(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInflience.value);
+        SetColors_Sliders_SteeringWheel(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInfluence.value);
         SetColors_Sliders_SteeringWheel(CarColorType.TintA, CarColorSlider.DarkenInfluence, slider_tintA_darkenInfluence.value);
 
         SetColors_Sliders_SteeringWheel(CarColorType.TintB, CarColorSlider.Metallic, slider_tintB_metallic.value);
         SetColors_Sliders_SteeringWheel(CarColorType.TintB, CarColorSlider.Smoothness, slider_tintB_smoothness.value);
-        SetColors_Sliders_SteeringWheel(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInflience.value);
+        SetColors_Sliders_SteeringWheel(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInfluence.value);
         SetColors_Sliders_SteeringWheel(CarColorType.TintB, CarColorSlider.DarkenInfluence, slider_tintB_darkenInfluence.value);
 
         SetColors_Sliders_SteeringWheel(CarColorType.TintC, CarColorSlider.Metallic, slider_tintC_metallic.value);
         SetColors_Sliders_SteeringWheel(CarColorType.TintC, CarColorSlider.Smoothness, slider_tintC_smoothness.value);
-        SetColors_Sliders_SteeringWheel(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInflience.value);
+        SetColors_Sliders_SteeringWheel(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInfluence.value);
         SetColors_Sliders_SteeringWheel(CarColorType.TintC, CarColorSlider.DarkenInfluence, slider_tintC_darkenInfluence.value);
     }
     private void SetColors_Sliders_SteeringWheel(CarColorType colorType, CarColorSlider propertieType, float value)
@@ -1111,22 +1179,22 @@ public class CarCustomizer : MonoBehaviour
     {
         SetColors_Sliders_Wheels(CarColorType.Base, CarColorSlider.Metallic, slider_baseColor_metallic.value);
         SetColors_Sliders_Wheels(CarColorType.Base, CarColorSlider.Smoothness, slider_baseColor_smoothness.value);
-        SetColors_Sliders_Wheels(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInflience.value);
+        SetColors_Sliders_Wheels(CarColorType.Base, CarColorSlider.FlakeInfluence, slider_baseColor_flakeInfluence.value);
         SetColors_Sliders_Wheels(CarColorType.Base, CarColorSlider.DarkenInfluence, slider_baseColor_darkenInfluence.value);
 
         SetColors_Sliders_Wheels(CarColorType.TintA, CarColorSlider.Metallic, slider_tintA_metallic.value);
         SetColors_Sliders_Wheels(CarColorType.TintA, CarColorSlider.Smoothness, slider_tintA_smoothness.value);
-        SetColors_Sliders_Wheels(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInflience.value);
+        SetColors_Sliders_Wheels(CarColorType.TintA, CarColorSlider.FlakeInfluence, slider_tintA_flakeInfluence.value);
         SetColors_Sliders_Wheels(CarColorType.TintA, CarColorSlider.DarkenInfluence, slider_tintA_darkenInfluence.value);
 
         SetColors_Sliders_Wheels(CarColorType.TintB, CarColorSlider.Metallic, slider_tintB_metallic.value);
         SetColors_Sliders_Wheels(CarColorType.TintB, CarColorSlider.Smoothness, slider_tintB_smoothness.value);
-        SetColors_Sliders_Wheels(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInflience.value);
+        SetColors_Sliders_Wheels(CarColorType.TintB, CarColorSlider.FlakeInfluence, slider_tintB_flakeInfluence.value);
         SetColors_Sliders_Wheels(CarColorType.TintB, CarColorSlider.DarkenInfluence, slider_tintB_darkenInfluence.value);
 
         SetColors_Sliders_Wheels(CarColorType.TintC, CarColorSlider.Metallic, slider_tintC_metallic.value);
         SetColors_Sliders_Wheels(CarColorType.TintC, CarColorSlider.Smoothness, slider_tintC_smoothness.value);
-        SetColors_Sliders_Wheels(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInflience.value);
+        SetColors_Sliders_Wheels(CarColorType.TintC, CarColorSlider.FlakeInfluence, slider_tintC_flakeInfluence.value);
         SetColors_Sliders_Wheels(CarColorType.TintC, CarColorSlider.DarkenInfluence, slider_tintC_darkenInfluence.value);
     }
     private void SetColors_Sliders_Wheels(CarColorType colorType, CarColorSlider propertieType, float value)
@@ -1141,5 +1209,68 @@ public class CarCustomizer : MonoBehaviour
 
     #endregion
 
+    #endregion
+
+    #region Decals
+    public void Decals_Back()
+    {
+        currentDecal--;
+
+        if (currentDecal < 0)
+        {
+            currentDecal = partsList.cars[currentPart_body].decals.Length - 1;
+        }
+
+        SetDecals();
+    }
+
+    public void Decals_Next()
+    {
+        currentDecal++;
+
+        if (currentDecal > partsList.cars[currentPart_body].decals.Length - 1)
+        {
+            currentDecal = 0;
+        }
+
+        SetDecals();
+    }
+
+    private void SetDecals()
+    {
+        title_decal.text = partsList.cars[currentPart_body].decals[currentDecal].name;
+
+        SetDecals_Body();
+        SetDecals_BodyKit();
+        SetDecals_Engine();
+    }
+
+    private void SetDecals_Body()
+    {
+        if (currentRootReferences.material_body != null)
+            currentRootReferences.material_body.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].body);
+        if (currentRootReferences.material_chassis != null)
+            currentRootReferences.material_chassis.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].chasis);
+        if (currentRootReferences.material_dash != null)
+            currentRootReferences.material_dash.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].dash);
+        if (currentRootReferences.material_emissive != null)
+            currentRootReferences.material_emissive.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].emissive);
+        if (currentRootReferences.material_glass != null)
+            currentRootReferences.material_glass.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].glass);
+        if (currentRootReferences.material_interior != null)
+            currentRootReferences.material_interior.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].interior);
+    }
+
+    private void SetDecals_BodyKit()
+    {
+        if (currentRootReferences.material_bodyKit != null)
+            currentRootReferences.material_bodyKit.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].bodyKit);
+    }
+
+    private void SetDecals_Engine()
+    {
+        if (currentRootReferences.material_engine != null)
+            currentRootReferences.material_engine.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].engine);
+    }
     #endregion
 }
