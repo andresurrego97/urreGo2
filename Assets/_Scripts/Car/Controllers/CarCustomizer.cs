@@ -13,7 +13,16 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private CarColors colorsList;
     [SerializeField] private Transform root;
 
+    [Header("Camera")]
+    [SerializeField] private Transform fpvOriginalParent;
+    [SerializeField] private Transform fpvCamera;
+
     [Header("UI")]
+    [SerializeField] private RectTransform panel_root;
+    [SerializeField] private GameObject panel_openText;
+    [SerializeField] private GameObject panel_closeText;
+    [SerializeField] private float panel_speed = 1;
+
     [Header("Parts")]
     [SerializeField] private TextMeshProUGUI title_body;
     [SerializeField] private TextMeshProUGUI title_bodyKit;
@@ -84,17 +93,29 @@ public class CarCustomizer : MonoBehaviour
 
     private int currentDecal = -1;
 
+    private CarDescription currentCar;
     private CarRootReferences currentRootReferences;
 
+    private bool panelOpen = true;
+
+    private bool body_ready = true;
+    private bool bodyKit_ready = true;
+    private bool wheels_ready = true;
+    private bool engine_ready = true;
+    private bool steeringWheel_ready = true;
+
     private const string _f0 = "F0";
+    private const string _none = "None";
+    private const string _zero = "0";
+    private const string _default = "Default";
     #endregion
 
     private void Awake()
     {
-        title_body.text = "None";
-        title_bodyKit.text = "None";
-        title_steeringWheel.text = "None";
-        title_wheels.text = "None";
+        title_body.text = _none;
+        title_bodyKit.text = _none;
+        title_steeringWheel.text = _none;
+        title_wheels.text = _none;
 
         title_baseColor.text = colorsList.colors[0].name;
         title_tintA.text = colorsList.colors[0].name;
@@ -106,39 +127,39 @@ public class CarCustomizer : MonoBehaviour
         slider_baseColor_smoothness.value = 0;
         slider_baseColor_flakeInfluence.value = 0;
         slider_baseColor_darkenInfluence.value = 0;
-        number_baseColor_metallic.text = "0";
-        number_baseColor_smoothness.text = "0";
-        number_baseColor_flakeInfluence.text = "0";
-        number_baseColor_darkenInfluence.text = "0";
+        number_baseColor_metallic.text = _zero;
+        number_baseColor_smoothness.text = _zero;
+        number_baseColor_flakeInfluence.text = _zero;
+        number_baseColor_darkenInfluence.text = _zero;
 
         slider_tintA_metallic.value = 0;
         slider_tintA_smoothness.value = 0;
         slider_tintA_flakeInfluence.value = 0;
         slider_tintA_darkenInfluence.value = 0;
-        number_tintA_metallic.text = "0";
-        number_tintA_smoothness.text = "0";
-        number_tintA_flakeInfluence.text = "0";
-        number_tintA_darkenInfluence.text = "0";
+        number_tintA_metallic.text = _zero;
+        number_tintA_smoothness.text = _zero;
+        number_tintA_flakeInfluence.text = _zero;
+        number_tintA_darkenInfluence.text = _zero;
 
         slider_tintB_metallic.value = 0;
         slider_tintB_smoothness.value = 0;
         slider_tintB_flakeInfluence.value = 0;
         slider_tintB_darkenInfluence.value = 0;
-        number_tintB_metallic.text = "0";
-        number_tintB_smoothness.text = "0";
-        number_tintB_flakeInfluence.text = "0";
-        number_tintB_darkenInfluence.text = "0";
+        number_tintB_metallic.text = _zero;
+        number_tintB_smoothness.text = _zero;
+        number_tintB_flakeInfluence.text = _zero;
+        number_tintB_darkenInfluence.text = _zero;
 
         slider_tintC_metallic.value = 0;
         slider_tintC_smoothness.value = 0;
         slider_tintC_flakeInfluence.value = 0;
         slider_tintC_darkenInfluence.value = 0;
-        number_tintC_metallic.text = "0";
-        number_tintC_smoothness.text = "0";
-        number_tintC_flakeInfluence.text = "0";
-        number_tintC_darkenInfluence.text = "0";
+        number_tintC_metallic.text = _zero;
+        number_tintC_smoothness.text = _zero;
+        number_tintC_flakeInfluence.text = _zero;
+        number_tintC_darkenInfluence.text = _zero;
 
-        title_decal.text = "None";
+        title_decal.text = _none;
     }
 
     #region Parts
@@ -146,6 +167,9 @@ public class CarCustomizer : MonoBehaviour
     #region Body
     public void Parts_Body_Back()
     {
+        if (!body_ready || !bodyKit_ready || !wheels_ready || !engine_ready || !steeringWheel_ready)
+            return;
+
         currentPart_body--;
 
         if (currentPart_body < 0)
@@ -158,6 +182,9 @@ public class CarCustomizer : MonoBehaviour
 
     public void Parts_Body_Next()
     {
+        if (!body_ready || !bodyKit_ready || !wheels_ready || !engine_ready || !steeringWheel_ready)
+            return;
+
         currentPart_body++;
 
         if (currentPart_body > partsList.cars.Length - 1)
@@ -170,7 +197,14 @@ public class CarCustomizer : MonoBehaviour
 
     private async UniTaskVoid Instantiate_Body()
     {
-        title_body.text = partsList.cars[currentPart_body].name;
+        body_ready = false;
+        bodyKit_ready = false;
+        wheels_ready = false;
+        engine_ready = false;
+        steeringWheel_ready = false;
+
+        currentCar = partsList.cars[currentPart_body];
+        title_body.text = currentCar.name;
 
         for (int i = 0; i < root.childCount; i++)
         {
@@ -178,7 +212,11 @@ public class CarCustomizer : MonoBehaviour
         }
 
         currentRootReferences =
-            (await Extensions.AsyncInstantiate(partsList.cars[currentPart_body].body.part, root)).GetComponent<CarRootReferences>();
+            (await Extensions.AsyncInstantiate(currentCar.body.part, root)).GetComponent<CarRootReferences>();
+
+        fpvCamera.SetParent(currentRootReferences.root_steeringWheel);
+        fpvCamera.localPosition = new Vector3(0, 0.15f, 0.5f);
+        fpvCamera.SetParent(fpvOriginalParent);
 
         if (currentRootReferences.renderer_body != null)
             currentRootReferences.material_body = currentRootReferences.renderer_body.material;
@@ -200,17 +238,19 @@ public class CarCustomizer : MonoBehaviour
         SetColors_Slider_Body();
         SetDecals_Body();
 
+        body_ready = true;
+
         currentPart_bodyKit = false;
         Parts_BodyKit_Next();
 
         currentPart_wheels = -1;
-        currentPart_wheels = Array.IndexOf(partsList.comboWheels, partsList.cars[currentPart_body].wheel) - 1;
+        currentPart_wheels = Array.IndexOf(partsList.comboWheels, currentCar.wheel) - 1;
         Parts_Wheels_Next();
 
         Engine_Next().Forget();
 
         currentPart_steeringWheel = -1;
-        currentPart_steeringWheel = Array.IndexOf(partsList.steeringWheels, partsList.cars[currentPart_body].steeringWheel) - 1;
+        currentPart_steeringWheel = Array.IndexOf(partsList.steeringWheels, currentCar.steeringWheel) - 1;
         Parts_SteeringWheel_Next();
     }
     #endregion
@@ -220,36 +260,39 @@ public class CarCustomizer : MonoBehaviour
     {
         currentPart_bodyKit = !currentPart_bodyKit;
 
-        if (partsList.cars[currentPart_body].bodyKit != null)
+        if (currentCar.bodyKit != null)
         {
             if (currentPart_bodyKit)
             {
-                title_bodyKit.text = partsList.cars[currentPart_body].bodyKit.name;
+                title_bodyKit.text = currentCar.bodyKit.name;
                 Instantiate_BodyKit().Forget();
             }
             else
             {
-                title_bodyKit.text = "None";
+                title_bodyKit.text = _none;
                 Destroy(currentRootReferences.root_bodyKit.GetChild(0).gameObject);
             }
         }
         else
         {
-            title_bodyKit.text = "Default";
+            title_bodyKit.text = _default;
+            bodyKit_ready = true;
         }
     }
 
     private async UniTaskVoid Instantiate_BodyKit()
     {
-        //title_bodyKit.text = list.cars[currentBody].bodyKit.name;
+        bodyKit_ready = false;
 
         currentRootReferences.renderer_bodyKit =
-            (await Extensions.AsyncInstantiate(partsList.cars[currentPart_body].bodyKit.part, currentRootReferences.root_bodyKit)).GetComponentInChildren<Renderer>();
+            (await Extensions.AsyncInstantiate(currentCar.bodyKit.part, currentRootReferences.root_bodyKit)).GetComponentInChildren<Renderer>();
 
         currentRootReferences.material_bodyKit = currentRootReferences.renderer_bodyKit.material;
         SetColor_BodyKitPart(CarColorType.All);
         SetColors_Sliders_BodyKit();
         SetDecals_BodyKit();
+
+        bodyKit_ready = true;
     }
     #endregion
 
@@ -270,7 +313,8 @@ public class CarCustomizer : MonoBehaviour
     {
         if (currentPart_wheels == -2)
         {
-            title_wheels.text = "Default";
+            title_wheels.text = _default;
+            wheels_ready = true;
             return;
         }
 
@@ -288,6 +332,8 @@ public class CarCustomizer : MonoBehaviour
 
     private async UniTaskVoid Instantiate_Wheels()
     {
+        wheels_ready = false;
+
         // front
         for (int i = 0; i < currentRootReferences.root_frontWheels.Length; i++)
         {
@@ -383,19 +429,25 @@ public class CarCustomizer : MonoBehaviour
 
         SetColor_WheelsPart(CarColorType.All);
         SetColors_Sliders_Wheels();
+
+        wheels_ready = true;
     }
     #endregion
 
     #region Engine
     private async UniTaskVoid Engine_Next()
     {
+        engine_ready = false;
+
         currentRootReferences.renderer_engine =
-        (await Extensions.AsyncInstantiate(partsList.cars[currentPart_body].engine.part, currentRootReferences.root_engine)).GetComponentInChildren<Renderer>();
+            (await Extensions.AsyncInstantiate(currentCar.engine.part, currentRootReferences.root_engine)).GetComponentInChildren<Renderer>();
 
         currentRootReferences.material_engine = currentRootReferences.renderer_engine.material;
         SetColor_EnginePart(CarColorType.All);
         SetColors_Slider_Engine();
         SetDecals_Engine();
+
+        engine_ready = true;
     }
     #endregion
 
@@ -428,6 +480,8 @@ public class CarCustomizer : MonoBehaviour
 
     private async UniTaskVoid Instantiate_SteeringWheel()
     {
+        steeringWheel_ready = false;
+
         if (currentRootReferences.root_steeringWheel.childCount == 1)
         {
             Destroy(currentRootReferences.root_steeringWheel.GetChild(0).gameObject);
@@ -439,6 +493,8 @@ public class CarCustomizer : MonoBehaviour
         currentRootReferences.material_steeringWheel = currentRootReferences.renderer_steeringWheel.material;
         SetColor_SteeringWheelPart(CarColorType.All);
         SetColors_Sliders_SteeringWheel();
+
+        steeringWheel_ready = true;
     }
     #endregion
 
@@ -1218,7 +1274,7 @@ public class CarCustomizer : MonoBehaviour
 
         if (currentDecal < 0)
         {
-            currentDecal = partsList.cars[currentPart_body].decals.Length - 1;
+            currentDecal = currentCar.decals.Length - 1;
         }
 
         SetDecals();
@@ -1228,7 +1284,7 @@ public class CarCustomizer : MonoBehaviour
     {
         currentDecal++;
 
-        if (currentDecal > partsList.cars[currentPart_body].decals.Length - 1)
+        if (currentDecal > currentCar.decals.Length - 1)
         {
             currentDecal = 0;
         }
@@ -1238,7 +1294,7 @@ public class CarCustomizer : MonoBehaviour
 
     private void SetDecals()
     {
-        title_decal.text = partsList.cars[currentPart_body].decals[currentDecal].name;
+        title_decal.text = currentCar.decals[currentDecal].name;
 
         SetDecals_Body();
         SetDecals_BodyKit();
@@ -1248,29 +1304,66 @@ public class CarCustomizer : MonoBehaviour
     private void SetDecals_Body()
     {
         if (currentRootReferences.material_body != null)
-            currentRootReferences.material_body.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].body);
+            currentRootReferences.material_body.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].body);
         if (currentRootReferences.material_chassis != null)
-            currentRootReferences.material_chassis.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].chasis);
+            currentRootReferences.material_chassis.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].chasis);
         if (currentRootReferences.material_dash != null)
-            currentRootReferences.material_dash.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].dash);
+            currentRootReferences.material_dash.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].dash);
         if (currentRootReferences.material_emissive != null)
-            currentRootReferences.material_emissive.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].emissive);
+            currentRootReferences.material_emissive.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].emissive);
         if (currentRootReferences.material_glass != null)
-            currentRootReferences.material_glass.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].glass);
+            currentRootReferences.material_glass.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].glass);
         if (currentRootReferences.material_interior != null)
-            currentRootReferences.material_interior.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].interior);
+            currentRootReferences.material_interior.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].interior);
     }
 
     private void SetDecals_BodyKit()
     {
         if (currentRootReferences.material_bodyKit != null)
-            currentRootReferences.material_bodyKit.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].bodyKit);
+            currentRootReferences.material_bodyKit.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].bodyKit);
     }
 
     private void SetDecals_Engine()
     {
         if (currentRootReferences.material_engine != null)
-            currentRootReferences.material_engine.SetTexture(CarColorsProperties.DecalTint, partsList.cars[currentPart_body].decals[currentDecal].engine);
+            currentRootReferences.material_engine.SetTexture(CarColorsProperties.DecalTint, currentCar.decals[currentDecal].engine);
     }
     #endregion
+
+    public void OpenClosePanel()
+    {
+        panelOpen = !panelOpen;
+
+        MovePanel(panelOpen).Forget();
+    }
+
+    private async UniTaskVoid MovePanel(bool up)
+    {
+        if (up)
+        {
+            panel_openText.SetActive(false);
+            panel_closeText.SetActive(true);
+
+            while (panel_root.anchoredPosition.x < 480)
+            {
+                panel_root.anchoredPosition = new Vector2(panel_root.anchoredPosition.x + (panel_speed * Time.deltaTime), 0);
+                await UniTask.NextFrame();
+            }
+
+            panel_root.anchoredPosition = new Vector2(480, 0);
+        }
+        else
+        {
+            panel_openText.SetActive(true);
+            panel_closeText.SetActive(false);
+
+            while (panel_root.anchoredPosition.x > 0)
+            {
+                panel_root.anchoredPosition = new Vector2(panel_root.anchoredPosition.x - (panel_speed * Time.deltaTime), 0);
+                await UniTask.NextFrame();
+            }
+
+            panel_root.anchoredPosition = new Vector2(0, 0);
+        }
+    }
 }

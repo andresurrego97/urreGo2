@@ -74,23 +74,32 @@ public static class Extensions
 
     public static async UniTask<T> AsyncInstantiate<T>(T ob, Transform parent = null, CancellationToken cancellationToken = default) where T : UnityEngine.Object
     {
+        if (ob == null)
+            return null;
+
         return (await UnityEngine.Object.InstantiateAsync(
             ob,
             new InstantiateParameters { parent = parent, worldSpace = false },
-            cancellationToken))[0];
+            cancellationToken))?[0];
     }
 
     public static async UniTask<T> AsyncInstantiate<T>(T ob, Vector3 position, Quaternion rotation, Transform parent = null) where T : UnityEngine.Object
     {
+        if (ob == null)
+            return null;
+
         return (await UnityEngine.Object.InstantiateAsync(
             ob,
             position,
             rotation,
-            new InstantiateParameters { parent = parent, worldSpace = false }))[0];
+            new InstantiateParameters { parent = parent, worldSpace = false }))?[0];
     }
 
     public static async UniTask<T[]> AsyncInstantiate<T>(T ob, int count, Transform parent = null) where T : UnityEngine.Object
     {
+        if (ob == null)
+            return null;
+
         return await UnityEngine.Object.InstantiateAsync(
             ob,
             count,
@@ -99,6 +108,9 @@ public static class Extensions
 
     public static async UniTask<T[]> AsyncInstantiate<T>(T ob, int count, Vector3[] positions, Quaternion[] rotations, Transform parent = null) where T : UnityEngine.Object
     {
+        if (ob == null)
+            return null;
+
         return await UnityEngine.Object.InstantiateAsync(
             ob,
             count,

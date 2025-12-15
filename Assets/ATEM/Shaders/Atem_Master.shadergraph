@@ -3895,7 +3895,7 @@
                 "m_Node": {
                     "m_Id": "591c5ee5255940a18cb64bbc93c00820"
                 },
-                "m_SlotId": 1
+                "m_SlotId": 2
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -8928,7 +8928,7 @@
     "m_ObjectId": "02d4763b375a4dddaa1d1e4d9c026cbe",
     "m_Title": "Color AO",
     "m_Position": {
-        "x": -717.0,
+        "x": -717.0001831054688,
         "y": 1502.0
     }
 }
@@ -10037,7 +10037,7 @@
     "m_Title": "Metallic",
     "m_Position": {
         "x": -731.0,
-        "y": 3583.0
+        "y": 3582.999755859375
     }
 }
 
@@ -11949,8 +11949,8 @@
     "m_ObjectId": "14cd064b58a4437c9e0add7ae2bb8110",
     "m_Title": "Emission",
     "m_Position": {
-        "x": -734.0,
-        "y": 4512.0
+        "x": -734.000244140625,
+        "y": 4511.9990234375
     }
 }
 
@@ -14157,8 +14157,8 @@
     "m_ObjectId": "21efa2f8ef354962b5cc187366cfc4b0",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -5636.0,
-        "y": -49.0
+        "x": -5635.99951171875,
+        "y": -48.9999885559082
     }
 }
 
@@ -14193,7 +14193,7 @@
     "m_ObjectId": "225aadd9e5e249f1aea96a6dd431c449",
     "m_Title": "Darken Colors",
     "m_Position": {
-        "x": -1886.0,
+        "x": -1886.00048828125,
         "y": -67.0
     }
 }
@@ -14928,7 +14928,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 0.5,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -19604,8 +19604,8 @@
     "m_ObjectId": "439798d98ab041ce9c838cccd89bdbbb",
     "m_Title": "DecalMix",
     "m_Position": {
-        "x": -716.0,
-        "y": -63.0
+        "x": -716.000244140625,
+        "y": -62.9999885559082
     }
 }
 
@@ -21278,8 +21278,8 @@
     "m_ObjectId": "4dc7ee9f441446ccaa9f7b1e7a19c79f",
     "m_Title": "Fresnel IOR",
     "m_Position": {
-        "x": -5635.0,
-        "y": -410.0
+        "x": -5634.99951171875,
+        "y": -409.99993896484377
     }
 }
 
@@ -24248,7 +24248,7 @@
     "m_ObjectId": "5e83e8d33cb2478086c65e3d5e7c9dc4",
     "m_Title": "Output",
     "m_Position": {
-        "x": 3059.0,
+        "x": 3058.999755859375,
         "y": 300.0
     }
 }
@@ -31066,8 +31066,8 @@
     "m_ObjectId": "87f5fc82771040b5915a2ca1621f05bf",
     "m_Title": "Ambient Occlusion",
     "m_Position": {
-        "x": -715.0,
-        "y": 2290.0
+        "x": -715.000244140625,
+        "y": 2289.99951171875
     }
 }
 
@@ -35048,7 +35048,7 @@
     "m_ObjectId": "9f442642f9a5426899638d2d13ab7f06",
     "m_Title": "Inputs",
     "m_Position": {
-        "x": -5635.0,
+        "x": -5634.99951171875,
         "y": 320.0
     }
 }
@@ -41461,7 +41461,7 @@
     "m_ObjectId": "c9a089dcc69d46a083f2397911bafd6e",
     "m_Title": "Alpha",
     "m_Position": {
-        "x": -712.0,
+        "x": -712.000244140625,
         "y": 4943.0
     }
 }
@@ -42281,8 +42281,8 @@
     "m_ObjectId": "cdef8c13755945558dbfdfc37604fee4",
     "m_Title": "Deep Paint",
     "m_Position": {
-        "x": -716.0,
-        "y": 831.0
+        "x": -716.000244140625,
+        "y": 830.9998779296875
     }
 }
 
@@ -43283,8 +43283,8 @@
     "m_ObjectId": "d329590774a343feaa6ff2fd1130e493",
     "m_Title": "NormalMap",
     "m_Position": {
-        "x": -717.0,
-        "y": 1940.0
+        "x": -717.0001831054688,
+        "y": 1939.9998779296875
     }
 }
 
