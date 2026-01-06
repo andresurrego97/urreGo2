@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be5c765d694ca554e94ee052f3563a8a, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_WizImpala_Engine_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be5c765d694ca554e94ee052f3563a8a, type: 3}
---- !u!23 &1275057038661669294 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7655234772190099327, guid: be5c765d694ca554e94ee052f3563a8a, type: 3}
-  m_PrefabInstance: {fileID: 8902828011826554577}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3309832124807813858 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2998324089631196109, guid: be5c765d694ca554e94ee052f3563a8a, type: 3}
-  m_PrefabInstance: {fileID: 8902828011826554577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &421000488090068372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309832124807813858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 128
-  _renderer: {fileID: 1275057038661669294}

@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed164b5fc35609640925f4201202a83c, type: 3}
@@ -60,28 +61,7 @@ PrefabInstance:
       value: SM_CoeTruck_Steering_LOD0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed164b5fc35609640925f4201202a83c, type: 3}
---- !u!23 &8510957069142738289 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -3137573091606715953, guid: ed164b5fc35609640925f4201202a83c, type: 3}
-  m_PrefabInstance: {fileID: 2479767851954562238}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8549518854531853362 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6110286972671969420, guid: ed164b5fc35609640925f4201202a83c, type: 3}
-  m_PrefabInstance: {fileID: 2479767851954562238}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1608833991751605146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8549518854531853362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 256
-  _renderer: {fileID: 8510957069142738289}

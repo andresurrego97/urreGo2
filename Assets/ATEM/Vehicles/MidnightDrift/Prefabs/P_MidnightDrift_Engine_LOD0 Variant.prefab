@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 77b6cde5e085a964492c32b61a6703c5, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_MidnightDrift_Engine_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b6cde5e085a964492c32b61a6703c5, type: 3}
---- !u!1 &3947300561786954730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 902610485020803739, guid: 77b6cde5e085a964492c32b61a6703c5, type: 3}
-  m_PrefabInstance: {fileID: 4197662193274560881}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8836813920528028944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3947300561786954730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 128
-  _renderer: {fileID: 4437051078957862728}
---- !u!23 &4437051078957862728 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 563660190398524985, guid: 77b6cde5e085a964492c32b61a6703c5, type: 3}
-  m_PrefabInstance: {fileID: 4197662193274560881}
-  m_PrefabAsset: {fileID: 0}

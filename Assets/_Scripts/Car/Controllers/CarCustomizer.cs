@@ -29,7 +29,7 @@ public class CarCustomizer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title_steeringWheel;
     [SerializeField] private TextMeshProUGUI title_wheels;
 
-    [Header("Colors")]
+    [Header("UI Colors")]
     [Header("Base color")]
     [SerializeField] private TextMeshProUGUI title_baseColor;
     [SerializeField] private Slider slider_baseColor_metallic;

@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c96d254a304c2fc40a4a3ab3c9dbdc12, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_Rossababy3045_SteeringWheel_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96d254a304c2fc40a4a3ab3c9dbdc12, type: 3}
---- !u!23 &1262977757609227800 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1049612051456969799, guid: c96d254a304c2fc40a4a3ab3c9dbdc12, type: 3}
-  m_PrefabInstance: {fileID: 2239985620276197983}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7937689538752403872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8160049295905547263, guid: c96d254a304c2fc40a4a3ab3c9dbdc12, type: 3}
-  m_PrefabInstance: {fileID: 2239985620276197983}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7945621890075271653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937689538752403872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 256
-  _renderer: {fileID: 1262977757609227800}

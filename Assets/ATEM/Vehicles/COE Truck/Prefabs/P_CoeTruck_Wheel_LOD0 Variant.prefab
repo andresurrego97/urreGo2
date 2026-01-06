@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ce317437360ea9e40949ce08e8c35d8b, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_CoeTruck_Wheel_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce317437360ea9e40949ce08e8c35d8b, type: 3}
---- !u!23 &5052501501291715343 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -6020626356472639078, guid: ce317437360ea9e40949ce08e8c35d8b, type: 3}
-  m_PrefabInstance: {fileID: 7668617938836310677}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6721320892664938888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3975142311594183453, guid: ce317437360ea9e40949ce08e8c35d8b, type: 3}
-  m_PrefabInstance: {fileID: 7668617938836310677}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7655579547899117860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721320892664938888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 512
-  _renderer: {fileID: 5052501501291715343}

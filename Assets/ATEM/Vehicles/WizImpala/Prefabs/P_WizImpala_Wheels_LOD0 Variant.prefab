@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 186fc83e7034fdb4b8e7a8b64c21395b, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_WizImpala_Wheels_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 186fc83e7034fdb4b8e7a8b64c21395b, type: 3}
---- !u!1 &1483772253749967500 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3296964235537571219, guid: 186fc83e7034fdb4b8e7a8b64c21395b, type: 3}
-  m_PrefabInstance: {fileID: 4131560634984343327}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4662762932706423438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483772253749967500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 512
-  _renderer: {fileID: 8516723235849419458}
---- !u!23 &8516723235849419458 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5721605799955144157, guid: 186fc83e7034fdb4b8e7a8b64c21395b, type: 3}
-  m_PrefabInstance: {fileID: 4131560634984343327}
-  m_PrefabAsset: {fileID: 0}

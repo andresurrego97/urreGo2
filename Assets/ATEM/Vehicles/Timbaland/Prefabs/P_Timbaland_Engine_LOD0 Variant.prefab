@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4953ac15afb6e6d4baeeb46da61cb6bd, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_Timbaland_Engine_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4953ac15afb6e6d4baeeb46da61cb6bd, type: 3}
---- !u!23 &7862719498732885175 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -6612785605964418912, guid: 4953ac15afb6e6d4baeeb46da61cb6bd, type: 3}
-  m_PrefabInstance: {fileID: 5271277815984972823}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8242062913403672808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4271356056618581247, guid: 4953ac15afb6e6d4baeeb46da61cb6bd, type: 3}
-  m_PrefabInstance: {fileID: 5271277815984972823}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1262233915161799955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8242062913403672808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 128
-  _renderer: {fileID: 7862719498732885175}

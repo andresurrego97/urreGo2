@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c9c41b6357212fa4581cc8cb50c40482, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_Smokebox_SteeringWheel_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9c41b6357212fa4581cc8cb50c40482, type: 3}
---- !u!1 &2039487441469844570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -90921540251031859, guid: c9c41b6357212fa4581cc8cb50c40482, type: 3}
-  m_PrefabInstance: {fileID: 7129563604374375063}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3130194476751433047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039487441469844570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 256
-  _renderer: {fileID: 4383312227934456636}
---- !u!23 &4383312227934456636 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6784087269904023979, guid: c9c41b6357212fa4581cc8cb50c40482, type: 3}
-  m_PrefabInstance: {fileID: 7129563604374375063}
-  m_PrefabAsset: {fileID: 0}

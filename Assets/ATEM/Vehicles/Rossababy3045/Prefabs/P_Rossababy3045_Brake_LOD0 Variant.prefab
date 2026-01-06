@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f99c894094c95bb43b5a89cef508e255, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_Rossababy3045_Brake_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99c894094c95bb43b5a89cef508e255, type: 3}
---- !u!1 &6389160551005603463 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3438984805702755846, guid: f99c894094c95bb43b5a89cef508e255, type: 3}
-  m_PrefabInstance: {fileID: 8580309324071444609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7572634117145323729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6389160551005603463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 1024
-  _renderer: {fileID: 8552498904762719183}
---- !u!23 &8552498904762719183 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 118208144861870926, guid: f99c894094c95bb43b5a89cef508e255, type: 3}
-  m_PrefabInstance: {fileID: 8580309324071444609}
-  m_PrefabAsset: {fileID: 0}

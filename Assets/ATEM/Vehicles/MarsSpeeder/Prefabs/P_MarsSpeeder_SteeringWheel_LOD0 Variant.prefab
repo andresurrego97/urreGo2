@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_MarsSpeeder_SteeringWheel_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
---- !u!1 &6523516860804767275 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4735162492414804990, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
-  m_PrefabInstance: {fileID: 7260192687634424361}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6725035564595904847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6523516860804767275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 256
-  _renderer: {fileID: 6571663932812332617}
---- !u!23 &6571663932812332617 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4607850165314792544, guid: 8034554d8f9721c4a8576a39897d846f, type: 3}
-  m_PrefabInstance: {fileID: 7260192687634424361}
-  m_PrefabAsset: {fileID: 0}

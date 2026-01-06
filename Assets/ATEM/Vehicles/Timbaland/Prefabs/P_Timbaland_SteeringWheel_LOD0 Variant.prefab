@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0cfce42ce97b267488d36ee4983deccb, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_Timbaland_SteeringWheel_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfce42ce97b267488d36ee4983deccb, type: 3}
---- !u!1 &3878342220038138375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4853055473620088390, guid: 0cfce42ce97b267488d36ee4983deccb, type: 3}
-  m_PrefabInstance: {fileID: 681407423572468669}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7880085770026389347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3878342220038138375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 256
-  _renderer: {fileID: 5097050686792782241}
---- !u!23 &5097050686792782241 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -3474380975697808868, guid: 0cfce42ce97b267488d36ee4983deccb, type: 3}
-  m_PrefabInstance: {fileID: 681407423572468669}
-  m_PrefabAsset: {fileID: 0}

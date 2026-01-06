@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 056f4a272fdc92b44bbe8460952be8f0, type: 3}
@@ -56,28 +57,7 @@ PrefabInstance:
       value: P_ArcherPrimal_Wheel_LOD0 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056f4a272fdc92b44bbe8460952be8f0, type: 3}
---- !u!23 &1519846061748474066 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5795261851822223003, guid: 056f4a272fdc92b44bbe8460952be8f0, type: 3}
-  m_PrefabInstance: {fileID: 4216649066278863287}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4835712013940393825 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -459528203652217130, guid: 056f4a272fdc92b44bbe8460952be8f0, type: 3}
-  m_PrefabInstance: {fileID: 4216649066278863287}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7672705428184248840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4835712013940393825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575894436cad4b0781aec6abaa340699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 512
-  _renderer: {fileID: 1519846061748474066}
