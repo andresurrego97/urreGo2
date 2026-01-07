@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CarRootReferences : MonoBehaviour
 {
+    public Animator anim;
+
     [Header("Roots")]
     public Transform root_bodyKit;
     public Transform root_engine;
@@ -18,7 +20,7 @@ public class CarRootReferences : MonoBehaviour
     public SkinnedMeshRenderer renderer_glass;
     public SkinnedMeshRenderer renderer_interior;
 
-    [Space]
+    [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;
     public Renderer renderer_engine;
     public Renderer renderer_steeringWheel;
@@ -38,7 +40,4 @@ public class CarRootReferences : MonoBehaviour
     public Material material_engine;
     public Material material_steeringWheel;
     public Material material_wheels;
-
-    [Space]
-    public Animator anim;
 }

@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277905f9e40f82f4c9f1d93f96490816, type: 3}
   m_Name: Mars Speeder
   m_EditorClassIdentifier: Assembly-CSharp::CarDescription
+  performance:
+    acceleration: 0
+    reverseAcceleration: 0
+    steering:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.9
+        inSlope: -0.5
+        outSlope: -0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.5
+        inSlope: -0.79999995
+        outSlope: -0.79999995
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   body: {fileID: 11400000, guid: 0f706c5b992c72c45ac5e5177d53f77e, type: 2}
   bodyKit: {fileID: 11400000, guid: c4fb4604d6a9ed44ebbf16bcda2cdb0f, type: 2}
   engine: {fileID: 11400000, guid: 1d7402627e3a2bd47a1e9af8a4d3bfa9, type: 2}

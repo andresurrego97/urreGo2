@@ -15,9 +15,20 @@ public struct CarDecal
     public Texture interior;
 }
 
+[Serializable]
+public struct CarPerformance
+{
+    public float acceleration;
+    public float reverseAcceleration;
+    public AnimationCurve steering;
+}
+
 [CreateAssetMenu(fileName = "Car", menuName = "Scriptable Objects/Car/Car", order = 0)]
 public class CarDescription : ScriptableObject
 {
+    [Header("Performance")]
+    public CarPerformance performance;
+
     [Header("Parts")]
     public CarPart body;
     public CarPart bodyKit;
