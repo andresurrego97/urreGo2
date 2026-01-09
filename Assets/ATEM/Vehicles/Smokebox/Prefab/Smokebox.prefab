@@ -424,6 +424,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8e7e153906e73c640b9fd1a66f34d2e1, type: 3}
   m_PrefabInstance: {fileID: 8213116677208141197}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2811810243698780589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6268822246130418720, guid: 8e7e153906e73c640b9fd1a66f34d2e1, type: 3}
+  m_PrefabInstance: {fileID: 8213116677208141197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3250938915883790944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2528914530597281811, guid: 8e7e153906e73c640b9fd1a66f34d2e1, type: 3}
@@ -432,6 +437,11 @@ Transform:
 --- !u!137 &4029145536838452005 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5048742573037366952, guid: 8e7e153906e73c640b9fd1a66f34d2e1, type: 3}
+  m_PrefabInstance: {fileID: 8213116677208141197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4463607139671338248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5479527320757862533, guid: 8e7e153906e73c640b9fd1a66f34d2e1, type: 3}
   m_PrefabInstance: {fileID: 8213116677208141197}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4672701125347266417 stripped
@@ -491,9 +501,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd598f7abc34b44a5b8fdf41d9729f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarRootReferences
+  anim: {fileID: 2346463038763388956}
   root_bodyKit: {fileID: 8654685734902323928}
   root_engine: {fileID: 7568724081606644206}
   root_steeringWheel: {fileID: 980892995445010092}
+  root_frontSteering:
+  - {fileID: 2811810243698780589}
+  - {fileID: 4463607139671338248}
+  frontSteeringOffset: 180
   root_brakes:
   - {fileID: 8893589496469519197}
   - {fileID: 631885359636283307}
@@ -511,4 +526,19 @@ MonoBehaviour:
   renderer_emissive: {fileID: 7731431484226807016}
   renderer_glass: {fileID: 1829683626374680136}
   renderer_interior: {fileID: 7111563330768123045}
-  anim: {fileID: 2346463038763388956}
+  renderer_bodyKit: {fileID: 0}
+  renderer_engine: {fileID: 0}
+  renderer_steeringWheel: {fileID: 0}
+  renderer_brakes: []
+  renderer_frontWheels: []
+  renderer_backWheels: []
+  material_body: {fileID: 0}
+  material_chassis: {fileID: 0}
+  material_dash: {fileID: 0}
+  material_emissive: {fileID: 0}
+  material_glass: {fileID: 0}
+  material_interior: {fileID: 0}
+  material_bodyKit: {fileID: 0}
+  material_engine: {fileID: 0}
+  material_steeringWheel: {fileID: 0}
+  material_wheels: {fileID: 0}

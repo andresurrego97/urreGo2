@@ -234,9 +234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd598f7abc34b44a5b8fdf41d9729f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarRootReferences
+  anim: {fileID: 5767697507847070716}
   root_bodyKit: {fileID: 6124055648653168098}
   root_engine: {fileID: 8687415331990254440}
   root_steeringWheel: {fileID: 461452377395848217}
+  root_frontSteering:
+  - {fileID: 6072251314545640370}
+  - {fileID: 1731205684681381633}
+  frontSteeringOffset: 180
   root_brakes:
   - {fileID: 6068726088286117221}
   - {fileID: 4719235862541794193}
@@ -254,10 +259,30 @@ MonoBehaviour:
   renderer_emissive: {fileID: 4693951347220674502}
   renderer_glass: {fileID: 8302457521517990338}
   renderer_interior: {fileID: 2737850789497538601}
-  anim: {fileID: 5767697507847070716}
+  renderer_bodyKit: {fileID: 0}
+  renderer_engine: {fileID: 0}
+  renderer_steeringWheel: {fileID: 0}
+  renderer_brakes: []
+  renderer_frontWheels: []
+  renderer_backWheels: []
+  material_body: {fileID: 0}
+  material_chassis: {fileID: 0}
+  material_dash: {fileID: 0}
+  material_emissive: {fileID: 0}
+  material_glass: {fileID: 0}
+  material_interior: {fileID: 0}
+  material_bodyKit: {fileID: 0}
+  material_engine: {fileID: 0}
+  material_steeringWheel: {fileID: 0}
+  material_wheels: {fileID: 0}
 --- !u!137 &1704273103182105561 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7582191909900266060, guid: c34bcf057ecace04ebe0cf4be6858665, type: 3}
+  m_PrefabInstance: {fileID: 99202315040448109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1731205684681381633 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7393197965630518932, guid: c34bcf057ecace04ebe0cf4be6858665, type: 3}
   m_PrefabInstance: {fileID: 99202315040448109}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2566590518974513422 stripped
@@ -318,6 +343,11 @@ Transform:
 --- !u!4 &6068726088286117221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3073674019781655800, guid: c34bcf057ecace04ebe0cf4be6858665, type: 3}
+  m_PrefabInstance: {fileID: 99202315040448109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6072251314545640370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6135195302120234463, guid: c34bcf057ecace04ebe0cf4be6858665, type: 3}
   m_PrefabInstance: {fileID: 99202315040448109}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6124055648653168098 stripped

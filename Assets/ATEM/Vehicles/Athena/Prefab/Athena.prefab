@@ -161,9 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd598f7abc34b44a5b8fdf41d9729f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarRootReferences
+  anim: {fileID: 5858188685531729743}
   root_bodyKit: {fileID: 5847198606160783000}
   root_engine: {fileID: 3179068169805675330}
   root_steeringWheel: {fileID: 5685740839542915446}
+  root_frontSteering:
+  - {fileID: 4680331682289729114}
+  - {fileID: 2146481543243785429}
   root_brakes:
   - {fileID: 1853129943860176710}
   - {fileID: 1994768506925460818}
@@ -181,7 +185,22 @@ MonoBehaviour:
   renderer_emissive: {fileID: 2548691946110917597}
   renderer_glass: {fileID: 2114939037662347826}
   renderer_interior: {fileID: 7992578521837422049}
-  anim: {fileID: 5858188685531729743}
+  renderer_bodyKit: {fileID: 0}
+  renderer_engine: {fileID: 0}
+  renderer_steeringWheel: {fileID: 0}
+  renderer_brakes: []
+  renderer_frontWheels: []
+  renderer_backWheels: []
+  material_body: {fileID: 0}
+  material_chassis: {fileID: 0}
+  material_dash: {fileID: 0}
+  material_emissive: {fileID: 0}
+  material_glass: {fileID: 0}
+  material_interior: {fileID: 0}
+  material_bodyKit: {fileID: 0}
+  material_engine: {fileID: 0}
+  material_steeringWheel: {fileID: 0}
+  material_wheels: {fileID: 0}
 --- !u!4 &1465225210943338344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7749739847070448202, guid: 1dc59b78c45e72441b4ec8b147017bba, type: 3}
@@ -202,6 +221,11 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2125461404431216876, guid: 1dc59b78c45e72441b4ec8b147017bba, type: 3}
   m_PrefabInstance: {fileID: 10944795225912030}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2146481543243785429 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7066368074245597685, guid: 1dc59b78c45e72441b4ec8b147017bba, type: 3}
+  m_PrefabInstance: {fileID: 10944795225912030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &2548691946110917597 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2555836674479450371, guid: 1dc59b78c45e72441b4ec8b147017bba, type: 3}
@@ -220,6 +244,11 @@ Transform:
 --- !u!4 &4445828786468585071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4437210575633517745, guid: 1dc59b78c45e72441b4ec8b147017bba, type: 3}
+  m_PrefabInstance: {fileID: 10944795225912030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4680331682289729114 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4671643373964545156, guid: 1dc59b78c45e72441b4ec8b147017bba, type: 3}
   m_PrefabInstance: {fileID: 10944795225912030}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4962224257731969053 stripped

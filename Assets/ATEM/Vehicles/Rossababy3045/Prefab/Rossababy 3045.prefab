@@ -101,6 +101,11 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1968438170116617042, guid: c4dbc2f18cdf83c42a14026f29462191, type: 3}
   m_PrefabInstance: {fileID: 7630577235735379945}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1048505200873843026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1772086747567728965, guid: c4dbc2f18cdf83c42a14026f29462191, type: 3}
+  m_PrefabInstance: {fileID: 7630577235735379945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2806647737688398803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5698872870221014074, guid: c4dbc2f18cdf83c42a14026f29462191, type: 3}
@@ -183,9 +188,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd598f7abc34b44a5b8fdf41d9729f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarRootReferences
+  anim: {fileID: 4075709528080958072}
   root_bodyKit: {fileID: 8928125729907211651}
   root_engine: {fileID: 2806647737688398803}
   root_steeringWheel: {fileID: 5149522651557156970}
+  root_frontSteering:
+  - {fileID: 1048505200873843026}
+  - {fileID: 7538731248551650795}
   root_brakes:
   - {fileID: 7159898859430544619}
   - {fileID: 4954115646618514743}
@@ -203,10 +212,30 @@ MonoBehaviour:
   renderer_emissive: {fileID: 6054070157166390775}
   renderer_glass: {fileID: 958125946795291463}
   renderer_interior: {fileID: 6723983190869741361}
-  anim: {fileID: 4075709528080958072}
+  renderer_bodyKit: {fileID: 0}
+  renderer_engine: {fileID: 0}
+  renderer_steeringWheel: {fileID: 0}
+  renderer_brakes: []
+  renderer_frontWheels: []
+  renderer_backWheels: []
+  material_body: {fileID: 0}
+  material_chassis: {fileID: 0}
+  material_dash: {fileID: 0}
+  material_emissive: {fileID: 0}
+  material_glass: {fileID: 0}
+  material_interior: {fileID: 0}
+  material_bodyKit: {fileID: 0}
+  material_engine: {fileID: 0}
+  material_steeringWheel: {fileID: 0}
+  material_wheels: {fileID: 0}
 --- !u!137 &7407953294294495823 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -8130378500500894298, guid: c4dbc2f18cdf83c42a14026f29462191, type: 3}
+  m_PrefabInstance: {fileID: 7630577235735379945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7538731248551650795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 106878791480941058, guid: c4dbc2f18cdf83c42a14026f29462191, type: 3}
   m_PrefabInstance: {fileID: 7630577235735379945}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8605402146422250889 stripped

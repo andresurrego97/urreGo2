@@ -124,6 +124,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3725174173514142036, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
   m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3313835679957562747 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -228560103576297178, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &3953359894385836848 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1732828309336336531, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
@@ -132,6 +137,11 @@ SkinnedMeshRenderer:
 --- !u!137 &4027286452929504093 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7407627009888335616, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
+  m_PrefabInstance: {fileID: 5849866084183741533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4814468490135701541 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7782629583454921608, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}
   m_PrefabInstance: {fileID: 5849866084183741533}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5034046596469207426 stripped
@@ -171,9 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd598f7abc34b44a5b8fdf41d9729f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarRootReferences
+  anim: {fileID: 19267413621090764}
   root_bodyKit: {fileID: 1436038340921186832}
   root_engine: {fileID: 5859034900045499510}
   root_steeringWheel: {fileID: 1891800210855072044}
+  root_frontSteering:
+  - {fileID: 3313835679957562747}
+  - {fileID: 4814468490135701541}
   root_brakes:
   - {fileID: 5320913645069929792}
   - {fileID: 1815879661442954162}
@@ -192,7 +206,22 @@ MonoBehaviour:
   renderer_emissive: {fileID: 4027286452929504093}
   renderer_glass: {fileID: 0}
   renderer_interior: {fileID: 5668672416665285059}
-  anim: {fileID: 19267413621090764}
+  renderer_bodyKit: {fileID: 0}
+  renderer_engine: {fileID: 0}
+  renderer_steeringWheel: {fileID: 0}
+  renderer_brakes: []
+  renderer_frontWheels: []
+  renderer_backWheels: []
+  material_body: {fileID: 0}
+  material_chassis: {fileID: 0}
+  material_dash: {fileID: 0}
+  material_emissive: {fileID: 0}
+  material_glass: {fileID: 0}
+  material_interior: {fileID: 0}
+  material_bodyKit: {fileID: 0}
+  material_engine: {fileID: 0}
+  material_steeringWheel: {fileID: 0}
+  material_wheels: {fileID: 0}
 --- !u!137 &6888686975341653741 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1060437715276397232, guid: 4f4582a442802e647af7af1ca65bfc2e, type: 3}

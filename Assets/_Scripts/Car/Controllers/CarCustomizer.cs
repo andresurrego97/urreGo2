@@ -77,6 +77,10 @@ public class CarCustomizer : MonoBehaviour
     [Space]
     [SerializeField] private TextMeshProUGUI title_emission;
     [SerializeField] private TextMeshProUGUI title_decal;
+
+    [Header("Internal")]
+    public CarDescription currentCar;
+    public CarRootReferences currentRootReferences;
     #endregion
 
     #region pribate Fields
@@ -92,9 +96,6 @@ public class CarCustomizer : MonoBehaviour
     private int currentColor_emission = 0;
 
     private int currentDecal = -1;
-
-    private CarDescription currentCar;
-    private CarRootReferences currentRootReferences;
 
     private bool panelOpen = true;
 
