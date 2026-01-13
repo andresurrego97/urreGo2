@@ -22,6 +22,9 @@ public class CarRootReferences : MonoBehaviour
     public SkinnedMeshRenderer renderer_glass;
     public SkinnedMeshRenderer renderer_interior;
 
+    [Header("Particles")]
+    public ParticleSystem[] particles_drift;
+
     [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;
     public Renderer renderer_engine;

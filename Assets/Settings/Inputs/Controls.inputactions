@@ -17,21 +17,21 @@
                 },
                 {
                     "name": "Accelerate",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "513cf9e8-edb9-49e0-b5e5-e87cabe2a673",
-                    "expectedControlType": "",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Brake",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "97830bf6-a1b5-4a4f-9dc4-2298e3867da9",
-                    "expectedControlType": "",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "HandBrake",
@@ -160,7 +160,7 @@
                 {
                     "name": "",
                     "id": "bc3caef1-cc83-41c4-b58d-7b04caf1b420",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -203,30 +203,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4ec20c4d-9a9b-41bd-a196-6e05775d494a",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4138023c-2de2-47ac-848b-07bbd73f5ceb",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c6dc42cb-1d4d-48dc-b31b-d591dc65f322",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -258,17 +236,6 @@
                 },
                 {
                     "name": "",
-                    "id": "4c597482-cf2a-427b-9e93-a779b84ef30e",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ab003692-cfdb-413a-9ffa-7b16663a6565",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
@@ -292,29 +259,7 @@
                 {
                     "name": "",
                     "id": "f48c554c-bc21-4bb6-9564-25391edd205e",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "HandBrake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "13d804cd-576f-4207-8db9-6e964c3b1619",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "HandBrake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cd5e90df-6493-44c1-8d0a-66f7a4455b6f",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -357,41 +302,8 @@
                 },
                 {
                     "name": "",
-                    "id": "f29835ea-6b5e-4970-93f9-3151bd3d07ca",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "HandBrake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9535ac61-2638-40e1-b61c-8add723cf367",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "HandBrake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "9be1d63a-3313-4d5f-a1e7-aecad540f86f",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Turbo",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "218da5d2-c8aa-48f7-a943-03d9ba608fb4",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -424,7 +336,7 @@
                 {
                     "name": "",
                     "id": "b0e1ebc5-7b1b-42bf-bfdc-c73b4aadedf9",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/rightStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",

@@ -370,9 +370,9 @@ public class CarCustomizer : MonoBehaviour
         // back
         for (int i = 0; i < currentRootReferences.root_backWheels.Length; i++)
         {
-            if (currentRootReferences.root_backWheels[i].childCount == 1)
+            if (currentRootReferences.root_backWheels[i].childCount == 2)
             {
-                Destroy(currentRootReferences.root_backWheels[i].GetChild(0).gameObject);
+                Destroy(currentRootReferences.root_backWheels[i].GetChild(1).gameObject);
             }
         }
 

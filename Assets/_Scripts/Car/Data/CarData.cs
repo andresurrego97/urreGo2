@@ -1,6 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CarEngineStatus
+{
+    Idle,
+    Accelerating,
+    Braking,
+    HandBreaking
+}
+
 public enum CarPartType
 {
     Body,
