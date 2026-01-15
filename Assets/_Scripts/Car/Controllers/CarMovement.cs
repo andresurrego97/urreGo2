@@ -46,6 +46,15 @@ public class CarMovement : MonoBehaviour
     private bool driftParticles = false;
     private float timeFullToDrift = 0;
 
+    [Space]
+    private int suspensionIndex = 0;
+
+    private void Start()
+    {
+        // Setear esto al principio de una pista, para que los carros con 0 o mas de 4 llantas, no gasten cuando no deben
+        suspensionIndex = CarSuspensionRaycasts.Instance.Reserve();
+    }
+
     public void Move(InputAction.CallbackContext ctx)
     {
         move = ctx.ReadValue<float>();
@@ -112,6 +121,21 @@ public class CarMovement : MonoBehaviour
                 {
                     currentEngineStatus = CarEngineStatus.Accelerating;
                 }
+            }
+        }
+
+        if (customizer.currentRootReferences == null)
+            return;
+
+        if (customizer.currentRootReferences.material_emissive != null)
+        {
+            if (ctx.started)
+            {
+                customizer.currentRootReferences.material_emissive.SetFloat(CarColorsProperties.EmissiveBoost, customizer.currentRootReferences.default_emissiveValue * 2);
+            }
+            else if (ctx.canceled)
+            {
+                customizer.currentRootReferences.material_emissive.SetFloat(CarColorsProperties.EmissiveBoost, customizer.currentRootReferences.default_emissiveValue);
             }
         }
     }
@@ -212,10 +236,26 @@ public class CarMovement : MonoBehaviour
         carRoot.position = sphere.transform.position + sphereOffset;
 
 
-        // Animations
 
         if (customizer.currentRootReferences == null)
             return;
+
+
+
+        // Suspension
+
+        for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
+        {
+            CarSuspensionRaycasts.Instance.SetCommand(
+                suspensionIndex + i,
+                customizer.currentRootReferences.root_suspension[i].position,
+                -customizer.currentRootReferences.root_suspension[i].up,
+                customizer.currentCar.performance.suspensionLength);
+        }
+
+
+
+        // Animations
 
         for (int i = 0; i < customizer.currentRootReferences.root_frontSteering.Length; i++)
         {
@@ -223,13 +263,12 @@ public class CarMovement : MonoBehaviour
                 Quaternion.Euler(0, Mathf.Clamp(currentMoveSteering, -1, 1) * 45 + customizer.currentRootReferences.frontSteeringOffset, 0);
         }
 
-        //customizer.currentRootReferences.root_steeringWheel
+        customizer.currentRootReferences.root_steeringWheel.localRotation = Quaternion.Euler(0, 0, currentMoveSteering * 60);
 
         if (!brake || (brake && inManualReverse))
         {
             for (int i = 0; i < customizer.currentRootReferences.root_frontWheels.Length; i++)
             {
-                //TODO: Cambiar por el analogo de acelerar (tener en cuenta que botones llevaran a 1 de inmediato)
                 customizer.currentRootReferences.root_frontWheels[i].Rotate(Vector3.forward, (i == 0 ? -velocity : velocity) * Time.deltaTime * 100); //hotfix de rotacion derecha inverso izquierda
             }
         }
@@ -237,11 +276,9 @@ public class CarMovement : MonoBehaviour
         {
             for (int i = 0; i < customizer.currentRootReferences.root_backWheels.Length; i++)
             {
-                //TODO: Cambiar por el analogo de acelerar (tener en cuenta que botones llevaran a 1 de inmediato)
                 customizer.currentRootReferences.root_backWheels[i].Rotate(Vector3.forward, (i == 0 ? -velocity : velocity) * Time.deltaTime * 100); //hotfix de rotacion derecha inverso izquierda
             }
         }
-        // cuano se tenga el "InReverse", poner las llantas reversando
 
         if (inDrift && !driftParticles)
         {
@@ -260,6 +297,39 @@ public class CarMovement : MonoBehaviour
             {
                 customizer.currentRootReferences.particles_drift[i].Stop(false, ParticleSystemStopBehavior.StopEmitting);
             }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (customizer.currentRootReferences == null)
+            return;
+
+        for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
+        {
+            RaycastHit hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex + i);
+
+            if (!hit.collider)
+                return;
+
+            Debug.LogWarning($"hit #{i} dstance:{hit.distance}");
+
+            //float springStrength = 20000;
+            //float damperStrength = springStrength * 0.25f;
+
+            //float compression = 1f - (hit.distance / suspensionLength);
+            //float compressionVelocity = (compression - lastCompression[i]) / Time.fixedDeltaTime;
+            //lastCompression[i] = compression;
+
+            //float force =
+            //    (compression * springStrength) -
+            //    (compressionVelocity * damperStrength);
+
+            //sphere.AddForceAtPosition(
+            //    force * customizer.currentRootReferences.root_suspension[i].up,
+            //    hit.point,
+            //    ForceMode.Force
+            //);
         }
     }
 

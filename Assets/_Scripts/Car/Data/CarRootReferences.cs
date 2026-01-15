@@ -13,6 +13,7 @@ public class CarRootReferences : MonoBehaviour
     public Transform[] root_brakes;
     public Transform[] root_frontWheels;
     public Transform[] root_backWheels;
+    public Transform[] root_suspension;
 
     [Header("Renderers")]
     public SkinnedMeshRenderer renderer_body;
@@ -32,6 +33,7 @@ public class CarRootReferences : MonoBehaviour
     public Renderer[] renderer_brakes;
     public Renderer[] renderer_frontWheels;
     public Renderer[] renderer_backWheels;
+    public float default_emissiveValue;
 
     [Space]
     public Material material_body;

@@ -226,7 +226,10 @@ public class CarCustomizer : MonoBehaviour
         if (currentRootReferences.renderer_dash != null)
             currentRootReferences.material_dash = currentRootReferences.renderer_dash.material;
         if (currentRootReferences.renderer_emissive != null)
+        {
             currentRootReferences.material_emissive = currentRootReferences.renderer_emissive.material;
+            currentRootReferences.default_emissiveValue = currentRootReferences.material_emissive.GetFloat(CarColorsProperties.EmissiveBoost);
+        }
         if (currentRootReferences.renderer_glass != null)
             currentRootReferences.material_glass = currentRootReferences.renderer_glass.material;
         if (currentRootReferences.renderer_interior != null)

@@ -43,6 +43,7 @@ public struct CarColorsProperties
     public static readonly int TintB = Shader.PropertyToID("_TintB");
     public static readonly int TintC = Shader.PropertyToID("_TintC");
     public static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
+    public static readonly int EmissiveBoost = Shader.PropertyToID("_EmissiveBoost");
     public static readonly int DecalTint = Shader.PropertyToID("_DecalTint");
 
     public static Dictionary<(CarColorType, CarColorSlider), int> propertyMap =

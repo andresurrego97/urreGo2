@@ -373,6 +373,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7085075535359259185, guid: 2064d552439a08e42bd26f3334adc8e2, type: 3}
   m_PrefabInstance: {fileID: 5847045129850140581}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4267090667876638574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7643489051870161099, guid: 2064d552439a08e42bd26f3334adc8e2, type: 3}
+  m_PrefabInstance: {fileID: 5847045129850140581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &4736495562233575881 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -8025545311734706580, guid: 2064d552439a08e42bd26f3334adc8e2, type: 3}
@@ -429,6 +434,11 @@ MonoBehaviour:
   root_backWheels:
   - {fileID: 8744580631528066955}
   - {fileID: 3133795635652093266}
+  root_suspension:
+  - {fileID: 3334162773850804459}
+  - {fileID: 2904712803437922542}
+  - {fileID: 8525896469457082120}
+  - {fileID: 4267090667876638574}
   renderer_body: {fileID: 611105788904036973}
   renderer_chassis: {fileID: 2968048007866466318}
   renderer_dash: {fileID: 7922699820031362213}
@@ -444,6 +454,7 @@ MonoBehaviour:
   renderer_brakes: []
   renderer_frontWheels: []
   renderer_backWheels: []
+  default_emissiveValue: 0
   material_body: {fileID: 0}
   material_chassis: {fileID: 0}
   material_dash: {fileID: 0}
@@ -467,6 +478,11 @@ SkinnedMeshRenderer:
 --- !u!4 &8335158837889454203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6734976716395059234, guid: 2064d552439a08e42bd26f3334adc8e2, type: 3}
+  m_PrefabInstance: {fileID: 5847045129850140581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8525896469457082120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6379646583266729811, guid: 2064d552439a08e42bd26f3334adc8e2, type: 3}
   m_PrefabInstance: {fileID: 5847045129850140581}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8744580631528066955 stripped
