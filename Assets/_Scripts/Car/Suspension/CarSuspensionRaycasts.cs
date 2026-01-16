@@ -1,6 +1,8 @@
+using System;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CarSuspensionRaycasts : MonoBehaviour
 {
@@ -17,10 +19,6 @@ public class CarSuspensionRaycasts : MonoBehaviour
     private int writeIndex;
     private int rayCount;
 
-    /// <summary>
-    /// Cambiar segun cantidad de carros
-    /// </summary>
-
     private void Awake()
     {
         if (Instance != null)
@@ -34,7 +32,8 @@ public class CarSuspensionRaycasts : MonoBehaviour
 
         commands = new NativeArray<RaycastCommand>(rayCount, Allocator.Persistent);
         hits = new NativeArray<RaycastHit>(rayCount, Allocator.Persistent);
-        parameters = new QueryParameters(suspensionMask, false, QueryTriggerInteraction.Ignore, false);
+        //parameters = new QueryParameters(suspensionMask, false, QueryTriggerInteraction.Ignore, false);
+        parameters = new QueryParameters(suspensionMask, true, QueryTriggerInteraction.Collide, true);
     }
 
     public int Reserve(int amount = 4)
@@ -55,16 +54,38 @@ public class CarSuspensionRaycasts : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(writeIndex);
+
         if (writeIndex == 0)
             return;
 
-        JobHandle handle = RaycastCommand.ScheduleBatch(commands, hits, maxCars);
+        JobHandle handle = RaycastCommand.ScheduleBatch(commands, hits, maxCars, default);
         handle.Complete();
-        writeIndex = 0;
+        //writeIndex = 0;
     }
+
+    //private void OnDrawGizmos()
+    //{
+    //    if (!commands.IsCreated)
+    //        return;
+
+    //    for (int i = 0; i < 4; i++)
+    //    {
+    //        Gizmos.DrawSphere(commands[i].from, 0.6f);
+    //    }
+    //}
 
     public RaycastHit GetHit(int index)
     {
+        if (hits[index].collider != null)
+        {
+            Debug.DrawLine(commands[index].from, hits[index].point, Color.green);
+        }
+        else
+        {
+            Debug.DrawRay(commands[index].from, commands[index].direction * 10, Color.red);
+        }
+
         return hits[index];
     }
 

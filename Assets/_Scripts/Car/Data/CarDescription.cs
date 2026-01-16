@@ -22,8 +22,10 @@ public struct CarPerformance
     public float reverseAcceleration;
     public AnimationCurve steering;
 
-    [Space]
+    [Header("Suspension")]
     public float suspensionLength;
+    //public float suspensionFront;
+    //public float suspensionBack;
 }
 
 [CreateAssetMenu(fileName = "Car", menuName = "Scriptable Objects/Car/Car", order = 0)]

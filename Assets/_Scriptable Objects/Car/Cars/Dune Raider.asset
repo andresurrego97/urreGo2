@@ -48,7 +48,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    suspensionLength: 0.4
+    suspensionLength: 0.5
   body: {fileID: 11400000, guid: f68f0450d4490bd409cd6ae79f10048f, type: 2}
   bodyKit: {fileID: 11400000, guid: 49e132b0a7c5fd049b29365a7bf9455b, type: 2}
   engine: {fileID: 11400000, guid: ccead729ffc85a24ab88e7099999a6ff, type: 2}

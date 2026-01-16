@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 
 public class CarMovement : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class CarMovement : MonoBehaviour
 
     [Space]
     public float velocity;
+    public Vector3 velocity3;
 
     private CarEngineStatus currentEngineStatus = CarEngineStatus.Idle;
     private float move;
@@ -35,7 +38,6 @@ public class CarMovement : MonoBehaviour
     private bool inManualReverse;
     private bool turbo;
 
-    private int hits = 0;
     private readonly RaycastHit[] hitNear = new RaycastHit[1];
 
     private float currentSpeed;
@@ -48,8 +50,14 @@ public class CarMovement : MonoBehaviour
 
     [Space]
     private int suspensionIndex = 0;
+    //[Header("Suspension")]
+    ////[SerializeField] private float suspensionLength = 0.4f;
+    //[SerializeField] private float springStrength = 30000f;   // N/m
+    //[SerializeField] private float damperStrength = 4500f;    // N·s/m
+    //[SerializeField] private float maxSuspensionForce = 15000f;
+    //private float[] lastCompression = new float[4];
 
-    private void Start()
+    private void Awake()
     {
         // Setear esto al principio de una pista, para que los carros con 0 o mas de 4 llantas, no gasten cuando no deben
         suspensionIndex = CarSuspensionRaycasts.Instance.Reserve();
@@ -174,10 +182,14 @@ public class CarMovement : MonoBehaviour
     {
         inDirectionReverse = Vector3.Dot(carParent.transform.forward, sphere.linearVelocity.normalized) > 0;
         inManualReverse = inDirectionReverse && !accelerate && !handBrake;
-        velocity = sphere.linearVelocity.magnitude * (inManualReverse ? -1 : 1);
 
-        hits = Physics.RaycastNonAlloc(carRoot.position + (carRoot.up * 0.1f), Vector3.down, hitNear, 2.0f);
+        velocity3 = sphere.linearVelocity;
+        velocity3.y = 0;
+        velocity = velocity3.magnitude * (inManualReverse ? -1 : 1);
+
+        Physics.RaycastNonAlloc(carRoot.position + (carRoot.up * 0.1f), Vector3.down, hitNear, 2);
         carNormal.up = Vector3.Lerp(carNormal.up, hitNear[0].normal, Time.deltaTime * 7.5f);
+        Debug.DrawLine(carRoot.position + (carRoot.up * 0.1f), hitNear[0].point, Color.blue);
 
 
 
@@ -310,14 +322,32 @@ public class CarMovement : MonoBehaviour
             RaycastHit hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex + i);
 
             if (!hit.collider)
-                return;
+            {
+                //sphere.AddForce(Physics.gravity * sphere.mass, ForceMode.Force);
 
-            Debug.LogWarning($"hit #{i} dstance:{hit.distance}");
+                sphere.AddForceAtPosition(
+                    Physics.gravity * sphere.mass,
+                    hit.point,
+                    ForceMode.Force);
 
-            //float springStrength = 20000;
-            //float damperStrength = springStrength * 0.25f;
+                continue;
+            }
 
-            //float compression = 1f - (hit.distance / suspensionLength);
+            //Debug.LogWarning($"hit #{i} point:{hit.point} distance: {hit.distance}");
+
+            Vector3 force = customizer.currentRootReferences.root_suspension[i].up * (
+                customizer.currentRootReferences.root_suspension.Length + 0.6f - hit.distance * 10);
+
+            Debug.LogWarning($"Diference: {force} Distance: {hit.distance}");
+
+            sphere.AddForceAtPosition(
+                force,
+                hit.point,
+                ForceMode.Force);
+
+
+
+            //float compression = 1f - (hit.distance / customizer.currentCar.performance.suspensionLength);
             //float compressionVelocity = (compression - lastCompression[i]) / Time.fixedDeltaTime;
             //lastCompression[i] = compression;
 
@@ -335,6 +365,8 @@ public class CarMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //sphere.AddForce(Physics.gravity * sphere.mass, ForceMode.Force);
+
         if (currentEngineStatus != CarEngineStatus.Idle)
         {
             sphere.AddForce(-carParent.transform.forward * currentSpeed, ForceMode.Acceleration);

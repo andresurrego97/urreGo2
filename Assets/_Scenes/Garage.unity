@@ -2422,6 +2422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomizeCameraOffset
   rotationComposer: {fileID: 480104620}
+  normalPosition: {x: 0, y: 0.05}
+  offsetPosition: {x: 0.18, y: 0}
 --- !u!1 &205611395
 GameObject:
   m_ObjectHideFlags: 0
@@ -11077,7 +11079,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
@@ -12425,7 +12427,7 @@ MonoBehaviour:
   raysPerCar: 4
   suspensionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
 --- !u!4 &834915980
 Transform:
   m_ObjectHideFlags: 0
@@ -30079,6 +30081,7 @@ MonoBehaviour:
   reverse: 20
   rotation: 100
   velocity: 0
+  velocity3: {x: 0, y: 0, z: 0}
 --- !u!1 &1863234081
 GameObject:
   m_ObjectHideFlags: 0
