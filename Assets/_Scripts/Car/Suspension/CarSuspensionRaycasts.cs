@@ -1,8 +1,6 @@
-using System;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class CarSuspensionRaycasts : MonoBehaviour
 {
@@ -36,7 +34,7 @@ public class CarSuspensionRaycasts : MonoBehaviour
         parameters = new QueryParameters(suspensionMask, true, QueryTriggerInteraction.Collide, true);
     }
 
-    public int Reserve(int amount = 4)
+    public int Reserve(int amount)
     {
         int start = writeIndex;
         writeIndex += amount;
@@ -52,7 +50,7 @@ public class CarSuspensionRaycasts : MonoBehaviour
             distance * 2);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //Debug.Log(writeIndex);
 
@@ -63,17 +61,6 @@ public class CarSuspensionRaycasts : MonoBehaviour
         handle.Complete();
         //writeIndex = 0;
     }
-
-    //private void OnDrawGizmos()
-    //{
-    //    if (!commands.IsCreated)
-    //        return;
-
-    //    for (int i = 0; i < 4; i++)
-    //    {
-    //        Gizmos.DrawSphere(commands[i].from, 0.6f);
-    //    }
-    //}
 
     public RaycastHit GetHit(int index)
     {

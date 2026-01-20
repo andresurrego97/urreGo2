@@ -45,11 +45,18 @@ public class CarMovement : MonoBehaviour
 
     [Space]
     private int suspensionIndex = 0;
+    private RaycastHit hit;
+    private Vector3 force;
+    private float suspensionDifference;
+    private float suspensionWheelTravel;
+    private float z;
+    private float multipler;
+    private bool isGrounded;
 
     private void Awake()
     {
         // Setear esto al principio de una pista, para que los carros con 0 o mas de 4 llantas, no gasten cuando no deben
-        suspensionIndex = CarSuspensionRaycasts.Instance.Reserve();
+        suspensionIndex = CarSuspensionRaycasts.Instance.Reserve(4);
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -169,7 +176,7 @@ public class CarMovement : MonoBehaviour
 
     private void Update()
     {
-        inDirectionReverse = Vector3.Dot(carParent.transform.forward, rb.linearVelocity.normalized) > 0;
+        inDirectionReverse = Vector3.Dot(carParent.forward, rb.linearVelocity.normalized) > 0;
         inManualReverse = inDirectionReverse && !accelerate && !handBrake;
 
         velocity3 = rb.linearVelocity;
@@ -189,8 +196,14 @@ public class CarMovement : MonoBehaviour
                 break;
 
             case CarEngineStatus.Braking:
-                //currentSpeed = speed * (accelerating - braking);
-                currentSpeed = -reverse * (braking - accelerating);
+                if (velocity > -3)
+                {
+                    currentSpeed = -reverse * (braking - accelerating);
+                }
+                else
+                {
+                    currentSpeed = 0;
+                }
                 break;
 
             case CarEngineStatus.HandBreaking:
@@ -229,6 +242,17 @@ public class CarMovement : MonoBehaviour
         rotate = currentMove * rotation * Time.deltaTime * Mathf.Clamp(velocity * 0.1f, -1, 1);
 
         carParent.localRotation = Quaternion.Euler(0, carParent.localEulerAngles.y + rotate, 0);
+
+        //if (customizer.currentRootReferences.root_suspension.Length == 0)
+        //{
+        //    rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        //    rb.transform.localEulerAngles = new Vector3(rb.transform.localEulerAngles.x, rb.transform.localEulerAngles.y, 0);
+        //}
+        //else
+        //{
+        //    rb.constraints = RigidbodyConstraints.None;
+        //}
+
         carNormal.up = rb.transform.up;
         carRoot.position = rb.transform.position;
 
@@ -239,25 +263,12 @@ public class CarMovement : MonoBehaviour
 
 
 
-        // Suspension
-
-        for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
-        {
-            CarSuspensionRaycasts.Instance.SetCommand(
-                suspensionIndex + i,
-                customizer.currentRootReferences.root_suspension[i].position,
-                -customizer.currentRootReferences.root_suspension[i].up,
-                customizer.currentCar.performance.suspensionLength);
-        }
-
-
-
         // Animations
 
         for (int i = 0; i < customizer.currentRootReferences.root_frontSteering.Length; i++)
         {
             customizer.currentRootReferences.root_frontSteering[i].localRotation =
-                Quaternion.Euler(0, Mathf.Clamp(currentMoveSteering, -1, 1) * 45 + customizer.currentRootReferences.frontSteeringOffset, 0);
+                Quaternion.Euler(0, Mathf.Clamp(currentMoveSteering, -1, 1) * 45, 0);
         }
 
         customizer.currentRootReferences.root_steeringWheel.localRotation = Quaternion.Euler(0, 0, currentMoveSteering * 60);
@@ -271,7 +282,7 @@ public class CarMovement : MonoBehaviour
         }
         if (!handBrake)
         {
-            for (int i = 0; i < customizer.currentRootReferences.root_backWheels.Length; i++)
+            for (int i = 0; i < customizer.currentRootReferences.root_backWheels.Length && i < 2; i++) //hotfix de solo 2 ruedas traseras maximo (baja truck fix)
             {
                 customizer.currentRootReferences.root_backWheels[i].Rotate(Vector3.forward, (i == 0 ? -velocity : velocity) * Time.deltaTime * 100); //hotfix de rotacion derecha inverso izquierda
             }
@@ -297,38 +308,83 @@ public class CarMovement : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (customizer.currentRootReferences == null)
             return;
 
-        for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
+        if (customizer.currentRootReferences.root_suspension.Length == 0)
         {
-            RaycastHit hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex + i);
+            z = rb.transform.localEulerAngles.z;
 
-            if (!hit.collider)
+            if (z > 180f)
             {
-                hit.distance = customizer.currentCar.performance.suspensionLength;
+                multipler = z.Remap(360, 180, 0, customizer.currentCar.performance.suspensionForce);
+                z -= 360f;
+            }
+            else
+            {
+                multipler = z.Remap(0, 180, 0, customizer.currentCar.performance.suspensionForce);
             }
 
-            Vector3 force = (customizer.currentCar.performance.suspensionLength - hit.distance) * 10000 * customizer.currentRootReferences.root_suspension[i].up;
+            rb.AddTorque(-z * multipler * rb.transform.forward, ForceMode.Acceleration);
 
-            //Debug.LogWarning($"hit #{i} Diference: {force} Distance: {hit.distance} Resta: {customizer.currentCar.performance.suspensionLength - hit.distance}");
+            CarSuspensionRaycasts.Instance.SetCommand(
+                suspensionIndex,
+                customizer.currentRootReferences.transform.position,
+                -customizer.currentRootReferences.transform.up,
+                customizer.currentCar.performance.suspensionLength);
 
-            rb.AddForceAtPosition(
-                force,
-                customizer.currentRootReferences.root_suspension[i].position,
-                ForceMode.Force);
+            hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex);
+
+            isGrounded = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex).collider;
         }
-    }
+        else
+        {
+            for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
+            {
+                CarSuspensionRaycasts.Instance.SetCommand(
+                    suspensionIndex + i,
+                    customizer.currentRootReferences.root_suspension[i].position,
+                    -customizer.currentRootReferences.root_suspension[i].up,
+                    customizer.currentCar.performance.suspensionLength);
 
-    private void FixedUpdate()
-    {
+                hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex + i);
+                isGrounded = hit.collider;
+
+                if (!hit.collider)
+                {
+                    suspensionDifference = 0;
+                    suspensionWheelTravel = -customizer.currentCar.performance.suspensionLength;
+                }
+                else
+                {
+                    suspensionDifference = (customizer.currentCar.performance.suspensionLength - hit.distance) * customizer.currentCar.performance.suspensionForce;
+                    suspensionWheelTravel = customizer.currentCar.performance.suspensionLength - hit.distance;
+
+                    force = suspensionDifference * customizer.currentRootReferences.root_suspension[i].up;
+                    //Debug.LogWarning($"hit #{i} Diference: {force} Distance: {hit.distance} Resta: {customizer.currentCar.performance.suspensionLength - hit.distance}");
+
+                    rb.AddForceAtPosition(
+                        force,
+                        customizer.currentRootReferences.root_suspension[i].position,
+                        ForceMode.Force);
+                }
+
+                customizer.currentRootReferences.root_suspension[i].GetChild(0).localPosition = new Vector3(
+                    customizer.currentRootReferences.root_suspension[i].GetChild(0).localPosition.x,
+                    suspensionWheelTravel,
+                    customizer.currentRootReferences.root_suspension[i].GetChild(0).localPosition.z);
+            }
+        }
+
+        //
+
         rb.transform.localEulerAngles = new Vector3(rb.transform.localEulerAngles.x, carParent.localEulerAngles.y, rb.transform.localEulerAngles.z);
 
-        if (currentEngineStatus != CarEngineStatus.Idle)
+        if (isGrounded && currentEngineStatus != CarEngineStatus.Idle)
         {
-            rb.AddForce(-carParent.transform.forward * currentSpeed, ForceMode.Acceleration);
+            rb.AddForce(-carParent.forward * currentSpeed, ForceMode.Acceleration);
         }
     }
 }

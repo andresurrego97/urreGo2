@@ -24,8 +24,7 @@ public struct CarPerformance
 
     [Header("Suspension")]
     public float suspensionLength;
-    //public float suspensionFront;
-    //public float suspensionBack;
+    public float suspensionForce;
 }
 
 [CreateAssetMenu(fileName = "Car", menuName = "Scriptable Objects/Car/Car", order = 0)]

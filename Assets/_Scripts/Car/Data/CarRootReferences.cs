@@ -9,7 +9,6 @@ public class CarRootReferences : MonoBehaviour
     public Transform root_engine;
     public Transform root_steeringWheel;
     public Transform[] root_frontSteering;
-    public float frontSteeringOffset;
     public Transform[] root_brakes;
     public Transform[] root_frontWheels;
     public Transform[] root_backWheels;

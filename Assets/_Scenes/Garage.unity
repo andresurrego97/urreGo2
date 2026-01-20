@@ -3369,7 +3369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afa82ae3200b82408d605c3dbdd1e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineRotateWithFollowTarget
-  Damping: 0.2
+  Damping: 0.3
 --- !u!114 &278122199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30192,10 +30192,16 @@ MonoBehaviour:
   carModel: {fileID: 2082367521}
   rb: {fileID: 730818491}
   speed: 50
-  reverse: 20
+  reverse: 40
   rotation: 100
   velocity: 0
   velocity3: {x: 0, y: 0, z: 0}
+  suspensionChangePotential:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1863234081
 GameObject:
   m_ObjectHideFlags: 0
