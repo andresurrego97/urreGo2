@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.PlayerLoop;
 
 public class CarMovement : MonoBehaviour
 {
@@ -13,10 +11,9 @@ public class CarMovement : MonoBehaviour
     [SerializeField] private Transform carNormal;
     [SerializeField] private Transform carParent;
     [SerializeField] private Transform carModel;
-    [SerializeField] private Rigidbody sphere;
+    [SerializeField] private Rigidbody rb;
 
     [Space]
-    [SerializeField] private Vector3 sphereOffset;
     [SerializeField] private float speed;
     [SerializeField] private float reverse;
     [SerializeField] private float rotation;
@@ -38,8 +35,6 @@ public class CarMovement : MonoBehaviour
     private bool inManualReverse;
     private bool turbo;
 
-    private readonly RaycastHit[] hitNear = new RaycastHit[1];
-
     private float currentSpeed;
     private float rotate;
 
@@ -50,12 +45,6 @@ public class CarMovement : MonoBehaviour
 
     [Space]
     private int suspensionIndex = 0;
-    //[Header("Suspension")]
-    ////[SerializeField] private float suspensionLength = 0.4f;
-    //[SerializeField] private float springStrength = 30000f;   // N/m
-    //[SerializeField] private float damperStrength = 4500f;    // N·s/m
-    //[SerializeField] private float maxSuspensionForce = 15000f;
-    //private float[] lastCompression = new float[4];
 
     private void Awake()
     {
@@ -180,16 +169,12 @@ public class CarMovement : MonoBehaviour
 
     private void Update()
     {
-        inDirectionReverse = Vector3.Dot(carParent.transform.forward, sphere.linearVelocity.normalized) > 0;
+        inDirectionReverse = Vector3.Dot(carParent.transform.forward, rb.linearVelocity.normalized) > 0;
         inManualReverse = inDirectionReverse && !accelerate && !handBrake;
 
-        velocity3 = sphere.linearVelocity;
+        velocity3 = rb.linearVelocity;
         velocity3.y = 0;
         velocity = velocity3.magnitude * (inManualReverse ? -1 : 1);
-
-        Physics.RaycastNonAlloc(carRoot.position + (carRoot.up * 0.1f), Vector3.down, hitNear, 2);
-        carNormal.up = Vector3.Lerp(carNormal.up, hitNear[0].normal, Time.deltaTime * 7.5f);
-        Debug.DrawLine(carRoot.position + (carRoot.up * 0.1f), hitNear[0].point, Color.blue);
 
 
 
@@ -244,8 +229,8 @@ public class CarMovement : MonoBehaviour
         rotate = currentMove * rotation * Time.deltaTime * Mathf.Clamp(velocity * 0.1f, -1, 1);
 
         carParent.localRotation = Quaternion.Euler(0, carParent.localEulerAngles.y + rotate, 0);
-
-        carRoot.position = sphere.transform.position + sphereOffset;
+        carNormal.up = rb.transform.up;
+        carRoot.position = rb.transform.position;
 
 
 
@@ -323,53 +308,27 @@ public class CarMovement : MonoBehaviour
 
             if (!hit.collider)
             {
-                //sphere.AddForce(Physics.gravity * sphere.mass, ForceMode.Force);
-
-                sphere.AddForceAtPosition(
-                    Physics.gravity * sphere.mass,
-                    hit.point,
-                    ForceMode.Force);
-
-                continue;
+                hit.distance = customizer.currentCar.performance.suspensionLength;
             }
 
-            //Debug.LogWarning($"hit #{i} point:{hit.point} distance: {hit.distance}");
+            Vector3 force = (customizer.currentCar.performance.suspensionLength - hit.distance) * 10000 * customizer.currentRootReferences.root_suspension[i].up;
 
-            Vector3 force = customizer.currentRootReferences.root_suspension[i].up * (
-                customizer.currentRootReferences.root_suspension.Length + 0.6f - hit.distance * 10);
+            //Debug.LogWarning($"hit #{i} Diference: {force} Distance: {hit.distance} Resta: {customizer.currentCar.performance.suspensionLength - hit.distance}");
 
-            Debug.LogWarning($"Diference: {force} Distance: {hit.distance}");
-
-            sphere.AddForceAtPosition(
+            rb.AddForceAtPosition(
                 force,
-                hit.point,
+                customizer.currentRootReferences.root_suspension[i].position,
                 ForceMode.Force);
-
-
-
-            //float compression = 1f - (hit.distance / customizer.currentCar.performance.suspensionLength);
-            //float compressionVelocity = (compression - lastCompression[i]) / Time.fixedDeltaTime;
-            //lastCompression[i] = compression;
-
-            //float force =
-            //    (compression * springStrength) -
-            //    (compressionVelocity * damperStrength);
-
-            //sphere.AddForceAtPosition(
-            //    force * customizer.currentRootReferences.root_suspension[i].up,
-            //    hit.point,
-            //    ForceMode.Force
-            //);
         }
     }
 
     private void FixedUpdate()
     {
-        //sphere.AddForce(Physics.gravity * sphere.mass, ForceMode.Force);
+        rb.transform.localEulerAngles = new Vector3(rb.transform.localEulerAngles.x, carParent.localEulerAngles.y, rb.transform.localEulerAngles.z);
 
         if (currentEngineStatus != CarEngineStatus.Idle)
         {
-            sphere.AddForce(-carParent.transform.forward * currentSpeed, ForceMode.Acceleration);
+            rb.AddForce(-carParent.transform.forward * currentSpeed, ForceMode.Acceleration);
         }
     }
 }

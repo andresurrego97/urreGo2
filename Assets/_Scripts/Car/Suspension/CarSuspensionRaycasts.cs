@@ -49,7 +49,7 @@ public class CarSuspensionRaycasts : MonoBehaviour
             origin,
             direction,
             parameters,
-            distance);
+            distance * 2);
     }
 
     private void Update()
