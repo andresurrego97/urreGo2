@@ -30219,11 +30219,6 @@ MonoBehaviour:
   carParent: {fileID: 754741418}
   carModel: {fileID: 2082367521}
   rb: {fileID: 730818491}
-  speed: 50
-  reverse: 20
-  rotation: 100
-  velocity: 0
-  velocity3: {x: 0, y: 0, z: 0}
 --- !u!1 &1863234081
 GameObject:
   m_ObjectHideFlags: 0
@@ -71384,10 +71379,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2804712834731206899, guid: 8a4ce7d54b4a0244ea5abc60c2196724, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804712834731206899, guid: 8a4ce7d54b4a0244ea5abc60c2196724, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2804712834731206899, guid: 8a4ce7d54b4a0244ea5abc60c2196724, type: 3}

@@ -192,16 +192,14 @@ public class CarMovement : MonoBehaviour
 
 
 
-        if (accelerate && velocity * 0.1f < accelerating)
+        if (!handBrake && accelerate && velocity * 0.1f < accelerating)
         {
             wheelsDrift = true;
-            particlesPerRevolution = 5;
             wheelsVelocity = Mathf.Lerp(wheelsVelocity, customizer.currentCar.performance.acceleration * 0.25f, Time.deltaTime * 2);
         }
         else
         {
             wheelsDrift = false;
-            particlesPerRevolution = 25;
             wheelsVelocity = velocity;
         }
 
@@ -308,9 +306,9 @@ public class CarMovement : MonoBehaviour
             }
         }
 
-        if (wheelsDrift ||
-            (inDrift && !driftParticles) ||
-            (accelerate && brake))
+        if ((!driftParticles && wheelsDrift) ||
+            (!driftParticles && inDrift) /*||
+            (!driftParticles && accelerate && brake)*/)
         {
             driftParticles = true;
 
@@ -319,46 +317,13 @@ public class CarMovement : MonoBehaviour
                 customizer.currentRootReferences.particles_drift[i].Play();
             }
         }
-        else if (!inDrift && driftParticles)
+        else if (driftParticles && !inDrift && !wheelsDrift)
         {
             driftParticles = false;
 
             for (int i = 0; i < customizer.currentRootReferences.particles_drift.Length; i++)
             {
                 customizer.currentRootReferences.particles_drift[i].Stop(false, ParticleSystemStopBehavior.StopEmitting);
-            }
-        }
-    }
-
-    private float particlesPerRevolution = 4;
-    private float accumulatedAngle;
-    private float lastAngle;
-
-    private void LateUpdate()
-    {
-        if (customizer.currentRootReferences == null)
-            return;
-
-        if (!driftParticles || customizer.currentRootReferences.root_backWheels.Length == 0)
-            return;
-
-        float currentAngle = customizer.currentRootReferences.root_backWheels[0].localEulerAngles.z;
-
-        float delta = Mathf.DeltaAngle(lastAngle, currentAngle);
-        lastAngle = currentAngle;
-
-        accumulatedAngle += Mathf.Abs(delta);
-
-        float anglePerParticle = 360f / particlesPerRevolution;
-
-        int emitCount = Mathf.FloorToInt(accumulatedAngle / anglePerParticle);
-
-        for (int i = 0; i < customizer.currentRootReferences.particles_drift.Length; i++)
-        {
-            if (emitCount > 0)
-            {
-                customizer.currentRootReferences.particles_drift[i].Emit(emitCount);
-                accumulatedAngle -= emitCount * anglePerParticle;
             }
         }
     }
