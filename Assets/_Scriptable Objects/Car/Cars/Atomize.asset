@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Atomize
   m_EditorClassIdentifier: Assembly-CSharp::CarDescription
   performance:
-    acceleration: 0
-    reverseAcceleration: 0
+    acceleration: 50
+    reverseAcceleration: 20
+    rotation: 100
     steering:
       serializedVersion: 2
       m_Curve:
@@ -50,6 +51,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     suspensionLength: 0.43
     suspensionForce: 20000
+    suspensionDamper: 0.1
   body: {fileID: 11400000, guid: 8f62786b798e21649bb3b0c5830b1571, type: 2}
   bodyKit: {fileID: 11400000, guid: 10ee03f235cee6449b85c604f0dead6c, type: 2}
   engine: {fileID: 11400000, guid: 4af9b54c614d571429441bc5f04b3a75, type: 2}

@@ -14,17 +14,16 @@ public class CarMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
 
     [Space]
-    [SerializeField] private float speed;
-    [SerializeField] private float reverse;
-    [SerializeField] private float rotation;
+    private float velocity;
+    private Vector3 velocityVector;
+    private float wheelsVelocity;
 
     [Space]
-    public float velocity;
-    public Vector3 velocity3;
-
     private CarEngineStatus currentEngineStatus = CarEngineStatus.Idle;
     private float move;
+    private float moveCurve;
     private float currentMove;
+    private float currentMoveLerp;
     private float currentMoveSteering;
     private bool accelerate;
     private float accelerating;
@@ -40,23 +39,28 @@ public class CarMovement : MonoBehaviour
 
     [Space]
     private bool inDrift = false;
+    private bool wheelsDrift = false;
     private bool driftParticles = false;
     private float timeFullToDrift = 0;
 
     [Space]
     private int suspensionIndex = 0;
     private RaycastHit hit;
-    private Vector3 force;
+    private Vector3[] force;
     private float suspensionDifference;
     private float suspensionWheelTravel;
+    private float damp;
     private float z;
     private float multipler;
     private bool isGrounded;
+    //private float chasisMove;
+    //public float chasisMovePower;
 
     private void Awake()
     {
         // Setear esto al principio de una pista, para que los carros con 0 o mas de 4 llantas, no gasten cuando no deben
         suspensionIndex = CarSuspensionRaycasts.Instance.Reserve(4);
+        force = new Vector3[4];
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -176,38 +180,49 @@ public class CarMovement : MonoBehaviour
 
     private void Update()
     {
+        if (customizer.currentRootReferences == null)
+            return;
+
         inDirectionReverse = Vector3.Dot(carParent.forward, rb.linearVelocity.normalized) > 0;
         inManualReverse = inDirectionReverse && !accelerate && !handBrake;
 
-        velocity3 = rb.linearVelocity;
-        velocity3.y = 0;
-        velocity = velocity3.magnitude * (inManualReverse ? -1 : 1);
+        velocityVector = rb.linearVelocity;
+        velocityVector.y = 0;
+        velocity = velocityVector.magnitude * (inManualReverse ? -1 : 1);
+
+
+
+        if (accelerate && velocity * 0.1f < accelerating)
+        {
+            wheelsDrift = true;
+            particlesPerRevolution = 5;
+            wheelsVelocity = Mathf.Lerp(wheelsVelocity, customizer.currentCar.performance.acceleration * 0.25f, Time.deltaTime * 2);
+        }
+        else
+        {
+            wheelsDrift = false;
+            particlesPerRevolution = 25;
+            wheelsVelocity = velocity;
+        }
 
 
 
         switch (currentEngineStatus)
         {
             case CarEngineStatus.Idle:
-                currentSpeed = 0;
+                currentSpeed = Mathf.Lerp(currentSpeed, 0, Time.deltaTime);
                 break;
 
             case CarEngineStatus.Accelerating:
-                currentSpeed = speed * accelerating;
+                currentSpeed = customizer.currentCar.performance.acceleration * accelerating;
                 break;
 
             case CarEngineStatus.Braking:
-                if (velocity > -3)
-                {
-                    currentSpeed = -reverse * (braking - accelerating);
-                }
-                else
-                {
-                    currentSpeed = 0;
-                }
+                currentSpeed = -customizer.currentCar.performance.reverseAcceleration * (braking - accelerating);
                 break;
 
             case CarEngineStatus.HandBreaking:
-                currentSpeed = (!inDirectionReverse ? -reverse : reverse * 0.5f) * Mathf.Clamp01(velocity);
+                currentSpeed = (!inDirectionReverse ? -customizer.currentCar.performance.reverseAcceleration : customizer.currentCar.performance.reverseAcceleration * 0.5f) * Mathf.Clamp01(velocity);
                 break;
         }
 
@@ -229,8 +244,28 @@ public class CarMovement : MonoBehaviour
 
         //currentMove = Mathf.Lerp(currentMove, move, Time.deltaTime * velocity.Remap(0, speed * 0.5f, 10, 1)); // variar intensidad de cambio de direccion dependiendo de la velocidad
         //currentMove = Mathf.Lerp(currentMove, move, Time.deltaTime * 10); // sin variacion de cambio de direccion por velocidad
-        currentMove = Mathf.Lerp(currentMove, move * (inDrift ? 2 : 1), Time.deltaTime * (inDrift ? 0.6f : 8)); // variar intensidad por inDrift
-        currentMoveSteering = Mathf.Lerp(currentMoveSteering, move, Time.deltaTime * 8);
+
+        if (inDrift)
+        {
+            if (!brake)
+            {
+                currentMoveLerp = 0.6f;
+            }
+            else
+            {
+                currentMoveLerp = 2;
+            }
+        }
+        else
+        {
+            currentMoveLerp = 8;
+        }
+        //currentMoveLerp = inDrift && !brake ? 0.6f : 8;
+
+        moveCurve = move * customizer.currentCar.performance.steering.Evaluate(velocity / (customizer.currentCar.performance.acceleration * 0.5f));
+
+        currentMove = Mathf.Lerp(currentMove, moveCurve * (inDrift ? 2 : 1), Time.deltaTime * currentMoveLerp); // variar intensidad por inDrift
+        currentMoveSteering = Mathf.Lerp(currentMoveSteering, moveCurve, Time.deltaTime * 7.5f);
 
         if (inDrift && move == 0 && currentMove < 0.25f && currentMove > -0.25f) // si deja de girar se cancela el drift, se asume que ya anda el carro derecho
         {
@@ -239,27 +274,12 @@ public class CarMovement : MonoBehaviour
         }
 
         //rotate = currentMove * rotation * Time.deltaTime /** customizer.currentCar.performance.steering.Evaluate(accelerate)*/ * Mathf.Clamp01(velocity * 0.1f);
-        rotate = currentMove * rotation * Time.deltaTime * Mathf.Clamp(velocity * 0.1f, -1, 1);
+        rotate = currentMove * customizer.currentCar.performance.rotation * Time.deltaTime * Mathf.Clamp(velocity * 0.1f, -1, 1);
 
         carParent.localRotation = Quaternion.Euler(0, carParent.localEulerAngles.y + rotate, 0);
 
-        //if (customizer.currentRootReferences.root_suspension.Length == 0)
-        //{
-        //    rb.constraints = RigidbodyConstraints.FreezeRotationZ;
-        //    rb.transform.localEulerAngles = new Vector3(rb.transform.localEulerAngles.x, rb.transform.localEulerAngles.y, 0);
-        //}
-        //else
-        //{
-        //    rb.constraints = RigidbodyConstraints.None;
-        //}
-
         carNormal.up = rb.transform.up;
         carRoot.position = rb.transform.position;
-
-
-
-        if (customizer.currentRootReferences == null)
-            return;
 
 
 
@@ -284,11 +304,13 @@ public class CarMovement : MonoBehaviour
         {
             for (int i = 0; i < customizer.currentRootReferences.root_backWheels.Length && i < 2; i++) //hotfix de solo 2 ruedas traseras maximo (baja truck fix)
             {
-                customizer.currentRootReferences.root_backWheels[i].Rotate(Vector3.forward, (i == 0 ? -velocity : velocity) * Time.deltaTime * 100); //hotfix de rotacion derecha inverso izquierda
+                customizer.currentRootReferences.root_backWheels[i].Rotate(Vector3.forward, (i == 0 ? -wheelsVelocity : wheelsVelocity) * Time.deltaTime * 100); //hotfix de rotacion derecha inverso izquierda
             }
         }
 
-        if (inDrift && !driftParticles)
+        if (wheelsDrift ||
+            (inDrift && !driftParticles) ||
+            (accelerate && brake))
         {
             driftParticles = true;
 
@@ -308,10 +330,45 @@ public class CarMovement : MonoBehaviour
         }
     }
 
+    private float particlesPerRevolution = 4;
+    private float accumulatedAngle;
+    private float lastAngle;
+
+    private void LateUpdate()
+    {
+        if (customizer.currentRootReferences == null)
+            return;
+
+        if (!driftParticles || customizer.currentRootReferences.root_backWheels.Length == 0)
+            return;
+
+        float currentAngle = customizer.currentRootReferences.root_backWheels[0].localEulerAngles.z;
+
+        float delta = Mathf.DeltaAngle(lastAngle, currentAngle);
+        lastAngle = currentAngle;
+
+        accumulatedAngle += Mathf.Abs(delta);
+
+        float anglePerParticle = 360f / particlesPerRevolution;
+
+        int emitCount = Mathf.FloorToInt(accumulatedAngle / anglePerParticle);
+
+        for (int i = 0; i < customizer.currentRootReferences.particles_drift.Length; i++)
+        {
+            if (emitCount > 0)
+            {
+                customizer.currentRootReferences.particles_drift[i].Emit(emitCount);
+                accumulatedAngle -= emitCount * anglePerParticle;
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
         if (customizer.currentRootReferences == null)
             return;
+
+        rb.maxLinearVelocity = inManualReverse ? 6 : customizer.currentCar.performance.acceleration * 2;
 
         if (customizer.currentRootReferences.root_suspension.Length == 0)
         {
@@ -331,16 +388,18 @@ public class CarMovement : MonoBehaviour
 
             CarSuspensionRaycasts.Instance.SetCommand(
                 suspensionIndex,
-                customizer.currentRootReferences.transform.position,
+                customizer.currentRootReferences.transform.position + (customizer.currentRootReferences.transform.up.normalized * 0.5f),
                 -customizer.currentRootReferences.transform.up,
                 customizer.currentCar.performance.suspensionLength);
-
-            hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex);
 
             isGrounded = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex).collider;
         }
         else
         {
+            isGrounded = false;
+
+            //chasisMove = Mathf.Lerp(chasisMove, accelerating - braking, Time.deltaTime * 10);
+
             for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
             {
                 CarSuspensionRaycasts.Instance.SetCommand(
@@ -350,7 +409,6 @@ public class CarMovement : MonoBehaviour
                     customizer.currentCar.performance.suspensionLength);
 
                 hit = CarSuspensionRaycasts.Instance.GetHit(suspensionIndex + i);
-                isGrounded = hit.collider;
 
                 if (!hit.collider)
                 {
@@ -359,14 +417,18 @@ public class CarMovement : MonoBehaviour
                 }
                 else
                 {
+                    isGrounded = true;
+
                     suspensionDifference = (customizer.currentCar.performance.suspensionLength - hit.distance) * customizer.currentCar.performance.suspensionForce;
                     suspensionWheelTravel = customizer.currentCar.performance.suspensionLength - hit.distance;
 
-                    force = suspensionDifference * customizer.currentRootReferences.root_suspension[i].up;
-                    //Debug.LogWarning($"hit #{i} Diference: {force} Distance: {hit.distance} Resta: {customizer.currentCar.performance.suspensionLength - hit.distance}");
+                    force[i] = suspensionDifference * customizer.currentRootReferences.root_suspension[i].up;
+                    damp = (1f - Mathf.Exp(-force[i].magnitude * customizer.currentCar.performance.suspensionDamper * Time.deltaTime)).Remap(0, 1, 1, 0);
+                    force[i] = Vector3.Lerp(force[i], Vector3.zero, damp);
+                    //Debug.LogWarning($"hit #{i} Diference: {force[i]} Distance: {hit.distance} Resta: {customizer.currentCar.performance.suspensionLength - hit.distance}");
 
                     rb.AddForceAtPosition(
-                        force,
+                        force[i],
                         customizer.currentRootReferences.root_suspension[i].position,
                         ForceMode.Force);
                 }
@@ -382,7 +444,7 @@ public class CarMovement : MonoBehaviour
 
         rb.transform.localEulerAngles = new Vector3(rb.transform.localEulerAngles.x, carParent.localEulerAngles.y, rb.transform.localEulerAngles.z);
 
-        if (isGrounded && currentEngineStatus != CarEngineStatus.Idle)
+        //if (isGrounded && currentEngineStatus != CarEngineStatus.Idle)
         {
             rb.AddForce(-carParent.forward * currentSpeed, ForceMode.Acceleration);
         }

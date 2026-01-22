@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Rossababy 3045
   m_EditorClassIdentifier: Assembly-CSharp::CarDescription
   performance:
-    acceleration: 0
-    reverseAcceleration: 0
+    acceleration: 50
+    reverseAcceleration: 20
+    rotation: 100
     steering:
       serializedVersion: 2
       m_Curve:
@@ -50,6 +51,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     suspensionLength: 0.33
     suspensionForce: 30000
+    suspensionDamper: 0.05
   body: {fileID: 11400000, guid: a5ddce0401b82394bba3777ea5716333, type: 2}
   bodyKit: {fileID: 11400000, guid: 976e774412bab1b4d8672b9ffe20c64e, type: 2}
   engine: {fileID: 11400000, guid: c326e7bed4224494ebedff38b9500739, type: 2}

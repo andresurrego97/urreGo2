@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Midnight Drift
   m_EditorClassIdentifier: Assembly-CSharp::CarDescription
   performance:
-    acceleration: 0
-    reverseAcceleration: 0
+    acceleration: 50
+    reverseAcceleration: 20
+    rotation: 100
     steering:
       serializedVersion: 2
       m_Curve:
@@ -50,6 +51,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     suspensionLength: 0.44
     suspensionForce: 20000
+    suspensionDamper: 0.1
   body: {fileID: 11400000, guid: d0a22d68629398b4cbf0a0bca616ecee, type: 2}
   bodyKit: {fileID: 11400000, guid: 68072c4c5fcae2c408f916a0d5fa28e1, type: 2}
   engine: {fileID: 11400000, guid: bf4b9bb0004e61a45a0f482da8986f0f, type: 2}

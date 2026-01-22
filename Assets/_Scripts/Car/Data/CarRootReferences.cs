@@ -13,6 +13,7 @@ public class CarRootReferences : MonoBehaviour
     public Transform[] root_frontWheels;
     public Transform[] root_backWheels;
     public Transform[] root_suspension;
+    //[HideInInspector] public Vector3[] suspensionCenters;
 
     [Header("Renderers")]
     public SkinnedMeshRenderer renderer_body;
@@ -46,4 +47,13 @@ public class CarRootReferences : MonoBehaviour
     public Material material_engine;
     public Material material_steeringWheel;
     public Material material_wheels;
+
+    //private void Awake()
+    //{
+    //    suspensionCenters = new Vector3[root_suspension.Length];
+    //    for (int i = 0; i < root_suspension.Length; i++)
+    //    {
+    //        suspensionCenters[i] = root_suspension[i].localPosition;
+    //    }
+    //}
 }

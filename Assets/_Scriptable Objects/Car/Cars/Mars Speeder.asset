@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Mars Speeder
   m_EditorClassIdentifier: Assembly-CSharp::CarDescription
   performance:
-    acceleration: 0
-    reverseAcceleration: 0
+    acceleration: 50
+    reverseAcceleration: 20
+    rotation: 100
     steering:
       serializedVersion: 2
       m_Curve:
@@ -50,6 +51,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     suspensionLength: 0.47
     suspensionForce: 10000
+    suspensionDamper: 0.05
   body: {fileID: 11400000, guid: 0f706c5b992c72c45ac5e5177d53f77e, type: 2}
   bodyKit: {fileID: 11400000, guid: c4fb4604d6a9ed44ebbf16bcda2cdb0f, type: 2}
   engine: {fileID: 11400000, guid: 1d7402627e3a2bd47a1e9af8a4d3bfa9, type: 2}

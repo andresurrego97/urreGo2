@@ -20,11 +20,16 @@ public struct CarPerformance
 {
     public float acceleration;
     public float reverseAcceleration;
+    public float rotation;
     public AnimationCurve steering;
 
     [Header("Suspension")]
+    [Tooltip("Distance from the suspension point to the ground. This must not be modified")]
     public float suspensionLength;
+    [Tooltip("The force exerted by each tire when the suspension is compressed, the higher it is, the faster it straightens")]
     public float suspensionForce;
+    [Tooltip("The faster the suspension reaches zero to stabilize, but make it less respinsive")]
+    public float suspensionDamper;
 }
 
 [CreateAssetMenu(fileName = "Car", menuName = "Scriptable Objects/Car/Car", order = 0)]
