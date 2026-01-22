@@ -25,6 +25,7 @@ public class CarRootReferences : MonoBehaviour
 
     [Header("Particles")]
     public ParticleSystem[] particles_drift;
+    public ParticleSystem[] particles_exhaust;
 
     [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;

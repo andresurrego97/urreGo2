@@ -14,9 +14,9 @@ public class CarMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
 
     [Space]
-    private float velocity;
+    public float velocity;
     private Vector3 velocityVector;
-    private float wheelsVelocity;
+    public float wheelsVelocity;
 
     [Space]
     private CarEngineStatus currentEngineStatus = CarEngineStatus.Idle;
@@ -55,6 +55,9 @@ public class CarMovement : MonoBehaviour
     private bool isGrounded;
     //private float chasisMove;
     //public float chasisMovePower;
+
+    [Space]
+    private float timeToExhaust;
 
     private void Awake()
     {
@@ -105,6 +108,11 @@ public class CarMovement : MonoBehaviour
         if (ctx.canceled)
         {
             timeFullToDrift = 0;
+        }
+
+        if (ctx.started)
+        {
+            timeToExhaust = 1;
         }
     }
 
@@ -212,15 +220,15 @@ public class CarMovement : MonoBehaviour
                 break;
 
             case CarEngineStatus.Accelerating:
-                currentSpeed = customizer.currentCar.performance.acceleration * accelerating;
+                currentSpeed = Mathf.Lerp(currentSpeed, customizer.currentCar.performance.acceleration * accelerating, Time.deltaTime * customizer.currentCar.performance.torque);
                 break;
 
             case CarEngineStatus.Braking:
-                currentSpeed = -customizer.currentCar.performance.reverseAcceleration * (braking - accelerating);
+                currentSpeed = -(inManualReverse ? customizer.currentCar.performance.reverseAcceleration : customizer.currentCar.performance.reverseAcceleration * 0.5f) * (braking - accelerating);
                 break;
 
             case CarEngineStatus.HandBreaking:
-                currentSpeed = (!inDirectionReverse ? -customizer.currentCar.performance.reverseAcceleration : customizer.currentCar.performance.reverseAcceleration * 0.5f) * Mathf.Clamp01(velocity);
+                currentSpeed = (!inDirectionReverse ? -customizer.currentCar.performance.reverseAcceleration * 0.5f : customizer.currentCar.performance.reverseAcceleration * 0.25f) * Mathf.Clamp01(velocity);
                 break;
         }
 
@@ -265,7 +273,7 @@ public class CarMovement : MonoBehaviour
         currentMove = Mathf.Lerp(currentMove, moveCurve * (inDrift ? 2 : 1), Time.deltaTime * currentMoveLerp); // variar intensidad por inDrift
         currentMoveSteering = Mathf.Lerp(currentMoveSteering, moveCurve, Time.deltaTime * 7.5f);
 
-        if (inDrift && move == 0 && currentMove < 0.25f && currentMove > -0.25f) // si deja de girar se cancela el drift, se asume que ya anda el carro derecho
+        if (inDrift && move == 0 && currentMove < 0.25f && currentMove > -0.25f && !handBrake) // si deja de girar se cancela el drift, se asume que ya anda el carro derecho
         {
             inDrift = false;
             timeFullToDrift = 0;
@@ -325,6 +333,27 @@ public class CarMovement : MonoBehaviour
             {
                 customizer.currentRootReferences.particles_drift[i].Stop(false, ParticleSystemStopBehavior.StopEmitting);
             }
+        }
+
+        if (accelerate)
+        {
+            timeToExhaust += Time.deltaTime * (wheelsDrift || turbo ? customizer.currentCar.performance.torque * 2 : customizer.currentCar.performance.torque * 0.5f) * accelerating;
+
+            if (timeToExhaust >= 1)
+            {
+                timeToExhaust = 0;
+
+                for (int i = 0; i < customizer.currentRootReferences.particles_exhaust.Length; i++)
+                {
+                    //customizer.currentRootReferences.particles_exhaust[i].Emit();
+                }
+
+                Debug.LogWarning("Exhaust!");
+            }
+        }
+        else
+        {
+            timeToExhaust = 0;
         }
     }
 

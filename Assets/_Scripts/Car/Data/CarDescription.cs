@@ -18,24 +18,29 @@ public struct CarDecal
 [Serializable]
 public struct CarPerformance
 {
+    [Tooltip("Acceleration and Top Speed")]
     public float acceleration;
+    [Tooltip("Force or velocity at which it reaches that maximum speed")]
+    public float torque;
+    [Tooltip("Reverse speed and brake power")]
     public float reverseAcceleration;
+    [Tooltip("How much can it rotate")]
     public float rotation;
+    [Tooltip("Reduced steering response at high speed to maintain stability")]
     public AnimationCurve steering;
 
     [Header("Suspension")]
-    [Tooltip("Distance from the suspension point to the ground. This must not be modified")]
+    [Tooltip("Distance from the suspension point to the ground. This must not be modified!")]
     public float suspensionLength;
-    [Tooltip("The force exerted by each tire when the suspension is compressed, the higher it is, the faster it straightens")]
+    [Tooltip("Force exerted by each tire when the suspension is compressed, the higher it is, the faster it straightens")]
     public float suspensionForce;
-    [Tooltip("The faster the suspension reaches zero to stabilize, but make it less respinsive")]
+    [Tooltip("The faster the suspension reaches zero to stabilize, but make it laggyer")]
     public float suspensionDamper;
 }
 
 [CreateAssetMenu(fileName = "Car", menuName = "Scriptable Objects/Car/Car", order = 0)]
 public class CarDescription : ScriptableObject
 {
-    [Header("Performance")]
     public CarPerformance performance;
 
     [Header("Parts")]
@@ -45,6 +50,6 @@ public class CarDescription : ScriptableObject
     public CarPart steeringWheel;
     public CarComboPart wheel;
 
-    [Header("Decals")]
+    [Space]
     public CarDecal[] decals;
 }
