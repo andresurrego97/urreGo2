@@ -15,7 +15,7 @@ MonoBehaviour:
   performance:
     acceleration: 50
     torque: 1
-    reverseAcceleration: 20
+    reverseAcceleration: 15
     rotation: 100
     steering:
       serializedVersion: 2

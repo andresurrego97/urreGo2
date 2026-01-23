@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarDescription
   performance:
     acceleration: 50
-    torque: 1
-    reverseAcceleration: 20
+    torque: 2
+    reverseAcceleration: 15
     rotation: 100
     steering:
       serializedVersion: 2

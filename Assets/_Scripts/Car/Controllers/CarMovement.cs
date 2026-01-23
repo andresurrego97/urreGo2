@@ -34,7 +34,9 @@ public class CarMovement : MonoBehaviour
     private bool inManualReverse;
     private bool turbo;
 
+    [Space]
     private float currentSpeed;
+    private float nextSpeed;
     private float rotate;
 
     [Space]
@@ -58,6 +60,8 @@ public class CarMovement : MonoBehaviour
 
     [Space]
     private float timeToExhaust;
+    private float timeToExhaustRandom = 1;
+    private float timeToExhaustDriftRandom = 1;
 
     private void Awake()
     {
@@ -154,6 +158,11 @@ public class CarMovement : MonoBehaviour
                 customizer.currentRootReferences.material_emissive.SetFloat(CarColorsProperties.EmissiveBoost, customizer.currentRootReferences.default_emissiveValue);
             }
         }
+
+        if (ctx.started)
+        {
+            timeToExhaust = 1;
+        }
     }
 
     public void HandBrake(InputAction.CallbackContext ctx)
@@ -184,6 +193,15 @@ public class CarMovement : MonoBehaviour
     public void Turbo(InputAction.CallbackContext ctx)
     {
         turbo = ctx.performed;
+
+        if (ctx.started)
+        {
+            customizer.currentRootReferences.particles_exhaustMaterial.SetColor(CarColorsProperties.BaseColor, Color.cyan);
+        }
+        else if (ctx.canceled)
+        {
+            customizer.currentRootReferences.particles_exhaustMaterial.SetColor(CarColorsProperties.BaseColor, Color.white);
+        }
     }
 
     private void Update()
@@ -216,19 +234,23 @@ public class CarMovement : MonoBehaviour
         switch (currentEngineStatus)
         {
             case CarEngineStatus.Idle:
-                currentSpeed = Mathf.Lerp(currentSpeed, 0, Time.deltaTime);
+                nextSpeed = 0;
+                currentSpeed = Mathf.Lerp(currentSpeed, nextSpeed, Time.deltaTime);
                 break;
 
             case CarEngineStatus.Accelerating:
-                currentSpeed = Mathf.Lerp(currentSpeed, customizer.currentCar.performance.acceleration * accelerating, Time.deltaTime * customizer.currentCar.performance.torque);
+                nextSpeed = turbo ? customizer.currentCar.performance.acceleration * 2 : customizer.currentCar.performance.acceleration * accelerating;
+                currentSpeed = Mathf.Lerp(currentSpeed, nextSpeed, Time.deltaTime * customizer.currentCar.performance.torque);
                 break;
 
             case CarEngineStatus.Braking:
-                currentSpeed = -(inManualReverse ? customizer.currentCar.performance.reverseAcceleration : customizer.currentCar.performance.reverseAcceleration * 0.5f) * (braking - accelerating);
+                nextSpeed = -(inManualReverse ? customizer.currentCar.performance.reverseAcceleration : customizer.currentCar.performance.reverseAcceleration * (inDrift ? 0.25f : 0.5f)) * (braking - accelerating);
+                currentSpeed = Mathf.Lerp(currentSpeed, nextSpeed, Time.deltaTime * (inManualReverse ? 15 : 5));
                 break;
 
             case CarEngineStatus.HandBreaking:
-                currentSpeed = (!inDirectionReverse ? -customizer.currentCar.performance.reverseAcceleration * 0.5f : customizer.currentCar.performance.reverseAcceleration * 0.25f) * Mathf.Clamp01(velocity);
+                nextSpeed = (!inDirectionReverse ? -customizer.currentCar.performance.reverseAcceleration * 0.5f : customizer.currentCar.performance.reverseAcceleration * 0.25f) * Mathf.Clamp01(velocity);
+                currentSpeed = Mathf.Lerp(currentSpeed, nextSpeed, Time.deltaTime * 10);
                 break;
         }
 
@@ -248,9 +270,6 @@ public class CarMovement : MonoBehaviour
             }
         }
 
-        //currentMove = Mathf.Lerp(currentMove, move, Time.deltaTime * velocity.Remap(0, speed * 0.5f, 10, 1)); // variar intensidad de cambio de direccion dependiendo de la velocidad
-        //currentMove = Mathf.Lerp(currentMove, move, Time.deltaTime * 10); // sin variacion de cambio de direccion por velocidad
-
         if (inDrift)
         {
             if (!brake)
@@ -266,7 +285,6 @@ public class CarMovement : MonoBehaviour
         {
             currentMoveLerp = 8;
         }
-        //currentMoveLerp = inDrift && !brake ? 0.6f : 8;
 
         moveCurve = move * customizer.currentCar.performance.steering.Evaluate(velocity / (customizer.currentCar.performance.acceleration * 0.5f));
 
@@ -279,7 +297,6 @@ public class CarMovement : MonoBehaviour
             timeFullToDrift = 0;
         }
 
-        //rotate = currentMove * rotation * Time.deltaTime /** customizer.currentCar.performance.steering.Evaluate(accelerate)*/ * Mathf.Clamp01(velocity * 0.1f);
         rotate = currentMove * customizer.currentCar.performance.rotation * Time.deltaTime * Mathf.Clamp(velocity * 0.1f, -1, 1);
 
         carParent.localRotation = Quaternion.Euler(0, carParent.localEulerAngles.y + rotate, 0);
@@ -315,8 +332,7 @@ public class CarMovement : MonoBehaviour
         }
 
         if ((!driftParticles && wheelsDrift) ||
-            (!driftParticles && inDrift) /*||
-            (!driftParticles && accelerate && brake)*/)
+            (!driftParticles && inDrift))
         {
             driftParticles = true;
 
@@ -337,7 +353,7 @@ public class CarMovement : MonoBehaviour
 
         if (accelerate)
         {
-            timeToExhaust += Time.deltaTime * (wheelsDrift || turbo ? customizer.currentCar.performance.torque * 2 : customizer.currentCar.performance.torque * 0.5f) * accelerating;
+            timeToExhaust += Time.deltaTime * (wheelsDrift || turbo || handBrake ? customizer.currentCar.performance.torque * timeToExhaustRandom : customizer.currentCar.performance.torque * timeToExhaustDriftRandom) * accelerating;
 
             if (timeToExhaust >= 1)
             {
@@ -345,10 +361,11 @@ public class CarMovement : MonoBehaviour
 
                 for (int i = 0; i < customizer.currentRootReferences.particles_exhaust.Length; i++)
                 {
-                    //customizer.currentRootReferences.particles_exhaust[i].Emit();
+                    customizer.currentRootReferences.particles_exhaust[i].Play();
                 }
 
-                Debug.LogWarning("Exhaust!");
+                timeToExhaustRandom = turbo ? Random.Range(5f, 10f) : Random.Range(2f, 5f);
+                timeToExhaustDriftRandom = inDrift ? Random.Range(1f, 2f) : Random.Range(0.2f, 0.4f);
             }
         }
         else

@@ -3,6 +3,7 @@ using UnityEngine;
 public class CarRootReferences : MonoBehaviour
 {
     public Animator anim;
+    public Transform cameraRoot;
 
     [Header("Roots")]
     public Transform root_bodyKit;
@@ -26,6 +27,7 @@ public class CarRootReferences : MonoBehaviour
     [Header("Particles")]
     public ParticleSystem[] particles_drift;
     public ParticleSystem[] particles_exhaust;
+    public Material particles_exhaustMaterial;
 
     [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;
@@ -48,6 +50,24 @@ public class CarRootReferences : MonoBehaviour
     public Material material_engine;
     public Material material_steeringWheel;
     public Material material_wheels;
+
+    private void Awake()
+    {
+        for (int i = 0; i < particles_exhaust.Length; i++)
+        {
+            particles_exhaust[i].TryGetComponent(out ParticleSystemRenderer render);
+
+            if (i == 0)
+            {
+                particles_exhaustMaterial = Instantiate(render.material);
+                render.material = particles_exhaustMaterial;
+            }
+            else
+            {
+                render.material = particles_exhaustMaterial;
+            }
+        }
+    }
 
     //private void Awake()
     //{

@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class CarCustomizer : MonoBehaviour
 {
+    public Action OnBodyChange;
+
     #region Serialize Fields
     [Header("References")]
     [SerializeField] private CarPartsList partsList;
@@ -243,6 +245,7 @@ public class CarCustomizer : MonoBehaviour
         SetDecals_Body();
 
         body_ready = true;
+        OnBodyChange?.Invoke();
 
         currentPart_bodyKit = false;
         Parts_BodyKit_Next();
