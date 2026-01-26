@@ -863,6 +863,7 @@ MonoBehaviour:
   particles_exhaust:
   - {fileID: 1987306656774497434}
   particles_exhaustMaterial: {fileID: 0}
+  removableParts: []
   renderer_bodyKit: {fileID: 0}
   renderer_engine: {fileID: 0}
   renderer_steeringWheel: {fileID: 0}
@@ -888,7 +889,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4535903982343544673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 4331d8af2d1ef7b43bd6f3915a97dd77, type: 3}
   m_Controller: {fileID: 22100000, guid: 9f9a7436bfa336249a2f48cdb4935464, type: 2}
   m_CullingMode: 1

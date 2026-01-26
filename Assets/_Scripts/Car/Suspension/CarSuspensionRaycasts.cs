@@ -30,8 +30,8 @@ public class CarSuspensionRaycasts : MonoBehaviour
 
         commands = new NativeArray<RaycastCommand>(rayCount, Allocator.Persistent);
         hits = new NativeArray<RaycastHit>(rayCount, Allocator.Persistent);
-        //parameters = new QueryParameters(suspensionMask, false, QueryTriggerInteraction.Ignore, false);
-        parameters = new QueryParameters(suspensionMask, true, QueryTriggerInteraction.Collide, true);
+        parameters = new QueryParameters(suspensionMask, false, QueryTriggerInteraction.Ignore, false);
+        //parameters = new QueryParameters(suspensionMask, true, QueryTriggerInteraction.Collide, true);
     }
 
     public int Reserve(int amount)

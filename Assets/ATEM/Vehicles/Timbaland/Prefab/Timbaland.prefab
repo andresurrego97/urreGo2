@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5793483998650335871}
+  - component: {fileID: 2098619848358380958}
+  - component: {fileID: 6290216562056040430}
   m_Layer: 0
   m_Name: Def_Door.L
   m_TagString: Untagged
@@ -31,6 +33,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5033471345330459416}
   m_LocalEulerAnglesHint: {x: 0, y: 26.241297, z: 0}
+--- !u!65 &2098619848358380958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87981900622582902}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.5597579, y: 1.0375777, z: 1.5017874}
+  m_Center: {x: 0.091344416, y: 0.26849502, z: -0.779803}
+--- !u!54 &6290216562056040430
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87981900622582902}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &185719698927123974
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +268,13 @@ MonoBehaviour:
   - {fileID: 3530283988900891843}
   - {fileID: 4744839862335485432}
   particles_exhaustMaterial: {fileID: 0}
+  removableParts:
+  - removed: 0
+    collider: {fileID: 2098619848358380958}
+    rigidbody: {fileID: 6290216562056040430}
+  - removed: 0
+    collider: {fileID: 4503754810169884632}
+    rigidbody: {fileID: 4778968778033194771}
   renderer_bodyKit: {fileID: 0}
   renderer_engine: {fileID: 0}
   renderer_steeringWheel: {fileID: 0}
@@ -243,7 +300,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982072976451887932}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: c34bcf057ecace04ebe0cf4be6858665, type: 3}
   m_Controller: {fileID: 22100000, guid: 6469d32ca9dd90048849075af3025a89, type: 2}
   m_CullingMode: 1
@@ -1748,6 +1805,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3332366112889482490}
+  - component: {fileID: 4503754810169884632}
+  - component: {fileID: 4778968778033194771}
   m_Layer: 0
   m_Name: Def_Door.R
   m_TagString: Untagged
@@ -1770,6 +1829,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4994188223565017795}
   m_LocalEulerAnglesHint: {x: 0, y: 0.00000040019006, z: 0}
+--- !u!65 &4503754810169884632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176034551820038978}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.5597579, y: 1.0375777, z: 1.5017874}
+  m_Center: {x: -0.09134442, y: 0.26849502, z: -0.779803}
+--- !u!54 &4778968778033194771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176034551820038978}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8244376497680410007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +2060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8991972418623879117}
   serializedVersion: 2
-  m_LocalRotation: {x: 6.1232336e-17, y: 1, z: 6.1232336e-17, w: 0.00000004371139}
+  m_LocalRotation: {x: 0, y: 0.9986295, z: 0.052335896, w: 0}
   m_LocalPosition: {x: 0.00000028461463, y: 0.6421098, z: -2.0142474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -11194,7 +11194,7 @@ GameObject:
   - component: {fileID: 730818494}
   - component: {fileID: 730818491}
   - component: {fileID: 730818493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11278,7 +11278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41167c350ea5544da371d854bf54287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarCollisionChecker
-  rb: {fileID: 730818491}
 --- !u!1 &738924163
 GameObject:
   m_ObjectHideFlags: 0
@@ -30387,9 +30386,9 @@ MonoBehaviour:
   frequencyMax: 3
   frequencyAdd: 0.5
   amplitudeBase: 0.2
-  shakeLimit: 0.05
-  shakePower: 2
-  shakePowerLimit: 10
+  shakeLimit: 1500
+  shakePower: 0.00075
+  shakeSpeed: 2
 --- !u!1 &1863234081
 GameObject:
   m_ObjectHideFlags: 0
@@ -45826,6 +45825,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 982072976451887932, guid: 1ce541efdacbd25469c96f27dfcd06c5, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160866715421435662, guid: 1ce541efdacbd25469c96f27dfcd06c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160866715421435662, guid: 1ce541efdacbd25469c96f27dfcd06c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -70745,6 +70752,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748728931}
     m_Modifications:
+    - target: {fileID: 3674813031290724719, guid: 7072b6aa4cde3ed49b01af7aca5a6737, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8521116349041756370, guid: 7072b6aa4cde3ed49b01af7aca5a6737, type: 3}
       propertyPath: m_Name
       value: Archer Primal

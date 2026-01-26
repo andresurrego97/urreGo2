@@ -41,6 +41,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903237392960027605}
+  - component: {fileID: 7067786494438079209}
+  - component: {fileID: 4784718344369717508}
   m_Layer: 0
   m_Name: Mch_DoorHinge.R
   m_TagString: Untagged
@@ -64,6 +66,54 @@ Transform:
   - {fileID: 6826929649334017152}
   m_Father: {fileID: 161576310990113994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7067786494438079209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303432863318040929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.43781835, y: 0.8163254, z: 1.2720542}
+  m_Center: {x: 0.1019453, y: 0.30199873, z: 0.6892398}
+--- !u!54 &4784718344369717508
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303432863318040929}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &378023008805463158
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +704,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1858041734870888046}
+  - component: {fileID: 6807194641119283695}
+  - component: {fileID: 2427696220858075332}
   m_Layer: 0
   m_Name: Def_Hood
   m_TagString: Untagged
@@ -676,6 +728,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8985469768270150312}
   m_LocalEulerAnglesHint: {x: -89.98021, y: 179.99997, z: 0}
+--- !u!65 &6807194641119283695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611082312948237537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.89, y: 0.15338083, z: 1.0849046}
+  m_Center: {x: 1.6797944e-14, y: -0.023045491, z: 0.5130655}
+--- !u!54 &2427696220858075332
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611082312948237537}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2732988872547051173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1103,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3229635285023397955}
+  - component: {fileID: 3220098213612381899}
+  - component: {fileID: 1327619289946769364}
   m_Layer: 0
   m_Name: Mch_DoorHinge.L
   m_TagString: Untagged
@@ -1026,6 +1128,54 @@ Transform:
   - {fileID: 4885924680151021551}
   m_Father: {fileID: 9011123562816451833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3220098213612381899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021682703358676583}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.43781835, y: 0.8163254, z: 1.2720542}
+  m_Center: {x: -0.10194526, y: 0.30199873, z: 0.6892398}
+--- !u!54 &1327619289946769364
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021682703358676583}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4083190521315774893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +2028,16 @@ MonoBehaviour:
   - {fileID: 6237117762340021723}
   - {fileID: 2144476578446266291}
   particles_exhaustMaterial: {fileID: 0}
+  removableParts:
+  - removed: 0
+    collider: {fileID: 6807194641119283695}
+    rigidbody: {fileID: 2427696220858075332}
+  - removed: 0
+    collider: {fileID: 3220098213612381899}
+    rigidbody: {fileID: 1327619289946769364}
+  - removed: 0
+    collider: {fileID: 7067786494438079209}
+    rigidbody: {fileID: 4784718344369717508}
   renderer_bodyKit: {fileID: 0}
   renderer_engine: {fileID: 0}
   renderer_steeringWheel: {fileID: 0}
@@ -1903,7 +2063,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7287994356013548216}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: c4dbc2f18cdf83c42a14026f29462191, type: 3}
   m_Controller: {fileID: 22100000, guid: b063ac5286d7ccf489f6d24f677526fe, type: 2}
   m_CullingMode: 1
