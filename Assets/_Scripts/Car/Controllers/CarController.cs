@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class CarController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] CarCustomizer customizer;
+    [SerializeField] private CarCustomizer customizer;
+    [SerializeField] private CarCollisionChecker collisionChecker;
 
     [Space]
     [SerializeField] private Transform carRoot;
@@ -15,7 +16,6 @@ public class CarController : MonoBehaviour
 
     [Space]
     public float velocity;
-    private Vector3 velocityVector;
     public float wheelsVelocity;
 
     [Space]
@@ -48,7 +48,8 @@ public class CarController : MonoBehaviour
     [Space]
     private int suspensionIndex = 0;
     private RaycastHit hit;
-    private Vector3[] force;
+    private Vector3[] forces;
+    private Vector3 force;
     private float suspensionDifference;
     private float suspensionWheelTravel;
     private float damp;
@@ -57,8 +58,6 @@ public class CarController : MonoBehaviour
     private bool isGrounded;
     //private float chasisMove;
     //public float chasisMovePower;
-    private Quaternion currentRotation;
-    private Quaternion targetYRotation;
 
     [Space]
     private float timeToExhaust;
@@ -67,13 +66,19 @@ public class CarController : MonoBehaviour
 
     [Space]
     private int detacheIndex;
-    private Vector3 detachePower;
 
     private void Awake()
     {
         // Setear esto al principio de una pista, para que los carros con 0 o mas de 4 llantas, no gasten cuando no deben
         suspensionIndex = CarSuspensionRaycasts.Instance.Reserve(4);
-        force = new Vector3[4];
+        forces = new Vector3[4];
+
+        collisionChecker.OnColission += OnCollide;
+    }
+
+    private void OnDestroy()
+    {
+        collisionChecker.OnColission -= OnCollide;
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -218,9 +223,7 @@ public class CarController : MonoBehaviour
         inDirectionReverse = Vector3.Dot(carParent.forward, rb.linearVelocity.normalized) > 0;
         inManualReverse = inDirectionReverse && !accelerate && !handBrake;
 
-        velocityVector = rb.linearVelocity;
-        velocityVector.y = 0; // COMENTAR ESTO CUANDO HAYAN PISTAS CON RAMPAS, O CUANDO SE TENGAN PISTAS CON GRAVEDAD CUSTOM (Diferente a gravedad global hacia abajo)
-        velocity = velocityVector.magnitude * (inManualReverse ? -1 : 1);
+        velocity = rb.linearVelocity.magnitude * (inManualReverse ? -1 : 1);
 
 
         if (isGrounded)
@@ -328,8 +331,8 @@ public class CarController : MonoBehaviour
         rotate = currentMove * customizer.currentCar.performance.rotation * Time.deltaTime * Mathf.Clamp(velocity * 0.1f, -1, 1);
 
         carParent.localEulerAngles = new Vector3(0, carParent.localEulerAngles.y + rotate, 0);
-        carNormal.rotation = Quaternion.LookRotation(carNormal.forward, rb.transform.up);
-        carRoot.position = rb.transform.position;
+
+        carNormal.rotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(carNormal.forward, rb.transform.up).normalized, rb.transform.up);
 
 
 
@@ -408,6 +411,11 @@ public class CarController : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        carRoot.position = rb.transform.position;
+    }
+
     private void FixedUpdate()
     {
         if (customizer.currentRootReferences == null)
@@ -417,6 +425,8 @@ public class CarController : MonoBehaviour
         //rb.maxAngularVelocity = 10;
 
         rb.maxLinearVelocity = inManualReverse ? 6 : customizer.currentCar.performance.acceleration * 2;
+
+        rb.MoveRotation(Quaternion.Slerp(rb.rotation, carParent.rotation, 0.5f));
 
         if (customizer.currentRootReferences.root_suspension.Length == 0)
         {
@@ -446,7 +456,7 @@ public class CarController : MonoBehaviour
         {
             isGrounded = false;
 
-            //chasisMove = Mathf.Lerp(chasisMove, accelerating - braking, Time.deltaTime * 10);
+            //chasisMove = Mathf.Lerp(chasisMove, accelerating - braking, 1);
 
             for (int i = 0; i < customizer.currentRootReferences.root_suspension.Length; i++)
             {
@@ -470,13 +480,12 @@ public class CarController : MonoBehaviour
                     suspensionDifference = (customizer.currentCar.performance.suspensionLength - hit.distance) * customizer.currentCar.performance.suspensionForce;
                     suspensionWheelTravel = customizer.currentCar.performance.suspensionLength - hit.distance;
 
-                    force[i] = suspensionDifference * customizer.currentRootReferences.root_suspension[i].up;
-                    damp = (1f - Mathf.Exp(-force[i].magnitude * customizer.currentCar.performance.suspensionDamper * Time.deltaTime)).Remap(0, 1, 1, 0);
-                    force[i] = Vector3.Lerp(force[i], Vector3.zero, damp);
-                    //Debug.LogWarning($"hit #{i} Diference: {force[i]} Distance: {hit.distance} Resta: {customizer.currentCar.performance.suspensionLength - hit.distance}");
+                    forces[i] = suspensionDifference * customizer.currentRootReferences.root_suspension[i].up;
+                    damp = (1f - Mathf.Exp(-forces[i].magnitude * customizer.currentCar.performance.suspensionDamper)).Remap(0, 1, 1, 0);
+                    forces[i] = Vector3.Lerp(forces[i], Vector3.zero, damp);
 
                     rb.AddForceAtPosition(
-                        force[i],
+                        forces[i],
                         customizer.currentRootReferences.root_suspension[i].position,
                         ForceMode.Force);
                 }
@@ -488,13 +497,7 @@ public class CarController : MonoBehaviour
             }
         }
 
-        //
-
-        currentRotation = rb.transform.localRotation;
-        targetYRotation = Quaternion.Euler(0f, carParent.localEulerAngles.y, 0f);
-        rb.transform.localRotation =
-            targetYRotation * Quaternion.Euler(currentRotation.eulerAngles.x, 0f, currentRotation.eulerAngles.z);
-
+        rb.linearDamping = isGrounded ? 2f : 0.25f;
 
         //if (isGrounded && currentEngineStatus != CarEngineStatus.Idle)
         {
@@ -503,29 +506,23 @@ public class CarController : MonoBehaviour
     }
 
     [ContextMenu("Detache part")]
-    private void DetachePart()
+    private void OnCollide(float power, Vector3 point)
     {
+        if (customizer.currentRootReferences == null)
+            return;
+
+        customizer.currentRootReferences.particles_sparks.transform.position = point;
+        customizer.currentRootReferences.particles_sparks.Emit(Mathf.Clamp(Mathf.CeilToInt(power * 0.1f), 0, 500));
+
+        if (power < 7500)
+            return;
+
         if (customizer.currentRootReferences.removableParts.Count == 0)
             return;
 
         detacheIndex = Random.Range(0, customizer.currentRootReferences.removableParts.Count);
 
-        customizer.currentRootReferences.removableParts[detacheIndex].collider.transform.SetParent(null);
-
-        detachePower = customizer.currentRootReferences.removableParts[detacheIndex].rigidbody.position - rb.position;
-        detachePower *= 2.5f;
-        detachePower.y *= 2;
-
-        customizer.currentRootReferences.removableParts[detacheIndex].rigidbody.isKinematic = false;
-        customizer.currentRootReferences.removableParts[detacheIndex].rigidbody.AddForceAtPosition(
-            detachePower,
-            rb.position,
-            ForceMode.Impulse);
-        customizer.currentRootReferences.removableParts[detacheIndex].collider.enabled = true;
-
+        customizer.currentRootReferences.removableParts[detacheIndex].Detache(rb.position);
         customizer.currentRootReferences.removableParts.RemoveAt(detacheIndex);
-
-        // Pasar logica a un script por componente para que luego pueda en la escala hacerse pequeño despues
-        // de un tiempo y se destruya, para ahorrar carga
     }
 }

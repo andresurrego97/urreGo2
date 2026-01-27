@@ -3,6 +3,8 @@
   <Project Path="UniTask.csproj" />
   <Project Path="UniTask.Linq.csproj" />
   <Project Path="Febucci.HierarchyIcons.csproj" />
+  <Project Path="Unity.Splines.Examples.csproj" />
+  <Project Path="Unity.Splines.Examples.Editor.csproj" />
   <Project Path="UniTask.TextMeshPro.csproj" />
   <Project Path="ShaderGraphVariables.csproj" />
   <Project Path="UniTask.Addressables.csproj" />

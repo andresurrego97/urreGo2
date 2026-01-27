@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,16 +29,10 @@ public class CarRootReferences : MonoBehaviour
     public ParticleSystem[] particles_drift;
     public ParticleSystem[] particles_exhaust;
     public Material particles_exhaustMaterial;
+    public ParticleSystem particles_sparks;
 
-    [Serializable]
-    public struct RemovablePart
-    {
-        [HideInInspector] public bool removed;
-        public Collider collider;
-        public Rigidbody rigidbody;
-    }
     [Header("Removable parts")]
-    public List<RemovablePart> removableParts;
+    public List<CarDetachedPart> removableParts;
 
     [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;
@@ -79,12 +72,6 @@ public class CarRootReferences : MonoBehaviour
                 render.material = particles_exhaustMaterial;
             }
         }
-
-        //for (int i = 0; i < removableParts.Length; i++)
-        //{
-        //    removableParts[i].collider.enabled = false;
-        //    removableParts[i].rigidbody.isKinematic = true;
-        //}
     }
 
     //private void Awake()

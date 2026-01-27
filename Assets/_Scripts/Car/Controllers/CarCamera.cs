@@ -27,12 +27,18 @@ public class CarCamera : MonoBehaviour
         collisionChecker.OnColission += CollisionShake;
     }
 
+    private void OnDestroy()
+    {
+        customizer.OnBodyChange -= ChangeCameraRoot;
+        collisionChecker.OnColission -= CollisionShake;
+    }
+
     private void ChangeCameraRoot()
     {
         cameraRoot.SetLocalPositionAndRotation(customizer.currentRootReferences.cameraRoot.localPosition, customizer.currentRootReferences.cameraRoot.localRotation);
     }
 
-    private void CollisionShake(float power)
+    private void CollisionShake(float power, Vector3 _)
     {
         if (power > shakeLimit)
         {

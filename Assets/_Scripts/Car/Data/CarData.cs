@@ -1,6 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Tags
+{
+    public static readonly string Road = "Road";
+}
+
 public enum CarEngineStatus
 {
     Idle,
