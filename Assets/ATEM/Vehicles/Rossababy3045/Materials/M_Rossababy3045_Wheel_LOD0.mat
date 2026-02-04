@@ -29,6 +29,7 @@ Material:
   - _HASDECALS
   - _HASEMISSION
   - _HASRAIN
+  - _SPACE_WORLD
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -231,6 +232,7 @@ Material:
     - _RoughnessA: 0
     - _RoughnessB: 0
     - _RoughnessC: 0
+    - _SPACE: 1
     - _Saturation: 2
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0

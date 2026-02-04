@@ -29,6 +29,7 @@ Material:
   - _HASALPHA
   - _HASDECALS
   - _HASRAIN
+  - _SPACE_WORLD
   m_InvalidKeywords:
   - _BUILTIN_ALPHATEST_ON
   - _BUILTIN_AlphaClip
@@ -243,6 +244,7 @@ Material:
     - _RoughnessA: 0
     - _RoughnessB: 0
     - _RoughnessC: 0
+    - _SPACE: 1
     - _Saturation: 2
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0

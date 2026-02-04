@@ -3812,7 +3812,7 @@
                 "m_Node": {
                     "m_Id": "591c5ee5255940a18cb64bbc93c00820"
                 },
-                "m_SlotId": 2
+                "m_SlotId": 1
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -8766,8 +8766,8 @@
     "m_ObjectId": "02d4763b375a4dddaa1d1e4d9c026cbe",
     "m_Title": "Color AO",
     "m_Position": {
-        "x": -716.999755859375,
-        "y": 1502.0001220703125
+        "x": -717.0,
+        "y": 1502.0
     }
 }
 
@@ -9911,8 +9911,8 @@
     "m_ObjectId": "09cfaeb31dca4019ab5e52389b3b2710",
     "m_Title": "Metallic",
     "m_Position": {
-        "x": -730.9996948242188,
-        "y": 3583.000244140625
+        "x": -731.0,
+        "y": 3582.99951171875
     }
 }
 
@@ -11813,8 +11813,8 @@
     "m_ObjectId": "14cd064b58a4437c9e0add7ae2bb8110",
     "m_Title": "Emission",
     "m_Position": {
-        "x": -733.999755859375,
-        "y": 4512.00048828125
+        "x": -734.0,
+        "y": 4511.99951171875
     }
 }
 
@@ -14045,8 +14045,8 @@
     "m_ObjectId": "21efa2f8ef354962b5cc187366cfc4b0",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -5636.00048828125,
-        "y": -49.0
+        "x": -5635.9990234375,
+        "y": -48.999996185302737
     }
 }
 
@@ -14082,7 +14082,7 @@
     "m_Title": "Darken Colors",
     "m_Position": {
         "x": -1886.0,
-        "y": -67.00000762939453
+        "y": -67.0
     }
 }
 
@@ -14347,7 +14347,7 @@
     "m_KeywordType": 0,
     "m_KeywordDefinition": 0,
     "m_KeywordScope": 0,
-    "m_KeywordStages": 63,
+    "m_KeywordStages": 2,
     "m_Entries": [],
     "m_Value": 0,
     "m_IsEditable": true
@@ -15098,8 +15098,8 @@
     "m_ObjectId": "2905823d6e6f415785d9252f6786381d",
     "m_Title": "Flakes Roughness",
     "m_Position": {
-        "x": -1749.0,
-        "y": 2658.000244140625
+        "x": -1749.0001220703125,
+        "y": 2658.0
     }
 }
 
@@ -16764,7 +16764,7 @@
     "m_KeywordType": 0,
     "m_KeywordDefinition": 0,
     "m_KeywordScope": 0,
-    "m_KeywordStages": 63,
+    "m_KeywordStages": 2,
     "m_Entries": [],
     "m_Value": 0,
     "m_IsEditable": true
@@ -19499,7 +19499,7 @@
     "m_Title": "DecalMix",
     "m_Position": {
         "x": -716.0,
-        "y": -63.00000762939453
+        "y": -63.000003814697269
     }
 }
 
@@ -21231,8 +21231,8 @@
     "m_ObjectId": "4dc7ee9f441446ccaa9f7b1e7a19c79f",
     "m_Title": "Fresnel IOR",
     "m_Position": {
-        "x": -5635.00048828125,
-        "y": -410.00006103515627
+        "x": -5634.99951171875,
+        "y": -410.0
     }
 }
 
@@ -23741,7 +23741,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 4.0,
+    "m_Value": 6.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -24289,7 +24289,7 @@
     "m_Title": "Flakes",
     "m_Position": {
         "x": -4318.0,
-        "y": 2657.000244140625
+        "y": 2657.0
     }
 }
 
@@ -28306,7 +28306,7 @@
     "m_KeywordType": 0,
     "m_KeywordDefinition": 0,
     "m_KeywordScope": 0,
-    "m_KeywordStages": 63,
+    "m_KeywordStages": 2,
     "m_Entries": [],
     "m_Value": 0,
     "m_IsEditable": true
@@ -30627,8 +30627,8 @@
     "m_ObjectId": "87f5fc82771040b5915a2ca1621f05bf",
     "m_Title": "Ambient Occlusion",
     "m_Position": {
-        "x": -714.999755859375,
-        "y": 2290.000244140625
+        "x": -715.0,
+        "y": 2289.999755859375
     }
 }
 
@@ -34643,7 +34643,7 @@
     "m_ObjectId": "9f442642f9a5426899638d2d13ab7f06",
     "m_Title": "Inputs",
     "m_Position": {
-        "x": -5635.00048828125,
+        "x": -5634.99951171875,
         "y": 319.9999694824219
     }
 }
@@ -35882,7 +35882,7 @@
     "m_KeywordType": 0,
     "m_KeywordDefinition": 0,
     "m_KeywordScope": 0,
-    "m_KeywordStages": 63,
+    "m_KeywordStages": 2,
     "m_Entries": [],
     "m_Value": 0,
     "m_IsEditable": true
@@ -36434,7 +36434,7 @@
     "m_KeywordType": 0,
     "m_KeywordDefinition": 0,
     "m_KeywordScope": 0,
-    "m_KeywordStages": 63,
+    "m_KeywordStages": 2,
     "m_Entries": [],
     "m_Value": 0,
     "m_IsEditable": true
@@ -36656,8 +36656,8 @@
     "m_ObjectId": "af4a4b728a744ad6962b6d5769fbef05",
     "m_Title": "Water drops",
     "m_Position": {
-        "x": 2459.000244140625,
-        "y": -392.0000305175781
+        "x": 2459.0,
+        "y": -392.0
     }
 }
 
@@ -39840,7 +39840,7 @@
     "m_Title": "Smoothness",
     "m_Position": {
         "x": -725.0,
-        "y": 2676.000244140625
+        "y": 2675.99951171875
     }
 }
 
@@ -40917,7 +40917,7 @@
     "m_Title": "Alpha",
     "m_Position": {
         "x": -712.0,
-        "y": 4943.00048828125
+        "y": 4943.0
     }
 }
 
@@ -42737,8 +42737,8 @@
     "m_ObjectId": "d329590774a343feaa6ff2fd1130e493",
     "m_Title": "NormalMap",
     "m_Position": {
-        "x": -716.999755859375,
-        "y": 1940.0001220703125
+        "x": -717.0,
+        "y": 1939.999755859375
     }
 }
 
