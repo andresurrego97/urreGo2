@@ -34,6 +34,10 @@ public class CarRootReferences : MonoBehaviour
     [Header("Removable parts")]
     public List<CarDetachedPart> removableParts;
 
+    [Header("Lights")]
+    public Light[] lights_normal;
+    public Light[] lights_bodyKit;
+
     [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;
     public Renderer renderer_engine;
