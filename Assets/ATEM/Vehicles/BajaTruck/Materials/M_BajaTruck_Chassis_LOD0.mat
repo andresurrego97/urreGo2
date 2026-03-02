@@ -28,6 +28,7 @@ Material:
   - _ALPHATEST_ON
   - _HASDECALS
   - _HASRAIN
+  - _SPACE_OBJECT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -213,13 +214,15 @@ Material:
     - _QueueControl: 1
     - _QueueOffset: 0
     - _Rain_Blend_Triplanar: 5
-    - _Rain_Normal_Strength: 0.05
+    - _Rain_Normal_Strength: 0.025
     - _Rain_Smoothness: 10
-    - _Rain_Tile: 2
+    - _Rain_Tile: 1
+    - _Rain_Tile2: 6
     - _ReceiveShadows: 1
     - _RoughnessA: 0
     - _RoughnessB: 0
     - _RoughnessC: 0
+    - _SPACE: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

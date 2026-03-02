@@ -36,7 +36,6 @@ public class CarRootReferences : MonoBehaviour
 
     [Header("Lights")]
     public Light[] lights_normal;
-    public Light[] lights_bodyKit;
 
     [Header("-- Runtime --")]
     public Renderer renderer_bodyKit;
