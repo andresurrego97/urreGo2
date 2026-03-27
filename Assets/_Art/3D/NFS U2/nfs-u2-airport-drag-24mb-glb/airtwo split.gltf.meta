@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: d0f51f97ea5faee4ba6cd1a49aee8b93
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\airtwo
+      split.bin
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\airtwo split.bin
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_WTLINE_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_WTLINE_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_RUNWAYCHASERLIGHT_A
+      (0x1ba00a94).png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_RUNWAYCHASERLIGHT_A
+      (0x1ba00a94).png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_RUNWAYCHASERLIGHT_B
+      (0x1ba096f5).png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_RUNWAYCHASERLIGHT_B
+      (0x1ba096f5).png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_RJB_BLKSHNYMETL.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_RJB_BLKSHNYMETL.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CANOPYLIGHT.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CANOPYLIGHT.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_SHOEBOX.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_SHOEBOX.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_LADDER.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_LADDER.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_FENCE_FOUNDATION.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_FENCE_FOUNDATION.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CEILINGLIGHT5_A_BK.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CEILINGLIGHT5_A_BK.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCRET_01.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCRET_01.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_SEMITRAILER_01.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_SEMITRAILER_01.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_SEMITRUCK_01.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_SEMITRUCK_01.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_CONTSTUCTRUCK_01.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_CONTSTUCTRUCK_01.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_BOEING737.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_BOEING737.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_SHINY_METAL2.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_SHINY_METAL2.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_LIGHTHOUSE_02.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_LIGHTHOUSE_02.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_WING_LB.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_WING_LB.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_SIDE_KT.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_SIDE_KT.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_BODY_LB.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_BODY_LB.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_WINDGLASSA_GL.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_WINDGLASSA_GL.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_WALLSTONEA_GL.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_WALLSTONEA_GL.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_PILLARCONCA_GL.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_PILLARCONCA_GL.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_METALPANELBLACK_GL.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_METALPANELBLACK_GL.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONC&BLUEBLDG_A_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONC&BLUEBLDG_A_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_F_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_F_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_E_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_E_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_C_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_C_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_A_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GOLDBLDG_A_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CT4STORY_APARTA_WIN.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CT4STORY_APARTA_WIN.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICKSTEELBLDG_C_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICKSTEELBLDG_C_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICKSTEELBLDG_B_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICKSTEELBLDG_B_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICKSTEELBLDG_A_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICKSTEELBLDG_A_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONC&BLUEBLDG_C_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONC&BLUEBLDG_C_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONC&BLUEBLDG_B_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONC&BLUEBLDG_B_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCBLKBLDG_C_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCBLKBLDG_C_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCBLKBLDG_B_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCBLKBLDG_B_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCBLKBLDG_A_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_CONCBLKBLDG_A_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BROWNSTEELBLDG_C_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BROWNSTEELBLDG_C_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BROWNSTEELBLDG_B_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BROWNSTEELBLDG_B_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BROWNSTEELBLDG_A_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BROWNSTEELBLDG_A_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_F_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_F_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_E_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_E_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_C_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_C_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_A_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_BRICK&GRAYBLDG_A_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERWALLINSIDE_A_
+      (0xe8ecc370).png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERWALLINSIDE_A_
+      (0xe8ecc370).png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERWALL_C_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERWALL_C_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERWALL_A_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERWALL_A_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERTOP_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGERTOP_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGEDOOR_B_RJ.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ARC_HANGEDOOR_B_RJ.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_SYCMULHOLLAND_A_BAR_(0xbeb6c797).dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_SYCMULHOLLAND_A_BAR_(0xbeb6c797).dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_EUCALYPTUS_B_BARK_C_(0xa42d7ea2).png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_EUCALYPTUS_B_BARK_C_(0xa42d7ea2).png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_NL_AB_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_NL_AB_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_RP_AA_KT.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_RP_AA_KT.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_ROADPATCH_A
+      (0xb0643279).png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_ROADPATCH_A
+      (0xb0643279).png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_NL_AA_KT.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_NL_AA_KT.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\TRN_GRASSA_KT.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\TRN_GRASSA_KT.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_MAGNOLIATREE_A_RB.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_MAGNOLIATREE_A_RB.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_SYCMULHOLLAND_A_CK.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_SYCMULHOLLAND_A_CK.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_EUCALYPTUS_B_CK.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_EUCALYPTUS_B_CK.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_MAPLEA01.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_MAPLEA01.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_GREENBUSH.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_GREENBUSH.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_BRANCH.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ORG_BRANCH.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_FENCE_CHNLINK01_TOP.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_FENCE_CHNLINK01_TOP.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_FENCE_CHNLINK.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_FENCE_CHNLINK.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ANM_BLD_LIGHT.dds.002.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\ANM_BLD_LIGHT.dds.002.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\SGN_AP_NFS.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\SGN_AP_NFS.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_SKIN_LB.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\OBJ_AIRLINERA_SKIN_LB.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_R_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_R_RJ.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_26_RJ.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-airport-drag-24mb-glb\source\textures\RDP_AIRPORT_26_RJ.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_ior

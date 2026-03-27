@@ -1,0 +1,63 @@
+fileFormatVersion: 2
+guid: 9436ffa7df394d74a8cf0f5299947323
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\landscape.bin
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\landscape.bin
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SPEED2.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SPEED2.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SFX_LIGHTSBLINKINGA_DM.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SFX_LIGHTSBLINKINGA_DM.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\TRN_GRASS_A.dds.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\TRN_GRASS_A.dds.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SFX_FLAREMISTA_DM.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SFX_FLAREMISTA_DM.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SPEED2-1.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SPEED2-1.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\ARC_STREETLIGHTS_A_DM.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\ARC_STREETLIGHTS_A_DM.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\ANM_WATERA_.dds.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\ANM_WATERA_.dds.png
+  - type: 1
+    originalUri: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SPEED2-2.png
+    assetPath: Assets\_Art\3D\NFS U2\nfs-u2-landscape-background-3mb-glb\source\textures\SPEED2-2.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_ior
