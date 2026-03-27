@@ -48,7 +48,7 @@ public class CarCamera : MonoBehaviour
 
     private void Update()
     {
-        if (customizer.currentRootReferences == null)
+        if (customizer.currentRootReferences == null || cinemachineNoise == null)
             return;
 
         cinemachineNoise.FrequencyGain =

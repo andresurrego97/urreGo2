@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: da31bcde6664f434498ec36efc0d6a3d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 0
+    animationMethod: 0
+    generateMipMaps: 0
+    texturesReadable: 0
+    defaultMinFilterMode: 0
+    defaultMagFilterMode: 0
+    anisotropicFilterLevel: 0
+  instantiationSettings:
+    mask: 2
+    layer: 0
+    skinUpdateWhenOffscreen: 0
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies: []
+  reportItems: []
